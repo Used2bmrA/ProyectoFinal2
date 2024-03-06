@@ -153,7 +153,7 @@ public class NewJFrame extends javax.swing.JFrame {
         pn_header = new javax.swing.JPanel();
         pn_exitBttn = new javax.swing.JPanel();
         lb_exitTxt = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        ingresarAdminsitrador = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -924,22 +924,22 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(34, Short.MAX_VALUE))
         );
 
-        panelPrincipal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
+        panelPrincipal.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Facebook te ayuda a comunicarte y");
-        panelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        panelPrincipal.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel2.setText("compartir con las personas que forman");
-        panelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        panelPrincipal.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel3.setText("parte de tu vida.");
-        panelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        panelPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 260, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/facebook logo2.png"))); // NOI18N
-        panelPrincipal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        panelPrincipal.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, -1, -1));
 
         pn_header.setBackground(new java.awt.Color(240, 242, 255));
         pn_header.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -997,8 +997,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
         panelPrincipal.add(pn_header, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 920, 30));
 
-        jButton3.setText("jButton3");
-        panelPrincipal.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 40, -1, -1));
+        ingresarAdminsitrador.setText("Iniciar como Administrador");
+        panelPrincipal.add(ingresarAdminsitrador, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1594,11 +1594,11 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_registrarteU;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
+    private javax.swing.JButton ingresarAdminsitrador;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
