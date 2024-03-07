@@ -76,8 +76,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel13 = new javax.swing.JLabel();
         jSeparator8 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
+        bt_homeMuroPersonal = new javax.swing.JButton();
         jPanel11 = new javax.swing.JPanel();
+        bt_cerrarSesion = new javax.swing.JButton();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         jLabel15 = new javax.swing.JLabel();
@@ -236,14 +237,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Amigos");
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 150, 170));
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 110, 150, 170));
 
         jButton8.setText("Editar perfil");
         jPanel3.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
         jLabel20.setText("Sugerencias de amigos");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 140, 190));
+        jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 150, 190));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproductorMusical.png"))); // NOI18N
         jButton1.setBorder(null);
@@ -261,7 +262,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 130, 120));
 
         jLabel4.setText("Regresar Menu Principal");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -315,16 +316,16 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel3.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 320, 120));
 
-        jButton2.setBackground(new java.awt.Color(240, 242, 245));
-        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
-        jButton2.setBorder(null);
-        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        bt_homeMuroPersonal.setBackground(new java.awt.Color(240, 242, 245));
+        bt_homeMuroPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
+        bt_homeMuroPersonal.setBorder(null);
+        bt_homeMuroPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_homeMuroPersonal.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton2MouseClicked(evt);
+                bt_homeMuroPersonalMouseClicked(evt);
             }
         });
-        jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 50, -1, -1));
+        jPanel3.add(bt_homeMuroPersonal, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
 
         jPanel11.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -340,6 +341,25 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 320, 370));
+
+        bt_cerrarSesion.setBackground(new java.awt.Color(255, 80, 107));
+        bt_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        bt_cerrarSesion.setForeground(new java.awt.Color(0, 0, 0));
+        bt_cerrarSesion.setText("Cerrar Sesión");
+        bt_cerrarSesion.setBorder(null);
+        bt_cerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_cerrarSesion.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_cerrarSesionMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                bt_cerrarSesionMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                bt_cerrarSesionMouseExited(evt);
+            }
+        });
+        jPanel3.add(bt_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 80, 20));
 
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
@@ -1537,6 +1557,7 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Landing");
         setUndecorated(true);
         setResizable(false);
 
@@ -1571,11 +1592,6 @@ public class NewJFrame extends javax.swing.JFrame {
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 bt_loginMouseExited(evt);
-            }
-        });
-        bt_login.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bt_loginActionPerformed(evt);
             }
         });
 
@@ -1827,83 +1843,74 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_CreateNewAccount.setBackground(new Color(0, 204, 0));
     }//GEN-LAST:event_bt_CreateNewAccountMouseExited
 
-    private void bt_loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_loginActionPerformed
-//        if (tf_username.getText().equals("admin") && pf_password.getText().equals("1234")) {
-//            this.setVisible(false);
-//            jd_muroPrincipal.setVisible(true);
-//            jd_muroPrincipal.pack();
-//            jd_muroPrincipal.setLocationRelativeTo(null);
-//
-//        } else {
-//            JOptionPane.showMessageDialog(this, "Usuario no Encontrado");
-//        }
-    }//GEN-LAST:event_bt_loginActionPerformed
-
     private void bt_registrarteUMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_registrarteUMouseClicked
-        int dia;
-        int mes;
-        int anio;
-        String mesFromSp = sp_monthU.getValue().toString();
+        if (UsuarioValido()) {
+            int dia;
+            int mes;
+            int anio;
+            String mesFromSp = sp_monthU.getValue().toString();
 
-        if (mesFromSp.equals("Enero")) {
-            mes = 0;
-        } else if (mesFromSp.equals("Febrero")) {
-            mes = 1;
-        } else if (mesFromSp.equals("Marzo")) {
-            mes = 2;
-        } else if (mesFromSp.equals("Abril")) {
-            mes = 3;
-        } else if (mesFromSp.equals("Mayo")) {
-            mes = 4;
-        } else if (mesFromSp.equals("Junio")) {
-            mes = 5;
-        } else if (mesFromSp.equals("Julio")) {
-            mes = 6;
-        } else if (mesFromSp.equals("Agosto")) {
-            mes = 7;
-        } else if (mesFromSp.equals("Septiembre")) {
-            mes = 8;
-        } else if (mesFromSp.equals("Octubre")) {
-            mes = 9;
-        } else if (mesFromSp.equals("Noviembre")) {
-            mes = 10;
-        } else {
-            mes = 11;
+            if (mesFromSp.equals("Enero")) {
+                mes = 0;
+            } else if (mesFromSp.equals("Febrero")) {
+                mes = 1;
+            } else if (mesFromSp.equals("Marzo")) {
+                mes = 2;
+            } else if (mesFromSp.equals("Abril")) {
+                mes = 3;
+            } else if (mesFromSp.equals("Mayo")) {
+                mes = 4;
+            } else if (mesFromSp.equals("Junio")) {
+                mes = 5;
+            } else if (mesFromSp.equals("Julio")) {
+                mes = 6;
+            } else if (mesFromSp.equals("Agosto")) {
+                mes = 7;
+            } else if (mesFromSp.equals("Septiembre")) {
+                mes = 8;
+            } else if (mesFromSp.equals("Octubre")) {
+                mes = 9;
+            } else if (mesFromSp.equals("Noviembre")) {
+                mes = 10;
+            } else {
+                mes = 11;
+            }
+
+            if (pf_passwordCreateU.getText().equals(pf_passwordConfirmU.getText())) {
+                dia = Integer.parseInt(sp_dateU.getValue().toString());
+                anio = Integer.parseInt(sp_yearU.getValue().toString());
+                Usuario p = new Regular((tf_nombreRegistrarU.getText() + " " + tf_apellidoRegistrarU.getText()),
+                        tf_apodoRegistrarU.getText(),
+                        pf_password.getText(),
+                        tf_paisCreateU.getText(),
+                        new Date(dia, mes, anio));
+                administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+                admin.cargarArchivo();
+                admin.setPersona(p);
+                admin.escribirArchivo();
+                JOptionPane.showMessageDialog(jd_createUser, "Bienvenido a Facebook "
+                        + tf_nombreRegistrarU.getText() + "!");
+                tf_nombreRegistrarU.setText("");
+                tf_nombreRegistrarU.setForeground(Color.gray);
+                tf_apellidoRegistrarU.setText("");
+                tf_apellidoRegistrarU.setForeground(Color.gray);
+                tf_apodoRegistrarU.setText("");
+                tf_apodoRegistrarU.setForeground(Color.gray);
+                tf_paisCreateU.setText("");
+                tf_paisCreateU.setForeground(Color.gray);
+                pf_passwordCreateU.setText("");
+                pf_passwordCreateU.setForeground(Color.gray);
+                pf_passwordConfirmU.setText("");
+                pf_passwordConfirmU.setForeground(Color.gray);
+
+                LlenarEspacios();
+                jd_createUser.dispose();
+            } else {
+                JOptionPane.showMessageDialog(jd_createUser, "Las contraseñas "
+                        + "ingresadas no son iguales. Intente otra vez.");
+            }
         }
 
-        if (pf_passwordCreateU.getText().equals(pf_passwordConfirmU.getText())) {
-            dia = Integer.parseInt(sp_dateU.getValue().toString());
-            anio = Integer.parseInt(sp_yearU.getValue().toString());
-            Usuario p = new Regular((tf_nombreRegistrarU.getText() + " " + tf_apellidoRegistrarU.getText()),
-                    tf_apodoRegistrarU.getText(),
-                    pf_password.getText(),
-                    tf_paisCreateU.getText(),
-                    new Date(dia, mes, anio));
-            administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
-            admin.cargarArchivo();
-            admin.setPersona(p);
-            admin.escribirArchivo();
-            JOptionPane.showMessageDialog(jd_createUser, "Bienvenido a Facebook "
-                    + tf_nombreRegistrarU.getText() + "!");
-            tf_nombreRegistrarU.setText("");
-            tf_nombreRegistrarU.setForeground(Color.gray);
-            tf_apellidoRegistrarU.setText("");
-            tf_apellidoRegistrarU.setForeground(Color.gray);
-            tf_apodoRegistrarU.setText("");
-            tf_apodoRegistrarU.setForeground(Color.gray);
-            tf_paisCreateU.setText("");
-            tf_paisCreateU.setForeground(Color.gray);
-            pf_passwordCreateU.setText("");
-            pf_passwordCreateU.setForeground(Color.gray);
-            pf_passwordConfirmU.setText("");
-            pf_passwordConfirmU.setForeground(Color.gray);
-
-            LlenarEspacios();
-            jd_createUser.dispose();
-        } else {
-            JOptionPane.showMessageDialog(jd_createUser, "Las contraseñas "
-                    + "ingresadas no son iguales. Intente otra vez.");
-        }
 
     }//GEN-LAST:event_bt_registrarteUMouseClicked
 
@@ -2258,21 +2265,31 @@ public class NewJFrame extends javax.swing.JFrame {
         reproductorMusical.setLocationRelativeTo(null);
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+    private void bt_homeMuroPersonalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_homeMuroPersonalMouseClicked
         jd_muroPersonal.setVisible(false);
         jd_muroPrincipal.setVisible(true);
         jd_muroPrincipal.pack();
         jd_muroPrincipal.setLocationRelativeTo(null);
-    }//GEN-LAST:event_jButton2MouseClicked
+    }//GEN-LAST:event_bt_homeMuroPersonalMouseClicked
 
     private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin.cargarArchivo();
         for (Object usuario : admin.getUsuarios()) {
-            System.out.println(((Regular) usuario).getNombre());
             if (tf_username.getText().equals(((Regular) usuario).getNombre()) && pf_password.getText().equals(((Regular) usuario).getContrasenia())) {
-                System.out.println("1");
+                this.dispose();
+                jd_muroPrincipal.pack();
+                jd_muroPrincipal.setLocationRelativeTo(null);
+                jd_muroPrincipal.setVisible(true);
             }
         }
+        
+        if (!ExisteUsuario(tf_username.getText())) {
+            JOptionPane.showMessageDialog(this, "Registrate en Facebook antes de comenzar.");
+        }
+        
+        
+        
     }//GEN-LAST:event_bt_loginMouseClicked
 
     private void ingresarAdminsitradorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarAdminsitradorMouseClicked
@@ -2391,6 +2408,21 @@ crearPublicacion();
 crearPublicacion();        
     }//GEN-LAST:event_jLabel49MouseClicked
 
+    private void bt_cerrarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseEntered
+        bt_cerrarSesion.setBackground(new Color(255, 24, 86));
+    }//GEN-LAST:event_bt_cerrarSesionMouseEntered
+
+    private void bt_cerrarSesionMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseExited
+        bt_cerrarSesion.setBackground(new Color(255, 80, 107));
+    }//GEN-LAST:event_bt_cerrarSesionMouseExited
+
+    private void bt_cerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseClicked
+        jd_muroPersonal.dispose();
+        this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+    }//GEN-LAST:event_bt_cerrarSesionMouseClicked
+
     public void ReproductorMusical() {
         reproductorMusical.setVisible(true);
         reproductorMusical.pack();
@@ -2443,6 +2475,8 @@ crearPublicacion.setLocationRelativeTo(null);
     private javax.swing.JButton Play;
     private javax.swing.JButton Stop;
     private javax.swing.JButton bt_CreateNewAccount;
+    private javax.swing.JButton bt_cerrarSesion;
+    private javax.swing.JButton bt_homeMuroPersonal;
     private javax.swing.JButton bt_login;
     private javax.swing.JButton bt_registrarAdmin;
     private javax.swing.JButton bt_registrarteU;
@@ -2462,7 +2496,6 @@ crearPublicacion.setLocationRelativeTo(null);
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
     private javax.swing.JButton jButton3;
@@ -2662,5 +2695,37 @@ crearPublicacion.setLocationRelativeTo(null);
             tf_paisAdmin.setText("País o región");
             tf_paisAdmin.setForeground(Color.gray);
         }
+    }
+
+    private boolean UsuarioValido() {
+        String nombreCompleto = tf_nombreRegistrarU.getText() + " " + tf_apellidoRegistrarU.getText();
+        if (!ExisteUsuario(nombreCompleto)) {
+            if (tf_nombreRegistrarU.getText().equalsIgnoreCase("nombre")) {
+                JOptionPane.showMessageDialog(jd_createUser, "Tu nombre no puede ser \"Nombre\".");
+            } else if (tf_apellidoRegistrarU.getText().equalsIgnoreCase("apellido")) {
+                JOptionPane.showMessageDialog(jd_createUser, "Tu apellido no puede ser \"Apellido\".");
+            } else if (pf_passwordCreateU.getText().equalsIgnoreCase("Contraseña")) {
+                JOptionPane.showMessageDialog(jd_createUser, "Tu contraseña no puede ser \"Contraseña\".");
+            } else if (tf_paisCreateU.getText().equalsIgnoreCase("País o región")) {
+                JOptionPane.showMessageDialog(jd_createUser, "Por favor ingresa tu país o región.");
+            } else {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private boolean ExisteUsuario(String nombreCompleto) {
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin.cargarArchivo();
+        for (Object regular : admin.getUsuarios()) {
+            if (((Regular) regular).getNombre().equalsIgnoreCase(nombreCompleto)) {
+                JOptionPane.showMessageDialog(this, "Ya existe un usuario bajo ese nombre.");
+                return true;
+            }
+        }
+        
+        return false;
     }
 }
