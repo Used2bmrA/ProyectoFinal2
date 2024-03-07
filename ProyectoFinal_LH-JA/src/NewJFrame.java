@@ -166,7 +166,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        muroAdministrador = new javax.swing.JDialog();
+        jd_muroAdministrador = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jPanel14 = new javax.swing.JPanel();
@@ -1333,7 +1333,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addComponent(jButton13)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton14)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(12, Short.MAX_VALUE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1344,15 +1344,15 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addContainerGap())))
         );
 
-        javax.swing.GroupLayout muroAdministradorLayout = new javax.swing.GroupLayout(muroAdministrador.getContentPane());
-        muroAdministrador.getContentPane().setLayout(muroAdministradorLayout);
-        muroAdministradorLayout.setHorizontalGroup(
-            muroAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jd_muroAdministradorLayout = new javax.swing.GroupLayout(jd_muroAdministrador.getContentPane());
+        jd_muroAdministrador.getContentPane().setLayout(jd_muroAdministradorLayout);
+        jd_muroAdministradorLayout.setHorizontalGroup(
+            jd_muroAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        muroAdministradorLayout.setVerticalGroup(
-            muroAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(muroAdministradorLayout.createSequentialGroup()
+        jd_muroAdministradorLayout.setVerticalGroup(
+            jd_muroAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_muroAdministradorLayout.createSequentialGroup()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
@@ -1745,7 +1745,7 @@ public class NewJFrame extends javax.swing.JFrame {
         ingresarAdminsitrador.setBackground(new java.awt.Color(0, 102, 255));
         ingresarAdminsitrador.setFont(new java.awt.Font("Roboto", 1, 14)); // NOI18N
         ingresarAdminsitrador.setForeground(new java.awt.Color(255, 255, 255));
-        ingresarAdminsitrador.setText("Iniciar sesió como Administrador");
+        ingresarAdminsitrador.setText("Iniciar sesión como Administrador");
         ingresarAdminsitrador.setBorder(null);
         ingresarAdminsitrador.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         ingresarAdminsitrador.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2298,12 +2298,24 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_loginMouseClicked
 
     private void ingresarAdminsitradorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarAdminsitradorMouseClicked
-        if(tf_username.getText().equals("1") || pf_password.getText().equals("2")){
-            jd_muroPrincipal.setVisible(true);
-            jd_muroPrincipal.pack();
-            jd_muroPrincipal.setLocationRelativeTo(null);
-            
-        }
+//        if(tf_username.getText().equals("1") || pf_password.getText().equals("2")){
+//            jd_muroPrincipal.setVisible(true);
+//            jd_muroPrincipal.pack();
+//            jd_muroPrincipal.setLocationRelativeTo(null);
+//            
+//        }
+
+        administradorUsuario admin = new administradorUsuario("./UsuariosAdmin.pfb");
+        admin.cargarArchivo();
+//        for (Usuario usuario : admin.getUsuarios()) {
+//            System.out.println(     usuario.getNombre() + " " + usuario.getContrasenia()      );
+//            if (tf_username.getText().equals(((Usuario) usuario).getNombre()) && pf_password.getText().equals(((Usuario) usuario).getContrasenia())) {
+//                this.dispose();
+//                jd_muroAdministrador.pack();
+//                jd_muroAdministrador.setLocationRelativeTo(null);
+//                jd_muroAdministrador.setVisible(true);
+//            }
+//        }
     }//GEN-LAST:event_ingresarAdminsitradorMouseClicked
 
     private void perro2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_perro2MouseClicked
@@ -2319,22 +2331,22 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void crearPensamientoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearPensamientoMousePressed
-if(crearPensamiento.getText().equals("")){
-    crearPensamiento.setText("¿Que estas pensando?");
-    crearPensamiento.setForeground(Color.gray);
-}      
-        if(crearPensamiento.getText().equals("¿Que estas pensando?")){
-         crearPensamiento.setText("");
-         crearPensamiento.setForeground(Color.black);
-     }
+        if (crearPensamiento.getText().equals("")) {
+            crearPensamiento.setText("¿Que estas pensando?");
+            crearPensamiento.setForeground(Color.gray);
+        }
+        if (crearPensamiento.getText().equals("¿Que estas pensando?")) {
+            crearPensamiento.setText("");
+            crearPensamiento.setForeground(Color.black);
+        }
     }//GEN-LAST:event_crearPensamientoMousePressed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel14MouseClicked
 
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel13MouseClicked
 
     private void jLabel16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel16MouseClicked
@@ -2372,27 +2384,27 @@ JFileChooser fileChooser = new JFileChooser();
     }//GEN-LAST:event_jLabel17MouseClicked
 
     private void ingresarAdminsitradorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarAdminsitradorMouseEntered
-ingresarAdminsitrador.setBackground(new Color(0, 70, 255));
+        ingresarAdminsitrador.setBackground(new Color(0, 70, 255));
     }//GEN-LAST:event_ingresarAdminsitradorMouseEntered
 
     private void ingresarAdminsitradorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ingresarAdminsitradorMouseExited
-ingresarAdminsitrador.setBackground(new Color(0, 10, 255)); 
+        ingresarAdminsitrador.setBackground(new Color(0, 10, 255));
     }//GEN-LAST:event_ingresarAdminsitradorMouseExited
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-JOptionPane.showMessageDialog(crearPublicacion, "Post ingresado correctamente");
-perro2.setIcon(null);
-media.stop();
-crearPensamiento.setText("");
+        JOptionPane.showMessageDialog(crearPublicacion, "Post ingresado correctamente");
+        perro2.setIcon(null);
+        media.stop();
+        crearPensamiento.setText("");
 
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jLabel24MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel24MouseClicked
@@ -2400,17 +2412,17 @@ crearPublicacion();
     }//GEN-LAST:event_jLabel24MouseClicked
 
     private void jLabel43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43MouseClicked
-muroPersonalAdministrador.setVisible(true);
-muroPersonalAdministrador.pack();
-muroPersonalAdministrador.setLocationRelativeTo(null);
+        muroPersonalAdministrador.setVisible(true);
+        muroPersonalAdministrador.pack();
+        muroPersonalAdministrador.setLocationRelativeTo(null);
     }//GEN-LAST:event_jLabel43MouseClicked
 
     private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
-crearPublicacion();   
+        crearPublicacion();
     }//GEN-LAST:event_jLabel50MouseClicked
 
     private void jLabel49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseClicked
-crearPublicacion();        
+        crearPublicacion();
     }//GEN-LAST:event_jLabel49MouseClicked
 
     private void bt_cerrarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseEntered
@@ -2614,13 +2626,13 @@ crearPublicacion();
     private javax.swing.JSeparator jSeparator9;
     private javax.swing.JDialog jd_createAdmin;
     private javax.swing.JDialog jd_createUser;
+    private javax.swing.JDialog jd_muroAdministrador;
     private javax.swing.JDialog jd_muroPersonal;
     private javax.swing.JDialog jd_muroPrincipal;
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
     private javax.swing.JLabel lb_profilePic;
-    private javax.swing.JDialog muroAdministrador;
     private javax.swing.JDialog muroPersonalAdministrador;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JLabel perro2;
