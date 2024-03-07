@@ -66,7 +66,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jd_muroPersonal = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
-        jLabel11 = new javax.swing.JLabel();
+        lb_profilePic = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jButton8 = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
@@ -229,10 +229,15 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel3.setBackground(new java.awt.Color(240, 242, 245));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("Profile pic");
-        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 180, 190));
+        lb_profilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_profilePic.setText("Profile pic");
+        lb_profilePic.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        lb_profilePic.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_profilePicMouseClicked(evt);
+            }
+        });
+        jPanel3.add(lb_profilePic, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Amigos");
@@ -2306,11 +2311,11 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_perro2MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel7MouseClicked
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
-crearPublicacion();
+        crearPublicacion();
     }//GEN-LAST:event_jLabel8MouseClicked
 
     private void crearPensamientoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearPensamientoMousePressed
@@ -2352,7 +2357,7 @@ JFileChooser fileChooser = new JFileChooser();
     }//GEN-LAST:event_jLabel16MouseClicked
 
     private void jLabel17MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel17MouseClicked
-      String ruta = "";
+        String ruta = "";
         JFileChooser fr = new JFileChooser();
         FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
         fr.setFileFilter(filtro);
@@ -2423,16 +2428,31 @@ crearPublicacion();
         this.setVisible(true);
     }//GEN-LAST:event_bt_cerrarSesionMouseClicked
 
+    private void lb_profilePicMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_profilePicMouseClicked
+        String ruta = "";
+        JFileChooser fr = new JFileChooser();
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
+        fr.setFileFilter(filtro);
+        int r = fr.showOpenDialog(jd_muroPersonal);
+        if (r == JFileChooser.APPROVE_OPTION) {
+            //foto
+            ruta = fr.getSelectedFile().getPath();
+            Image imagen = new ImageIcon(ruta).getImage();
+            ImageIcon m = new ImageIcon(imagen.getScaledInstance(lb_profilePic.getWidth(), lb_profilePic.getHeight(), Image.SCALE_SMOOTH));
+            lb_profilePic.setIcon(m);
+        }
+    }//GEN-LAST:event_lb_profilePicMouseClicked
+
     public void ReproductorMusical() {
         reproductorMusical.setVisible(true);
         reproductorMusical.pack();
         reproductorMusical.setLocationRelativeTo(null);
     }
 
-    public void crearPublicacion(){
-       crearPublicacion.setVisible(true);
-crearPublicacion.pack();
-crearPublicacion.setLocationRelativeTo(null); 
+    public void crearPublicacion() {
+        crearPublicacion.setVisible(true);
+        crearPublicacion.pack();
+        crearPublicacion.setLocationRelativeTo(null);
     }
     /**
      * @param args the command line arguments
@@ -2507,7 +2527,6 @@ crearPublicacion.setLocationRelativeTo(null);
     private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
@@ -2600,6 +2619,7 @@ crearPublicacion.setLocationRelativeTo(null);
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
+    private javax.swing.JLabel lb_profilePic;
     private javax.swing.JDialog muroAdministrador;
     private javax.swing.JDialog muroPersonalAdministrador;
     private javax.swing.JPanel panelPrincipal;
