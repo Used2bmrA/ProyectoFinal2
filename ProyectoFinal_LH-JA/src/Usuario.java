@@ -11,7 +11,7 @@ public class Usuario implements Serializable {
     private Icon fotografía; 
     private ArrayList<Usuario> amigos = new ArrayList();
     private ArrayList<Post> posts = new ArrayList();
-    private JDialog personal, principal;
+    private transient JDialog personal, principal;
     
     
     private static final long SerialVersionUID = 777L;
