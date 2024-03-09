@@ -1,14 +1,52 @@
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.Icon;
+import javax.swing.JDialog;
 
 public class Usuario implements Serializable {
     private String nombre, nickname, contrasenia, pais;
     private Date fechaNacimiento;
     private Icon fotografía; 
+    private ArrayList<Usuario> amigos = new ArrayList();
+    private ArrayList<Post> posts = new ArrayList();
+    private JDialog personal, principal;
+    
     
     private static final long SerialVersionUID = 777L;
+
+    public ArrayList<Usuario> getAmigos() {
+        return amigos;
+    }
+
+    public void setAmigos(ArrayList<Usuario> amigos) {
+        this.amigos = amigos;
+    }
+
+    public ArrayList<Post> getPosts() {
+        return posts;
+    }
+
+    public void setPosts(ArrayList<Post> posts) {
+        this.posts = posts;
+    }
+
+    public JDialog getPersonal() {
+        return personal;
+    }
+
+    public void setPersonal(JDialog personal) {
+        this.personal = personal;
+    }
+
+    public JDialog getPrincipal() {
+        return principal;
+    }
+
+    public void setPrincipal(JDialog principal) {
+        this.principal = principal;
+    }
 
     public Icon getFotografía() {
         return fotografía;
