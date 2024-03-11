@@ -8,14 +8,21 @@ import javax.swing.JDialog;
 public class Usuario implements Serializable {
     private String nombre, nickname, contrasenia, pais;
     private Date fechaNacimiento;
-    private Icon fotografía; 
+    private transient Icon fotografía; 
     private ArrayList<Usuario> amigos = new ArrayList();
     private ArrayList<Post> posts = new ArrayList();
-    private transient JDialog personal, principal;
+    private JDialog personal, principal;
     
-    
-    private static final long SerialVersionUID = 777L;
+    private static final long serialVersionUID = 4636744672262166683L;
 
+    
+    public Usuario(){
+        principal = new JDialog();
+        principal.setTitle("Muro Principal");
+        principal.setSize(700,700);
+        principal.setLocationRelativeTo(null);
+        principal.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+    }
     public ArrayList<Usuario> getAmigos() {
         return amigos;
     }
@@ -103,7 +110,13 @@ public class Usuario implements Serializable {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-
+    
+    public void desplegarDialogs(){
+        principal.setVisible(true);
+        
+        
+    }
+    
     @Override
     public String toString() {
         return "Ususario{" + "nombre=" + nombre + ", nickname=" + nickname + ", contrasenia=" + contrasenia + ", pais=" + pais + ", fechaNacimiento=" + fechaNacimiento + '}';

@@ -8,7 +8,7 @@ class Post implements Serializable{
     private ArrayList<Comentario> comentarios = new ArrayList();
 
     
-    private static final long SerialVersionUID = 777L;
+    private static final long SerialVersionUID = 555L;
     
     public Post(String poster, int likes) {
         this.poster = poster;

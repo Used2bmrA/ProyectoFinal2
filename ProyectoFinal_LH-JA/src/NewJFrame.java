@@ -2,6 +2,7 @@
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.io.BufferedInputStream;
 import java.io.DataInputStream;
 import java.io.File;
@@ -18,8 +19,10 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javax.swing.ImageIcon;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
+import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
@@ -188,6 +191,10 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_eliminarUsuario = new javax.swing.JButton();
         jScrollPane3 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList<>();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jSeparator13 = new javax.swing.JSeparator();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -211,6 +218,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_proPicReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_proPicReg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicReg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        lb_proPicReg.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lb_proPicReg.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lb_proPicRegMouseClicked(evt);
@@ -218,7 +226,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(lb_proPicReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Amigos");
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -227,7 +234,6 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_editarPerfil.setText("Editar perfil");
         jPanel3.add(bt_editarPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
-        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Sugerencias de amigos");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 150, 190));
@@ -242,7 +248,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 130, 120));
 
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Regresar Menu Principal");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
@@ -326,7 +331,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         bt_cerrarSesion.setBackground(new java.awt.Color(255, 80, 107));
         bt_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
-        bt_cerrarSesion.setForeground(new java.awt.Color(0, 0, 0));
         bt_cerrarSesion.setText("Cerrar Sesión");
         bt_cerrarSesion.setBorder(null);
         bt_cerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -366,6 +370,11 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_proPicPrincipalReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_proPicPrincipalReg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicPrincipalReg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
+        lb_proPicPrincipalReg.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_proPicPrincipalRegMouseClicked(evt);
+            }
+        });
         jPanel5.add(lb_proPicPrincipalReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
         bt_homeMuroRegular.setBackground(new java.awt.Color(240, 242, 245));
@@ -386,7 +395,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_reproductorRegularMouseClicked(evt);
             }
         });
-        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -461,13 +470,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(182, Short.MAX_VALUE))
         );
 
-        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 160, 360, 360));
+        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 150, 360, 360));
 
         bt_chatRegular.setText("Chat");
-        jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 230, -1, -1));
+        jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
 
         bt_agendaRegular.setText("Agendas");
-        jPanel5.add(bt_agendaRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, -1, -1));
+        jPanel5.add(bt_agendaRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
         jList1.setBackground(new java.awt.Color(240, 242, 245));
         jScrollPane1.setViewportView(jList1);
@@ -1016,7 +1025,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 lb_subirMediaMouseClicked(evt);
             }
         });
-        jPanel6.add(lb_subirMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 196, 422, 285));
+        jPanel6.add(lb_subirMedia, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 196, 430, 280));
 
         bt_publicar.setBackground(new java.awt.Color(0, 102, 255));
         bt_publicar.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
@@ -1032,7 +1041,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel6.add(bt_publicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 493, 266, 42));
 
         lb_agregarVideo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lb_agregarVideo.setForeground(new java.awt.Color(0, 0, 0));
         lb_agregarVideo.setText("Agregar Videos");
         lb_agregarVideo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lb_agregarVideo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1043,7 +1051,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel6.add(lb_agregarVideo, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 128, -1, 40));
 
         lb_agregarFoto.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        lb_agregarFoto.setForeground(new java.awt.Color(0, 0, 0));
         lb_agregarFoto.setText("Agregar Fotos");
         lb_agregarFoto.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lb_agregarFoto.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1069,6 +1076,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lb_proPicPrincipalAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicPrincipalAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lb_proPicPrincipalAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_proPicPrincipalAdminMouseClicked(evt);
+            }
+        });
         jPanel13.add(lb_proPicPrincipalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 181, 156));
 
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
@@ -1147,7 +1159,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel13.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 174, 428, 391));
 
-        jLabel23.setForeground(new java.awt.Color(0, 0, 0));
         jLabel23.setText("Ir al muro Personal");
         jPanel13.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(723, 44, -1, -1));
 
@@ -1161,13 +1172,13 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel13.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 78, -1, -1));
 
         bt_reproductorAdmin.setText("Reproductor Musica");
-        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 180, -1, -1));
+        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         bt_agendaAdmin.setText("Agenda");
-        jPanel13.add(bt_agendaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 219, -1, -1));
+        jPanel13.add(bt_agendaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         bt_chatAdmin.setText("Chat");
-        jPanel13.add(bt_chatAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 258, -1, -1));
+        jPanel13.add(bt_chatAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         jList2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane2.setViewportView(jList2);
@@ -1191,7 +1202,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.setBackground(new java.awt.Color(240, 242, 245));
         jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel31.setForeground(new java.awt.Color(0, 0, 0));
         jLabel31.setText("Regresar al Muro Principal");
         jPanel16.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(593, 32, -1, -1));
 
@@ -1255,7 +1265,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 11, -1, -1));
+        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
         jPanel18.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1278,52 +1288,82 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 158, 340, 391));
+        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 340, 391));
 
         lb_proPicAdminPers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicAdminPers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel16.add(lb_proPicAdminPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 11, 189, 148));
+        lb_proPicAdminPers.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_proPicAdminPersMouseClicked(evt);
+            }
+        });
+        jPanel16.add(lb_proPicAdminPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 11, 220, 148));
 
         bt_reproductorPersAdmin.setText("Reproductor de Musica");
-        jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 188, -1, -1));
+        bt_reproductorPersAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_reproductorPersAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_reproductorPersAdminMouseClicked(evt);
+            }
+        });
+        jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         bt_calendarioPersAdmin.setText("Calendario");
-        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 227, -1, -1));
+        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
         bt_chatPersAdmin.setText("Chat");
-        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(18, 272, -1, -1));
+        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
 
-        bt_agregarAdmin.setText("Agregar Administrador");
+        bt_agregarAdmin.setText("Agregar Usuario Administrador");
         bt_agregarAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_agregarAdminMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_agregarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 400, -1, -1));
-        jPanel16.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 332, 189, 10));
+        jPanel16.add(bt_agregarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+        jPanel16.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 189, 10));
 
-        bt_listarUsuario.setText("Listar Usuario");
-        jPanel16.add(bt_listarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 433, -1, -1));
+        bt_listarUsuario.setText("Agregar Usuario Regular");
+        jPanel16.add(bt_listarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
 
-        bt_modificarUsuario.setText("Modificar Usuario");
-        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 472, -1, -1));
+        bt_modificarUsuario.setText("Modificar Usuario Administrador");
+        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
 
-        bt_eliminarUsuario.setText("Eliminar Usuario");
-        jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 511, -1, -1));
+        bt_eliminarUsuario.setText("Eliminar Usuario Administrador");
+        jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
         jScrollPane3.setViewportView(jList3);
 
-        jPanel16.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(571, 158, 177, 391));
+        jPanel16.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 177, 350));
+
+        jButton1.setBackground(new java.awt.Color(255, 51, 102));
+        jButton1.setText("Cerrar Sesion");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+        jPanel16.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, -1, -1));
+
+        jButton2.setText("Modificar Usuario Regular");
+        jPanel16.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
+
+        jButton3.setText("Eliminar Usuario Regular");
+        jPanel16.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
+        jPanel16.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, 20));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
         jd_muroPersonalAdministrador.getContentPane().setLayout(jd_muroPersonalAdministradorLayout);
         jd_muroPersonalAdministradorLayout.setHorizontalGroup(
             jd_muroPersonalAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel16, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 760, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jd_muroPersonalAdministradorLayout.setVerticalGroup(
             jd_muroPersonalAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jd_muroPersonalAdministradorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2034,22 +2074,21 @@ public class NewJFrame extends javax.swing.JFrame {
             admin.cargarArchivo();
             for (Usuario regular : admin.getUsuarios()) {
                 if (regular.getNombre().equals(tf_username.getText()) && regular.getContrasenia().equals(pf_password.getText())) {
-                    regular.getPrincipal().pack();
-                    regular.getPrincipal().setLocationRelativeTo(this);
-                    regular.getPrincipal().setVisible(true);
+                    jd_muroPrincipal.setVisible(true);
+                    jd_muroPrincipal.pack();
+                    jd_muroPrincipal.setLocationRelativeTo(null);
                     this.setVisible(false);
-                    encontrado = true;
                 }
             }
-
+            
             if (!encontrado) {
                 admin = new administradorUsuario("./Administradores.pfb");
                 admin.cargarArchivo();
                 for (Usuario administrador : admin.getUsuarios()) {
                     if (administrador.getNombre().equals(tf_username.getText()) && administrador.getContrasenia().equals(pf_password.getText())) {
-                        administrador.getPrincipal().pack();
-                        administrador.getPrincipal().setLocationRelativeTo(this);
-                        administrador.getPrincipal().setVisible(true);
+                        jd_muroPrincipalAdministrador.setVisible(true);
+                        jd_muroPersonalAdministrador.pack();
+                        jd_muroPersonalAdministrador.setLocationRelativeTo(null);
                         this.setVisible(false);
                     }
                 }
@@ -2104,30 +2143,28 @@ public class NewJFrame extends javax.swing.JFrame {
             view.setFitWidth(600);
             media.setVolume(0.2);
             media.setCycleCount(MediaPlayer.INDEFINITE);
-            media.play();
             
         }
     }//GEN-LAST:event_lb_agregarVideoMouseClicked
 
     private void lb_agregarFotoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_agregarFotoMouseClicked
-        String ruta = "";
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
-        fileChooser.setFileFilter(filtro);
-        int result = fileChooser.showOpenDialog(jd_crearPublicacion);
-        if (result == JFileChooser.APPROVE_OPTION) {
-            //foto
-            ruta = fileChooser.getSelectedFile().getPath();
-            Image imagen = new ImageIcon(ruta).getImage();
-            ImageIcon icon = new ImageIcon(imagen.getScaledInstance(lb_subirMedia.getWidth(), lb_subirMedia.getHeight(), Image.SCALE_SMOOTH));
-            lb_subirMedia.setIcon(icon);
+        JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(430, 280, 0);
+            this.lb_subirMedia.setIcon(new ImageIcon(img));
         }
     }//GEN-LAST:event_lb_agregarFotoMouseClicked
 
     private void bt_publicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarMouseClicked
         JOptionPane.showMessageDialog(jd_crearPublicacion, "Post ingresado correctamente");
+        jd_crearPublicacion.setVisible(false);
         lb_subirMedia.setIcon(null);
-        media.stop();
         crearPensamiento.setText("");
 
     }//GEN-LAST:event_bt_publicarMouseClicked
@@ -2174,17 +2211,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_cerrarSesionMouseClicked
 
     private void lb_proPicRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicRegMouseClicked
-        String ruta = "";
-        JFileChooser fr = new JFileChooser();
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
-        fr.setFileFilter(filtro);
-        int r = fr.showOpenDialog(jd_muroPersonal);
-        if (r == JFileChooser.APPROVE_OPTION) {
-            //foto
-            ruta = fr.getSelectedFile().getPath();
-            Image imagen = new ImageIcon(ruta).getImage();
-            ImageIcon m = new ImageIcon(imagen.getScaledInstance(lb_proPicReg.getWidth(), lb_proPicReg.getHeight(), Image.SCALE_SMOOTH));
-            lb_proPicReg.setIcon(m);
+        JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(170, 140, 0);
+            this.lb_proPicReg.setIcon(new ImageIcon(img));
         }
     }//GEN-LAST:event_lb_proPicRegMouseClicked
 
@@ -2194,6 +2230,59 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_createAdmin.setLocationRelativeTo(null);
         jd_createAdmin.setVisible(true);
     }//GEN-LAST:event_bt_agregarAdminMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+jd_muroPersonalAdministrador.dispose();
+this.pack();
+this.setVisible(true);
+this.setLocationRelativeTo(null);
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void bt_reproductorPersAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reproductorPersAdminMouseClicked
+ReproductorMusical();    
+    }//GEN-LAST:event_bt_reproductorPersAdminMouseClicked
+
+    private void lb_proPicAdminPersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicAdminPersMouseClicked
+       JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(220, 148, 0);
+            this.lb_proPicAdminPers.setIcon(new ImageIcon(img));
+        }
+    }//GEN-LAST:event_lb_proPicAdminPersMouseClicked
+
+    private void lb_proPicPrincipalAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicPrincipalAdminMouseClicked
+       JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(181, 156, 0);
+            this.lb_proPicPrincipalAdmin.setIcon(new ImageIcon(img));
+        }
+    }//GEN-LAST:event_lb_proPicPrincipalAdminMouseClicked
+
+    private void lb_proPicPrincipalRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicPrincipalRegMouseClicked
+       JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(170, 140, 0);
+            this.lb_proPicPrincipalReg.setIcon(new ImageIcon(img));
+        }
+    }//GEN-LAST:event_lb_proPicPrincipalRegMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -2272,6 +2361,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField crearPensamiento;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
@@ -2346,6 +2438,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator10;
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
+    private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -2524,4 +2617,5 @@ public class NewJFrame extends javax.swing.JFrame {
 
         return false;
     }
+
 }
