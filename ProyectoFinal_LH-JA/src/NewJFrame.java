@@ -18,6 +18,7 @@ import javafx.scene.Scene;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JFileChooser;
@@ -64,8 +65,16 @@ public class NewJFrame extends javax.swing.JFrame {
         jSeparator8 = new javax.swing.JSeparator();
         jLabel14 = new javax.swing.JLabel();
         bt_homeMuroAdmin = new javax.swing.JButton();
-        jPanel11 = new javax.swing.JPanel();
         bt_cerrarSesion = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jPanel20 = new javax.swing.JPanel();
+        lb_imagenPublicacion1 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jPanel21 = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         lb_proPicPrincipalReg = new javax.swing.JLabel();
@@ -148,7 +157,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        crearPensamiento = new javax.swing.JTextField();
+        tf_crearPensamiento = new javax.swing.JTextField();
         lb_subirMedia = new javax.swing.JLabel();
         bt_publicar = new javax.swing.JButton();
         lb_agregarVideo = new javax.swing.JLabel();
@@ -195,13 +204,23 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jSeparator13 = new javax.swing.JSeparator();
-        jDialog1 = new javax.swing.JDialog();
+        jd_calendario = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
         jCalendar1 = new com.toedter.calendar.JCalendar();
         jScrollPane4 = new javax.swing.JScrollPane();
         jList4 = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
         jList5 = new javax.swing.JList<>();
+        jd_editarPerfil = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jCheckBox2 = new javax.swing.JCheckBox();
+        jCheckBox3 = new javax.swing.JCheckBox();
+        jButton7 = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jSpinner1 = new javax.swing.JSpinner();
+        jSpinner2 = new javax.swing.JSpinner();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -233,6 +252,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(lb_proPicReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("Amigos");
         jLabel12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
@@ -241,6 +261,7 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_editarPerfil.setText("Editar perfil");
         jPanel3.add(bt_editarPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, -1, -1));
 
+        jLabel20.setForeground(new java.awt.Color(0, 0, 0));
         jLabel20.setText("Sugerencias de amigos");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 150, 190));
@@ -255,6 +276,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 130, 120));
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Regresar Menu Principal");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
@@ -263,6 +285,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel13.setText("¿Que estas pensando?");
         jLabel13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel13.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -287,14 +310,14 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addComponent(jLabel14)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(129, Short.MAX_VALUE))
             .addGroup(jPanel10Layout.createSequentialGroup()
                 .addComponent(jSeparator8)
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(19, 19, 19))
+                .addGap(51, 51, 51))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -321,21 +344,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_homeMuroAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
 
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
-        jPanel11.setLayout(jPanel11Layout);
-        jPanel11Layout.setHorizontalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 320, Short.MAX_VALUE)
-        );
-        jPanel11Layout.setVerticalGroup(
-            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 370, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 320, 370));
-
         bt_cerrarSesion.setBackground(new java.awt.Color(255, 80, 107));
         bt_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
         bt_cerrarSesion.setText("Cerrar Sesión");
@@ -353,6 +361,91 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel3.add(bt_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 80, 20));
+
+        jButton4.setText("Continuar navegando");
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, -1, -1));
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
+
+        lb_imagenPublicacion1.setBackground(new java.awt.Color(255, 255, 255));
+        lb_imagenPublicacion1.setForeground(new java.awt.Color(0, 0, 0));
+        lb_imagenPublicacion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_imagenPublicacion1.setText("IMAGEN AQUI");
+
+        jButton5.setText("Like");
+
+        jButton6.setText("Comentar");
+
+        jTextField3.setEditable(false);
+        jTextField3.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jTextField3.setText("Texto Aquí");
+
+        jTextField4.setEditable(false);
+        jTextField4.setText("contador likes");
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton6)))
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jTextField3, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton5)
+                            .addComponent(jButton6))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+
+        jPanel3.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 320, 150));
+
+        jPanel21.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel15.setText("jLabel11");
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(214, Short.MAX_VALUE))
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, -1));
 
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
@@ -377,11 +470,6 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_proPicPrincipalReg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_proPicPrincipalReg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicPrincipalReg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
-        lb_proPicPrincipalReg.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lb_proPicPrincipalRegMouseClicked(evt);
-            }
-        });
         jPanel5.add(lb_proPicPrincipalReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
         bt_homeMuroRegular.setBackground(new java.awt.Color(240, 242, 245));
@@ -490,6 +578,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel5.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 140, 180, 370));
 
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Ir a tu Muro Principal");
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
 
@@ -623,7 +712,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel33.setText("Confirma tu contraseña: ");
         jPanel8.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
 
-        sp_yearU.setModel(new javax.swing.SpinnerNumberModel(1900, 1900, 2024, 1));
+        sp_yearU.setModel(new javax.swing.SpinnerNumberModel(1970, 1970, 2024, 1));
         jPanel8.add(sp_yearU, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, -1, -1));
 
         header_register1.setBackground(new java.awt.Color(255, 255, 255));
@@ -912,7 +1001,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel45.setText("Confirma tu contraseña: ");
         jPanel9.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 320, -1, -1));
 
-        sp_yearAdmin.setModel(new javax.swing.SpinnerNumberModel(1900, 1900, 2024, 1));
+        sp_yearAdmin.setModel(new javax.swing.SpinnerNumberModel(1970, 1970, 2024, 1));
         jPanel9.add(sp_yearAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, -1, -1));
 
         header_registerAdmin.setBackground(new java.awt.Color(255, 255, 255));
@@ -1021,12 +1110,15 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel6.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(171, 20, 154, 37));
         jPanel6.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 63, 482, 10));
 
-        crearPensamiento.addMouseListener(new java.awt.event.MouseAdapter() {
+        tf_crearPensamiento.setForeground(new java.awt.Color(204, 204, 204));
+        tf_crearPensamiento.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_crearPensamiento.setText("¿Qué estás pensando?");
+        tf_crearPensamiento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                crearPensamientoMousePressed(evt);
+                tf_crearPensamientoMousePressed(evt);
             }
         });
-        jPanel6.add(crearPensamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 85, 422, 31));
+        jPanel6.add(tf_crearPensamiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(28, 85, 422, 31));
 
         lb_subirMedia.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         lb_subirMedia.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -1420,17 +1512,95 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
-        jDialog1.getContentPane().setLayout(jDialog1Layout);
-        jDialog1Layout.setHorizontalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jd_calendarioLayout = new javax.swing.GroupLayout(jd_calendario.getContentPane());
+        jd_calendario.getContentPane().setLayout(jd_calendarioLayout);
+        jd_calendarioLayout.setHorizontalGroup(
+            jd_calendarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
-        jDialog1Layout.setVerticalGroup(
-            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup()
+        jd_calendarioLayout.setVerticalGroup(
+            jd_calendarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_calendarioLayout.createSequentialGroup()
                 .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+
+        jCheckBox1.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox1.setText("Nombre");
+
+        jCheckBox2.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox2.setText("Fecha de nacimiento");
+
+        jCheckBox3.setForeground(new java.awt.Color(0, 0, 0));
+        jCheckBox3.setText("Apellido");
+
+        jButton7.setText("Aplicar Cambios");
+
+        jTextField1.setText("jTextField1");
+
+        jTextField2.setText("jTextField2");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(145, 145, 145)
+                        .addComponent(jButton7))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jCheckBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jCheckBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(36, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox1)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox2)
+                    .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jSpinner2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jCheckBox3)
+                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                .addComponent(jButton7)
+                .addGap(25, 25, 25))
+        );
+
+        javax.swing.GroupLayout jd_editarPerfilLayout = new javax.swing.GroupLayout(jd_editarPerfil.getContentPane());
+        jd_editarPerfil.getContentPane().setLayout(jd_editarPerfilLayout);
+        jd_editarPerfilLayout.setHorizontalGroup(
+            jd_editarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_editarPerfilLayout.setVerticalGroup(
+            jd_editarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_editarPerfilLayout.createSequentialGroup()
+                .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1743,8 +1913,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 String pais = tf_paisCreateU.getText();
                 Date fechaNacimiento = new Date(anio, mes, dia);
                 Usuario nuevoUsuario = new Regular(nombreCompleto, apodo, contrasenia, pais, fechaNacimiento);
-                nuevoUsuario.setPersonal(jd_muroPersonal);
-                nuevoUsuario.setPrincipal(jd_muroPrincipal);
                 administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
                 admin.cargarArchivo();
                 admin.setPersona(nuevoUsuario);
@@ -1759,7 +1927,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 tf_paisCreateU.setText("");
                 sp_dateU.setValue(1);
                 sp_monthU.setValue("Enero");
-                sp_yearU.setValue(1900);
+                sp_yearU.setValue(1970);
                 LlenarEspacios();
                 jd_createUser.dispose();
                 
@@ -1876,8 +2044,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 String pais = tf_paisAdmin.getText();
                 Date fechaNacimiento = new Date(anio, mes, dia);
                 Usuario nuevoUsuario = new Administrador(nombreCompleto, apodo, contrasenia, pais, fechaNacimiento);
-                nuevoUsuario.setPersonal(jd_muroPersonalAdministrador);
-                nuevoUsuario.setPrincipal(jd_muroPrincipalAdministrador);
                 administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
                 admin.cargarArchivo();
                 admin.setPersona(nuevoUsuario);
@@ -1892,7 +2058,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 tf_paisAdmin.setText("");
                 sp_dateAdmin.setValue(1);
                 sp_monthAdmin.setValue("Enero");
-                sp_yearAdmin.setValue(1900);
+                sp_yearAdmin.setValue(1970);
                 LlenarEspaciosAdmin();
                 jd_createAdmin.dispose();
                 
@@ -2137,29 +2303,42 @@ public class NewJFrame extends javax.swing.JFrame {
     private void bt_loginMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_loginMouseClicked
         if (ExisteUsuario(tf_username.getText())) {
             boolean encontrado = false;
+            indiceActual = -1;
             administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
             admin.cargarArchivo();
             for (Usuario regular : admin.getUsuarios()) {
                 if (regular.getNombre().equals(tf_username.getText()) && regular.getContrasenia().equals(pf_password.getText())) {
-                    jd_muroPrincipal.setVisible(true);
+                    encontrado = true;
+                    usuarioActual = regular;
                     jd_muroPrincipal.pack();
+                    lb_proPicPrincipalReg.setIcon(usuarioActual.getFotografia());
                     jd_muroPrincipal.setLocationRelativeTo(null);
+                    jd_muroPrincipal.setVisible(true);
                     this.setVisible(false);
                 }
+                indiceActual ++;
             }
             
             if (!encontrado) {
+                indiceActual = -1;
                 admin = new administradorUsuario("./Administradores.pfb");
                 admin.cargarArchivo();
                 for (Usuario administrador : admin.getUsuarios()) {
                     if (administrador.getNombre().equals(tf_username.getText()) && administrador.getContrasenia().equals(pf_password.getText())) {
+                        usuarioActual = administrador;
+                        jd_muroPrincipalAdministrador.pack();
+                        jd_muroPrincipalAdministrador.setLocationRelativeTo(null);
                         jd_muroPrincipalAdministrador.setVisible(true);
-                        jd_muroPersonalAdministrador.pack();
-                        jd_muroPersonalAdministrador.setLocationRelativeTo(null);
                         this.setVisible(false);
                     }
                 }
+                indiceActual ++;
             }
+            
+            if (!encontrado) {
+                JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecta");
+            }
+            
         } else {
             JOptionPane.showMessageDialog(this, "Registrate a Facebook para comenzar.");
         }
@@ -2177,16 +2356,16 @@ public class NewJFrame extends javax.swing.JFrame {
         crearPublicacion();
     }//GEN-LAST:event_jLabel8MouseClicked
 
-    private void crearPensamientoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_crearPensamientoMousePressed
-        if (crearPensamiento.getText().equals("")) {
-            crearPensamiento.setText("¿Que estás pensando?");
-            crearPensamiento.setForeground(Color.gray);
+    private void tf_crearPensamientoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_crearPensamientoMousePressed
+        if (tf_crearPensamiento.getText().equals("")) {
+            tf_crearPensamiento.setText("¿Qué estás pensando?");
+            tf_crearPensamiento.setForeground(Color.gray);
         }
-        if (crearPensamiento.getText().equals("¿Que estás pensando?")) {
-            crearPensamiento.setText("");
-            crearPensamiento.setForeground(Color.black);
+        if (tf_crearPensamiento.getText().equals("¿Qué estás pensando?")) {
+            tf_crearPensamiento.setText("");
+            tf_crearPensamiento.setForeground(Color.black);
         }
-    }//GEN-LAST:event_crearPensamientoMousePressed
+    }//GEN-LAST:event_tf_crearPensamientoMousePressed
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         crearPublicacion();
@@ -2229,10 +2408,18 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_lb_agregarFotoMouseClicked
 
     private void bt_publicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarMouseClicked
+        Publicacion nuevaPublicacion = new Publicacion(usuarioActual.getNombre(),tf_crearPensamiento.getText());
+        usuarioActual.getPublicacion().add(nuevaPublicacion);
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegular.pfb");
+        admin.cargarArchivo();
+        admin.getUsuarios().get(indiceActual).getPublicacion().add(nuevaPublicacion);
+        admin.escribirArchivo();
+        
+        
         JOptionPane.showMessageDialog(jd_crearPublicacion, "Post ingresado correctamente");
         jd_crearPublicacion.setVisible(false);
         lb_subirMedia.setIcon(null);
-        crearPensamiento.setText("");
+        tf_crearPensamiento.setText("¿Qué estás pensando?");
 
     }//GEN-LAST:event_bt_publicarMouseClicked
 
@@ -2280,15 +2467,25 @@ public class NewJFrame extends javax.swing.JFrame {
     private void lb_proPicRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicRegMouseClicked
         JFileChooser fc = new JFileChooser();
         FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
-        fc.setMultiSelectionEnabled(true);
+        fc.setMultiSelectionEnabled(false);
         fc.setFileFilter(filtro);
         File archivo;
         int op = fc.showOpenDialog(jd_muroPrincipal);
+        Image img;
         if (op == JFileChooser.APPROVE_OPTION) {
             archivo = fc.getSelectedFile();
-            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(170, 140, 0);
+            img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(170, 140, 0);
             this.lb_proPicReg.setIcon(new ImageIcon(img));
         }
+        
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin.cargarArchivo();
+        for (Usuario usuario : admin.getUsuarios()) {
+            if (usuario.getNombre().equals(usuarioActual.getNombre())) {
+                usuario.setFotografia(lb_proPicReg.getIcon());
+            }
+        }
+        admin.escribirArchivo();
     }//GEN-LAST:event_lb_proPicRegMouseClicked
 
     private void bt_agregarAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarAdminMouseClicked
@@ -2336,20 +2533,6 @@ ReproductorMusical();
             this.lb_proPicPrincipalAdmin.setIcon(new ImageIcon(img));
         }
     }//GEN-LAST:event_lb_proPicPrincipalAdminMouseClicked
-
-    private void lb_proPicPrincipalRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicPrincipalRegMouseClicked
-       JFileChooser fc = new JFileChooser();
-        FileFilter filtro = new FileNameExtensionFilter("Imagenes",  "png", "jpg", "jpeg", "gif");
-        fc.setMultiSelectionEnabled(true);
-        fc.setFileFilter(filtro);
-        File archivo;
-        int op = fc.showOpenDialog(jd_muroPrincipal);
-        if (op == JFileChooser.APPROVE_OPTION) {
-            archivo = fc.getSelectedFile();
-            Image img = Toolkit.getDefaultToolkit().createImage( archivo.getPath()).getScaledInstance(170, 140, 0);
-            this.lb_proPicPrincipalReg.setIcon(new ImageIcon(img));
-        }
-    }//GEN-LAST:event_lb_proPicPrincipalRegMouseClicked
 
     private void PlayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseClicked
         // TODO add your handling code here:
@@ -2429,19 +2612,25 @@ ReproductorMusical();
     private javax.swing.JButton bt_reproductorAdmin;
     private javax.swing.JButton bt_reproductorPersAdmin;
     private javax.swing.JButton bt_reproductorRegular;
-    private javax.swing.JTextField crearPensamiento;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private com.toedter.calendar.JCalendar jCalendar1;
-    private javax.swing.JDialog jDialog1;
+    private javax.swing.JCheckBox jCheckBox1;
+    private javax.swing.JCheckBox jCheckBox2;
+    private javax.swing.JCheckBox jCheckBox3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
@@ -2500,6 +2689,8 @@ ReproductorMusical();
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -2525,9 +2716,17 @@ ReproductorMusical();
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JDialog jd_calendario;
     private javax.swing.JDialog jd_crearPublicacion;
     private javax.swing.JDialog jd_createAdmin;
     private javax.swing.JDialog jd_createUser;
+    private javax.swing.JDialog jd_editarPerfil;
     private javax.swing.JDialog jd_muroPersonal;
     private javax.swing.JDialog jd_muroPersonalAdministrador;
     private javax.swing.JDialog jd_muroPrincipal;
@@ -2538,6 +2737,7 @@ ReproductorMusical();
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
+    private javax.swing.JLabel lb_imagenPublicacion1;
     private javax.swing.JLabel lb_proPicAdminPers;
     private javax.swing.JLabel lb_proPicPrincipalAdmin;
     private javax.swing.JLabel lb_proPicPrincipalReg;
@@ -2564,6 +2764,7 @@ ReproductorMusical();
     private javax.swing.JTextField tf_apellidoRegistrarU;
     private javax.swing.JTextField tf_apodoAdmin;
     private javax.swing.JTextField tf_apodoRegistrarU;
+    private javax.swing.JTextField tf_crearPensamiento;
     private javax.swing.JTextField tf_nombreAdmin;
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_paisAdmin;
@@ -2571,6 +2772,9 @@ ReproductorMusical();
     private javax.swing.JTextField tf_username;
     // End of variables declaration//GEN-END:variables
 
+    static Usuario usuarioActual;
+    static int indiceActual;
+    
     public void LlenarEspacios() {
 
         if (tf_nombreRegistrarU.getText().equals("")) {

@@ -32,8 +32,8 @@ public class administradorUsuario {
         this.archivo = archivo;
     }
 
-    public void setPersona(Usuario p) {
-        this.usuarios.add(p);
+    public void setPersona(Usuario persona) {
+        this.usuarios.add(persona);
     }
     
     @Override

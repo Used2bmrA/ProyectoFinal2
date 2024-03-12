@@ -3,28 +3,17 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.Icon;
-import javax.swing.JDialog;
 
 public class Usuario implements Serializable {
     private String nombre, nickname, contrasenia, pais;
     private Date fechaNacimiento;
-    private transient Icon fotografía;
+    private Icon fotografia;
     private ArrayList<Usuario> amigos = new ArrayList();
-//    private ArrayList<String> fotos = new ArrayList(); 
-//    private ArrayList<String> amigos = new ArrayList(); Incluida la ruta de las fotos de tus amigos
-    private ArrayList<Post> posts = new ArrayList();
-    private JDialog personal, principal;
+    private ArrayList<Publicacion> posts = new ArrayList();
     
-    private static final long serialVersionUID = 4636744672262166683L;
-
+    private static final long serialVersionUID = 444L;
     
-    public Usuario(){
-        principal = new JDialog();
-        principal.setTitle("Muro Principal");
-        principal.setSize(700,700);
-        principal.setLocationRelativeTo(null);
-        principal.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
-    }
+    
     public ArrayList<Usuario> getAmigos() {
         return amigos;
     }
@@ -33,36 +22,20 @@ public class Usuario implements Serializable {
         this.amigos = amigos;
     }
 
-    public ArrayList<Post> getPosts() {
+    public ArrayList<Publicacion> getPublicacion() {
         return posts;
     }
 
-    public void setPosts(ArrayList<Post> posts) {
+    public void setPublicacion(ArrayList<Publicacion> posts) {
         this.posts = posts;
     }
 
-    public JDialog getPersonal() {
-        return personal;
+    public Icon getFotografia() {
+        return fotografia;
     }
 
-    public void setPersonal(JDialog personal) {
-        this.personal = personal;
-    }
-
-    public JDialog getPrincipal() {
-        return principal;
-    }
-
-    public void setPrincipal(JDialog principal) {
-        this.principal = principal;
-    }
-
-    public Icon getFotografía() {
-        return fotografía;
-    }
-
-    public void setFotografía(Icon fotografía) {
-        this.fotografía = fotografía;
+    public void setFotografia(Icon fotografía) {
+        this.fotografia = fotografía;
     }
 
     public Usuario(String nombre, String nickname, String contrasenia, String pais, Date fechaNacimiento) {
@@ -113,11 +86,6 @@ public class Usuario implements Serializable {
         this.fechaNacimiento = fechaNacimiento;
     }
     
-    public void desplegarDialogs(){
-        principal.setVisible(true);
-        
-        
-    }
     
     @Override
     public String toString() {
