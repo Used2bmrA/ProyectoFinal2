@@ -8,8 +8,10 @@ import javax.swing.JDialog;
 public class Usuario implements Serializable {
     private String nombre, nickname, contrasenia, pais;
     private Date fechaNacimiento;
-    private transient Icon fotografía; 
+    private transient Icon fotografía;
     private ArrayList<Usuario> amigos = new ArrayList();
+//    private ArrayList<String> fotos = new ArrayList(); 
+//    private ArrayList<String> amigos = new ArrayList(); Incluida la ruta de las fotos de tus amigos
     private ArrayList<Post> posts = new ArrayList();
     private JDialog personal, principal;
     
