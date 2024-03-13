@@ -9,10 +9,18 @@ public class Usuario implements Serializable {
     private Date fechaNacimiento;
     private Icon fotografia;
     private ArrayList<Usuario> amigos = new ArrayList();
-    private ArrayList<Publicacion> posts = new ArrayList();
+    private ArrayList<String> solicitudes = new ArrayList();
+    private ArrayList<Publicacion> publicaciones = new ArrayList();
     
     private static final long serialVersionUID = 444L;
-    
+
+    public ArrayList<String> getSolicitudes() {
+        return solicitudes;
+    }
+
+    public void setSolicitudes(ArrayList<String> solicitudes) {
+        this.solicitudes = solicitudes;
+    }
     
     public ArrayList<Usuario> getAmigos() {
         return amigos;
@@ -22,12 +30,12 @@ public class Usuario implements Serializable {
         this.amigos = amigos;
     }
 
-    public ArrayList<Publicacion> getPublicacion() {
-        return posts;
+    public ArrayList<Publicacion> getPublicaciones() {
+        return publicaciones;
     }
 
-    public void setPublicacion(ArrayList<Publicacion> posts) {
-        this.posts = posts;
+    public void setPublicaciones(ArrayList<Publicacion> publicaciones) {
+        this.publicaciones = publicaciones;
     }
 
     public Icon getFotografia() {
