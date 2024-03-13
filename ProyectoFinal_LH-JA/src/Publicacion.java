@@ -4,6 +4,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javafx.scene.media.MediaPlayer;
 import javax.swing.Icon;
 
 class Publicacion implements Serializable{
@@ -12,7 +13,7 @@ class Publicacion implements Serializable{
     private int likes;
     private ArrayList<Publicacion> comentarios = new ArrayList();
     private Icon imagen;
-//    private Video video;
+    private MediaPlayer video;
     private Date fechaPublicacion = new Date();
 //    private int llave;
 //    private Video videos = new ArrayList(); Dirección para un video
