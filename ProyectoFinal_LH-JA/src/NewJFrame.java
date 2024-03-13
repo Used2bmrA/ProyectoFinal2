@@ -56,7 +56,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_muroPersonal = new javax.swing.JDialog();
         jPanel3 = new javax.swing.JPanel();
         lb_proPicReg = new javax.swing.JLabel();
-        bt_editarPerfil = new javax.swing.JButton();
         jLabel20 = new javax.swing.JLabel();
         bt_abrirReproductor = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
@@ -266,15 +265,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(lb_proPicReg, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 170, 140));
 
-        bt_editarPerfil.setText("Editar perfil");
-        bt_editarPerfil.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bt_editarPerfil.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bt_editarPerfilMouseClicked(evt);
-            }
-        });
-        jPanel3.add(bt_editarPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
-
         jLabel20.setText("Sugerencias de amigos");
         jLabel20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 3));
         jPanel3.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, 150, 190));
@@ -419,7 +409,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                     .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel20Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -428,7 +417,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bt_comentarPubPers1)
                             .addComponent(bt_likePubPers1))
-                        .addGap(0, 7, Short.MAX_VALUE)))
+                        .addGap(0, 25, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -565,7 +554,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_reproductorRegularMouseClicked(evt);
             }
         });
-        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
+        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -1251,13 +1240,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lb_proPicPrincipalAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
-        lb_proPicPrincipalAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        lb_proPicPrincipalAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lb_proPicPrincipalAdminMouseClicked(evt);
-            }
-        });
-        jPanel13.add(lb_proPicPrincipalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 181, 156));
+        lb_proPicPrincipalAdmin.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        jPanel13.add(lb_proPicPrincipalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 181, 156));
 
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
         jPanel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -1388,7 +1372,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 jLabel43MouseClicked(evt);
             }
         });
-        jPanel16.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(633, 76, -1, -1));
+        jPanel16.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 70, -1, -1));
 
         jPanel17.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1467,13 +1451,14 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 340, 391));
 
         lb_proPicAdminPers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
-        lb_proPicAdminPers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        lb_proPicAdminPers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        lb_proPicAdminPers.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         lb_proPicAdminPers.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 lb_proPicAdminPersMouseClicked(evt);
             }
         });
-        jPanel16.add(lb_proPicAdminPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 11, 220, 148));
+        jPanel16.add(lb_proPicAdminPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 190, 148));
 
         bt_reproductorPersAdmin.setText("Reproductor de Musica");
         bt_reproductorPersAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1485,10 +1470,10 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
 
         bt_calendarioPersAdmin.setText("Calendario");
-        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
 
         bt_chatPersAdmin.setText("Chat");
-        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, -1, -1));
+        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
         bt_agregarAdmin.setText("Agregar Usuario Administrador");
         bt_agregarAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -2449,9 +2434,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 indiceActual++;
             }
 
-            if (!encontrado) {
-                JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrecta");
-            }
+
 
         } else {
             JOptionPane.showMessageDialog(this, "Registrate a Facebook para comenzar.");
@@ -2546,15 +2529,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jl_muroPersonalAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_muroPersonalAdminMouseClicked
-jd_muroPersonalAdministrador.pack();
-jd_muroPersonalAdministrador.setLocationRelativeTo(null);
-jd_muroPersonalAdministrador.setVisible(true);
+        jd_muroPersonalAdministrador.pack();
+        jd_muroPersonalAdministrador.setLocationRelativeTo(null);
+        jd_muroPersonalAdministrador.setVisible(true);
     }//GEN-LAST:event_jl_muroPersonalAdminMouseClicked
 
     private void jLabel43MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel43MouseClicked
-        jd_muroPersonalAdministrador.setVisible(true);
+        jd_muroPersonalAdministrador.setVisible(false);
         jd_muroPersonalAdministrador.pack();
         jd_muroPersonalAdministrador.setLocationRelativeTo(null);
+        jd_muroPrincipalAdministrador.setVisible(true);
     }//GEN-LAST:event_jLabel43MouseClicked
 
     private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
@@ -2628,30 +2612,29 @@ jd_muroPersonalAdministrador.setVisible(true);
     private void lb_proPicAdminPersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicAdminPersMouseClicked
         JFileChooser fc = new JFileChooser();
         FileFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
-        fc.setMultiSelectionEnabled(true);
+        fc.setMultiSelectionEnabled(false);
         fc.setFileFilter(filtro);
         File archivo;
         int op = fc.showOpenDialog(jd_muroPrincipal);
+        Image img;
         if (op == JFileChooser.APPROVE_OPTION) {
             archivo = fc.getSelectedFile();
-            Image img = Toolkit.getDefaultToolkit().createImage(archivo.getPath()).getScaledInstance(220, 148, 0);
+            img = Toolkit.getDefaultToolkit().createImage(archivo.getPath()).getScaledInstance(190, 148, 0);
             this.lb_proPicAdminPers.setIcon(new ImageIcon(img));
+            lb_proPicPrincipalAdmin.setIcon(usuarioActual.getFotografia());
         }
-    }//GEN-LAST:event_lb_proPicAdminPersMouseClicked
 
-    private void lb_proPicPrincipalAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicPrincipalAdminMouseClicked
-        JFileChooser fc = new JFileChooser();
-        FileFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
-        fc.setMultiSelectionEnabled(true);
-        fc.setFileFilter(filtro);
-        File archivo;
-        int op = fc.showOpenDialog(jd_muroPrincipal);
-        if (op == JFileChooser.APPROVE_OPTION) {
-            archivo = fc.getSelectedFile();
-            Image img = Toolkit.getDefaultToolkit().createImage(archivo.getPath()).getScaledInstance(181, 156, 0);
-            this.lb_proPicPrincipalAdmin.setIcon(new ImageIcon(img));
+        administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
+        admin.cargarArchivo();
+        for (Usuario usuario : admin.getUsuarios()) {
+            if (usuario.getNombre().equals(usuarioActual.getNombre())) {
+                usuario.setFotografia(lb_proPicAdminPers.getIcon());
+
+            }
         }
-    }//GEN-LAST:event_lb_proPicPrincipalAdminMouseClicked
+        admin.escribirArchivo();
+        
+    }//GEN-LAST:event_lb_proPicAdminPersMouseClicked
 
     private void PlayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseClicked
         // TODO add your handling code here:
@@ -2696,18 +2679,9 @@ jd_muroPersonalAdministrador.setVisible(true);
         jc_fechaNacimiento.setSelected(false);
         jc_pais.setSelected(false);
         jc_nickname.setSelected(false);
-*/
+         */
 
     }//GEN-LAST:event_jb_aplicarCambiosMouseClicked
-
-    private void bt_editarPerfilMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_editarPerfilMouseClicked
-        jd_createAdmin.pack();
-        jd_createAdmin.setVisible(true);
-        /*jd_editarPerfil.pack();
-        jd_editarPerfil.setLocationRelativeTo(null);
-        jd_editarPerfil.setVisible(true);
-        */
-    }//GEN-LAST:event_bt_editarPerfilMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -2773,7 +2747,6 @@ jd_muroPersonalAdministrador.setVisible(true);
     private javax.swing.JButton bt_chatRegular;
     private javax.swing.JButton bt_comentarPubPers1;
     private javax.swing.JButton bt_comentarPubPers2;
-    private javax.swing.JButton bt_editarPerfil;
     private javax.swing.JButton bt_eliminarUsuario;
     private javax.swing.JButton bt_homeMuroAdmin;
     private javax.swing.JButton bt_homeMuroRegular;
