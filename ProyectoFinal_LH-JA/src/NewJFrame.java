@@ -11,6 +11,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -254,8 +255,26 @@ public class NewJFrame extends javax.swing.JFrame {
         sp_nuevoDia = new javax.swing.JSpinner();
         sp_nuevoMes = new javax.swing.JSpinner();
         sp_nuevoAño = new javax.swing.JSpinner();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList<>();
+        jd_eliminarUsuario = new javax.swing.JDialog();
+        jPanel23 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jSeparator15 = new javax.swing.JSeparator();
+        cb_usuariosRegularesEliminar = new javax.swing.JComboBox<>();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        tf_nombreEliminar = new javax.swing.JTextField();
+        tf_contraseñaEliminar = new javax.swing.JTextField();
+        tf_paisEliminar = new javax.swing.JTextField();
+        tf_nicknameEliminar = new javax.swing.JTextField();
+        lb_imagenEliminar = new javax.swing.JLabel();
+        sp_diaEliminar = new javax.swing.JSpinner();
+        sp_mesEliminar = new javax.swing.JSpinner();
+        sp_añoEliminar = new javax.swing.JSpinner();
+        jb_eliminarUsuario = new javax.swing.JButton();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -1612,6 +1631,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
         bt_eliminarUsuario.setText("Eliminar Usuario");
+        bt_eliminarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_eliminarUsuarioMouseClicked(evt);
@@ -1779,9 +1799,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lb_nuevaFechaNacimiento.setText("Fecha de Nacimiento:");
 
-        sp_nuevoDia.setModel(new javax.swing.SpinnerNumberModel(0, 0, 31, 1));
+        sp_nuevoDia.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
 
         sp_nuevoMes.setModel(new javax.swing.SpinnerListModel(new String[] {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}));
+
+        sp_nuevoAño.setModel(new javax.swing.SpinnerNumberModel(1990, 0, 1990, 1));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -1821,9 +1843,9 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(61, 61, 61)
                                 .addComponent(sp_nuevoDia, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(sp_nuevoAño, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1900,12 +1922,166 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jList1.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel17.setText("Eliminar Usuario");
+
+        cb_usuariosRegularesEliminar.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_usuariosRegularesEliminarItemStateChanged(evt);
+            }
         });
-        jScrollPane1.setViewportView(jList1);
+
+        jLabel18.setText("Nombre:");
+
+        jLabel20.setText("Pais:");
+
+        jLabel24.setText("Contraseña:");
+
+        jLabel52.setText("Foto de Perfil");
+
+        jLabel53.setText("Fecha de Nacimiento");
+
+        jLabel54.setText("NickName:");
+
+        tf_nombreEliminar.setEditable(false);
+
+        tf_contraseñaEliminar.setEditable(false);
+
+        tf_paisEliminar.setEditable(false);
+        tf_paisEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_paisEliminarActionPerformed(evt);
+            }
+        });
+
+        tf_nicknameEliminar.setEditable(false);
+
+        lb_imagenEliminar.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        sp_diaEliminar.setModel(new javax.swing.SpinnerNumberModel(1, 1, 31, 1));
+
+        sp_mesEliminar.setModel(new javax.swing.SpinnerListModel(new String[] {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}));
+
+        sp_añoEliminar.setModel(new javax.swing.SpinnerNumberModel(1990, 1990, 2024, 1));
+
+        jb_eliminarUsuario.setText("Eliminar Usuario");
+        jb_eliminarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jb_eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_eliminarUsuarioMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
+        jPanel23.setLayout(jPanel23Layout);
+        jPanel23Layout.setHorizontalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                        .addComponent(jLabel17)
+                        .addGap(223, 223, 223))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel23Layout.createSequentialGroup()
+                        .addComponent(cb_usuariosRegularesEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(207, 207, 207))))
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator15))
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel23Layout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel18)
+                                            .addComponent(jLabel20))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(tf_nombreEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                        .addGap(41, 41, 41)
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel54)
+                                            .addComponent(jLabel24))
+                                        .addGap(18, 18, 18)
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                            .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tf_contraseñaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jLabel52)
+                                        .addGap(171, 171, 171)
+                                        .addComponent(jLabel53))
+                                    .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addComponent(lb_imagenEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(50, 50, 50)
+                                        .addComponent(sp_diaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(sp_mesEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(12, 12, 12)
+                                        .addComponent(sp_añoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(jPanel23Layout.createSequentialGroup()
+                                .addGap(235, 235, 235)
+                                .addComponent(jb_eliminarUsuario)))
+                        .addGap(0, 26, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel23Layout.setVerticalGroup(
+            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel23Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator15, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(cb_usuariosRegularesEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel24)
+                    .addComponent(tf_nombreEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_contraseñaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel54)
+                    .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel52)
+                    .addComponent(jLabel53))
+                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(sp_diaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_mesEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sp_añoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel23Layout.createSequentialGroup()
+                        .addGap(24, 24, 24)
+                        .addComponent(lb_imagenEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addComponent(jb_eliminarUsuario)
+                .addGap(30, 30, 30))
+        );
+
+        javax.swing.GroupLayout jd_eliminarUsuarioLayout = new javax.swing.GroupLayout(jd_eliminarUsuario.getContentPane());
+        jd_eliminarUsuario.getContentPane().setLayout(jd_eliminarUsuarioLayout);
+        jd_eliminarUsuarioLayout.setHorizontalGroup(
+            jd_eliminarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_eliminarUsuarioLayout.createSequentialGroup()
+                .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jd_eliminarUsuarioLayout.setVerticalGroup(
+            jd_eliminarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Landing");
@@ -2970,11 +3146,19 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_modificarUsuarioMouseClicked
 
     private void bt_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarUsuarioMouseClicked
+        administradorUsuario u = new administradorUsuario("./UsuariosRegulares.pfb");
+        u.cargarArchivo();
+        DefaultComboBoxModel ee = new DefaultComboBoxModel(u.getUsuarios().toArray());
+        cb_usuariosRegularesEliminar.setModel(ee);
+
+        jd_eliminarUsuario.pack();
+        jd_eliminarUsuario.setLocationRelativeTo(null);
+        jd_eliminarUsuario.setVisible(true);
 
     }//GEN-LAST:event_bt_eliminarUsuarioMouseClicked
 
     private void cb_usuariosRegularesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_usuariosRegularesItemStateChanged
-        
+
         if (evt.getStateChange() == 1) {
             Usuario usuario = (Usuario) cb_usuariosRegulares.getSelectedItem();
             pos = cb_usuariosRegulares.getSelectedIndex();
@@ -3003,41 +3187,40 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_usuariosRegularesItemStateChanged
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-int dia1;
-int mes1;
-int año1;
+        int dia1;
+        int mes1;
+        int año1;
         String mesFromSp = sp_nuevoMes.getValue().toString();
 
-            if (mesFromSp.equals("Enero")) {
-                mes1 = 0;
-            } else if (mesFromSp.equals("Febrero")) {
-                mes1 = 1;
-            } else if (mesFromSp.equals("Marzo")) {
-                mes1 = 2;
-            } else if (mesFromSp.equals("Abril")) {
-                mes1 = 3;
-            } else if (mesFromSp.equals("Mayo")) {
-                mes1 = 4;
-            } else if (mesFromSp.equals("Junio")) {
-                mes1 = 5;
-            } else if (mesFromSp.equals("Julio")) {
-                mes1 = 6;
-            } else if (mesFromSp.equals("Agosto")) {
-                mes1 = 7;
-            } else if (mesFromSp.equals("Septiembre")) {
-                mes1 = 8;
-            } else if (mesFromSp.equals("Octubre")) {
-                mes1 = 9;
-            } else if (mesFromSp.equals("Noviembre")) {
-                mes1 = 10;
-            } else {
-                mes1 = 11;
-            }
-            
-dia1 = (int) sp_nuevoDia.getValue();
-año1 = (int) sp_nuevoAño.getValue();
+        if (mesFromSp.equals("Enero")) {
+            mes1 = 0;
+        } else if (mesFromSp.equals("Febrero")) {
+            mes1 = 1;
+        } else if (mesFromSp.equals("Marzo")) {
+            mes1 = 2;
+        } else if (mesFromSp.equals("Abril")) {
+            mes1 = 3;
+        } else if (mesFromSp.equals("Mayo")) {
+            mes1 = 4;
+        } else if (mesFromSp.equals("Junio")) {
+            mes1 = 5;
+        } else if (mesFromSp.equals("Julio")) {
+            mes1 = 6;
+        } else if (mesFromSp.equals("Agosto")) {
+            mes1 = 7;
+        } else if (mesFromSp.equals("Septiembre")) {
+            mes1 = 8;
+        } else if (mesFromSp.equals("Octubre")) {
+            mes1 = 9;
+        } else if (mesFromSp.equals("Noviembre")) {
+            mes1 = 10;
+        } else {
+            mes1 = 11;
+        }
 
-        Date nacimiento = new Date(dia1, mes1, año1);
+        dia1 = (int) sp_nuevoDia.getValue();
+        año1 = (int) sp_nuevoAño.getValue();
+        Date nacimiento = new Date(año1, mes1, dia1);
         DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
         Usuario usuario1 = (Usuario) modelo.getElementAt(pos);
         usuario1.setNombre(tf_nuevoNombre.getText());
@@ -3045,7 +3228,7 @@ año1 = (int) sp_nuevoAño.getValue();
         usuario1.setNickname(tf_nicknameNuevo.getText());
         usuario1.setPais(tf_paisNuevo.getText());
         usuario1.setFechaNacimiento(nacimiento);
-        
+
         administradorUsuario usuario = new administradorUsuario("./UsuariosRegulares.pfb");
         usuario.cargarArchivo();
         usuario.getUsuarios().get(pos).setNombre(tf_nuevoNombre.getText());
@@ -3099,6 +3282,44 @@ año1 = (int) sp_nuevoAño.getValue();
         jd_createUser.setVisible(true);
     }//GEN-LAST:event_bt_listarUsuarioMouseClicked
 
+    private void tf_paisEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_paisEliminarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_paisEliminarActionPerformed
+
+    private void cb_usuariosRegularesEliminarItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_usuariosRegularesEliminarItemStateChanged
+
+        if (evt.getStateChange() == 1) {
+            Usuario usuario2 = (Usuario) cb_usuariosRegularesEliminar.getSelectedItem();
+            pos = cb_usuariosRegularesEliminar.getSelectedIndex();
+            if (usuario2 != null) {
+                tf_nombreEliminar.setText(usuario2.getNombre());
+                tf_contraseñaEliminar.setText(usuario2.getContrasenia());
+                tf_nicknameEliminar.setText(usuario2.getNickname());
+                tf_paisEliminar.setText(usuario2.getPais());
+                sp_diaEliminar.setValue(usuario2.getFechaNacimiento().getDate());
+                int mes2 = usuario2.getFechaNacimiento().getMonth();
+                String[] meses2 = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+                String mesess = meses2[mes2];
+                sp_mesEliminar.setValue(mesess);
+                sp_añoEliminar.setValue(usuario2.getFechaNacimiento().getYear());
+                if (usuario2.getFotografia() == null) {
+                    lb_imagenEliminar.setIcon(null);
+                } else {
+                    ImageIcon icono = (ImageIcon) usuario2.getFotografia();
+                    Image icono2 = (Image) icono.getImage();
+                    Image renderizada = icono2.getScaledInstance(175, 146, Image.SCALE_SMOOTH);
+                    Icon renderizado2 = new ImageIcon(renderizada);
+                    lb_imagenEliminar.setIcon(renderizado2);
+                }
+            }
+        }
+
+    }//GEN-LAST:event_cb_usuariosRegularesEliminarItemStateChanged
+
+    private void jb_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarUsuarioMouseClicked
+        //me falta programarlo tenia otras tareas
+    }//GEN-LAST:event_jb_eliminarUsuarioMouseClicked
+
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
         jd_reproductorMusical.pack();
@@ -3110,7 +3331,6 @@ año1 = (int) sp_nuevoAño.getValue();
         jd_crearPublicacion.pack();
         jd_crearPublicacion.setLocationRelativeTo(null);
     }
-    
 
     /**
      * @param args the command line arguments
@@ -3187,6 +3407,7 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JButton bt_reproductorRegular;
     private javax.swing.JButton bt_verSolicitudes;
     private javax.swing.JComboBox<String> cb_usuariosRegulares;
+    private javax.swing.JComboBox<String> cb_usuariosRegularesEliminar;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
     private javax.swing.JButton jButton1;
@@ -3202,11 +3423,15 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
@@ -3237,11 +3462,13 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
@@ -3261,6 +3488,7 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3268,7 +3496,6 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3279,6 +3506,7 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
+    private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -3287,10 +3515,12 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JButton jb_eliminarUsuario;
     private javax.swing.JDialog jd_calendario;
     private javax.swing.JDialog jd_crearPublicacion;
     private javax.swing.JDialog jd_createAdmin;
     private javax.swing.JDialog jd_createUser;
+    private javax.swing.JDialog jd_eliminarUsuario;
     private javax.swing.JDialog jd_modificarUsuarios;
     private javax.swing.JDialog jd_muroPersonal;
     private javax.swing.JDialog jd_muroPersonalAdministrador;
@@ -3304,6 +3534,7 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
+    private javax.swing.JLabel lb_imagenEliminar;
     private javax.swing.JLabel lb_imagenPrincipal1;
     private javax.swing.JLabel lb_imagenPrincipal2;
     private javax.swing.JLabel lb_imagenPublicacion1;
@@ -3332,8 +3563,11 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JPanel pn_postPrincipal1;
     private javax.swing.JPanel pn_postPrincipal2;
     private javax.swing.JLabel reproductorTexto;
+    private javax.swing.JSpinner sp_añoEliminar;
     private javax.swing.JSpinner sp_dateAdmin;
     private javax.swing.JSpinner sp_dateU;
+    private javax.swing.JSpinner sp_diaEliminar;
+    private javax.swing.JSpinner sp_mesEliminar;
     private javax.swing.JSpinner sp_monthAdmin;
     private javax.swing.JSpinner sp_monthU;
     private javax.swing.JSpinner sp_nuevoAño;
@@ -3345,19 +3579,23 @@ año1 = (int) sp_nuevoAño.getValue();
     private javax.swing.JTextField tf_apellidoRegistrarU;
     private javax.swing.JTextField tf_apodoAdmin;
     private javax.swing.JTextField tf_apodoRegistrarU;
+    private javax.swing.JTextField tf_contraseñaEliminar;
     private javax.swing.JTextField tf_contraseñaNueva;
     private javax.swing.JTextField tf_crearPensamiento;
     private javax.swing.JTextField tf_likesPers1;
     private javax.swing.JTextField tf_likesPers2;
     private javax.swing.JTextField tf_likesPrin1;
     private javax.swing.JTextField tf_likesPrin2;
+    private javax.swing.JTextField tf_nicknameEliminar;
     private javax.swing.JTextField tf_nicknameNuevo;
     private javax.swing.JTextField tf_nombreAdmin;
+    private javax.swing.JTextField tf_nombreEliminar;
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_nombreSugerencia;
     private javax.swing.JTextField tf_nuevoNombre;
     private javax.swing.JTextField tf_paisAdmin;
     private javax.swing.JTextField tf_paisCreateU;
+    private javax.swing.JTextField tf_paisEliminar;
     private javax.swing.JTextField tf_paisNuevo;
     private javax.swing.JTextField tf_textoPubPers1;
     private javax.swing.JTextField tf_textoPubPers2;
