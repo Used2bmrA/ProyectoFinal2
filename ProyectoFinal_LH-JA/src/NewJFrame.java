@@ -1575,25 +1575,32 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_reproductorPersAdminMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, -1, -1));
+        jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
 
         bt_calendarioPersAdmin.setText("Calendario");
-        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 200, -1, -1));
+        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 100, -1));
 
         bt_chatPersAdmin.setText("Chat");
-        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
+        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, 80, -1));
 
         bt_agregarAdmin.setText("Agregar Usuario Administrador");
+        bt_agregarAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_agregarAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_agregarAdminMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_agregarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
-        jPanel16.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 189, 10));
+        jPanel16.add(bt_agregarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        jPanel16.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 189, 10));
 
         bt_listarUsuario.setText("Agregar Usuario Regular");
-        jPanel16.add(bt_listarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
+        bt_listarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_listarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_listarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel16.add(bt_listarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, -1, -1));
 
         bt_modificarUsuario.setText("Modificar Usuario");
         bt_modificarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1602,15 +1609,15 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_modificarUsuarioMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
 
-        bt_eliminarUsuario.setText("Eliminar Usuario Administrador");
+        bt_eliminarUsuario.setText("Eliminar Usuario");
         bt_eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_eliminarUsuarioMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
+        jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
         jScrollPane3.setViewportView(jList3);
 
@@ -1624,7 +1631,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel16.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, -1, -1));
-        jPanel16.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, 20));
+        jPanel16.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 220, 20));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
         jd_muroPersonalAdministrador.getContentPane().setLayout(jd_muroPersonalAdministradorLayout);
@@ -1772,6 +1779,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lb_nuevaFechaNacimiento.setText("Fecha de Nacimiento:");
 
+        sp_nuevoDia.setModel(new javax.swing.SpinnerNumberModel(0, 0, 31, 1));
+
+        sp_nuevoMes.setModel(new javax.swing.SpinnerListModel(new String[] {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}));
+
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
         jPanel11Layout.setHorizontalGroup(
@@ -1807,17 +1818,17 @@ public class NewJFrame extends javax.swing.JFrame {
                             .addGroup(jPanel11Layout.createSequentialGroup()
                                 .addGap(179, 179, 179)
                                 .addComponent(tf_contraseñaNueva, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(61, 61, 61)
+                                .addComponent(sp_nuevoDia, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(sp_nuevoAño, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(lb_nuevaFechaNacimiento)
-                                .addGap(119, 119, 119))
-                            .addGroup(jPanel11Layout.createSequentialGroup()
-                                .addGap(46, 46, 46)
-                                .addComponent(sp_nuevoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45)
-                                .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(50, 50, 50)
-                                .addComponent(sp_nuevoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addGap(100, 100, 100)))))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -2729,6 +2740,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jl_muroPersonalAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_muroPersonalAdminMouseClicked
+        jd_muroPrincipalAdministrador.setVisible(false);
         jd_muroPersonalAdministrador.pack();
         jd_muroPersonalAdministrador.setLocationRelativeTo(null);
         jd_muroPersonalAdministrador.setVisible(true);
@@ -2947,14 +2959,14 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_rechazarMouseClicked
 
     private void bt_modificarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificarUsuarioMouseClicked
-administradorUsuario u = new administradorUsuario("./UsuariosRegulares.pfb");
-u.cargarArchivo();        
-DefaultComboBoxModel e = new DefaultComboBoxModel(u.getUsuarios().toArray());
-cb_usuariosRegulares.setModel(e);
+        administradorUsuario u = new administradorUsuario("./UsuariosRegulares.pfb");
+        u.cargarArchivo();
+        DefaultComboBoxModel e = new DefaultComboBoxModel(u.getUsuarios().toArray());
+        cb_usuariosRegulares.setModel(e);
 
-jd_modificarUsuarios.pack();
-jd_modificarUsuarios.setLocationRelativeTo(null);
-jd_modificarUsuarios.setVisible(true);
+        jd_modificarUsuarios.pack();
+        jd_modificarUsuarios.setLocationRelativeTo(null);
+        jd_modificarUsuarios.setVisible(true);
     }//GEN-LAST:event_bt_modificarUsuarioMouseClicked
 
     private void bt_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarUsuarioMouseClicked
@@ -2962,75 +2974,130 @@ jd_modificarUsuarios.setVisible(true);
     }//GEN-LAST:event_bt_eliminarUsuarioMouseClicked
 
     private void cb_usuariosRegularesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_usuariosRegularesItemStateChanged
-if( evt.getStateChange() == 1){
-    Usuario usuario = (Usuario) cb_usuariosRegulares.getSelectedItem();
-    pos = cb_usuariosRegulares.getSelectedIndex();
-    if(usuario!= null){
-        tf_nuevoNombre.setText(usuario.getNombre());
-        tf_nicknameNuevo.setText(usuario.getNickname());
-        tf_contraseñaNueva.setText(usuario.getContrasenia());
-        tf_paisNuevo.setText(usuario.getPais());
-        if(usuario.getFotografia() == null){
-            lb_nuevaFotoPerfil.setIcon(null);
-        }else{
-        ImageIcon icono = (ImageIcon) usuario.getFotografia();
+        
+        if (evt.getStateChange() == 1) {
+            Usuario usuario = (Usuario) cb_usuariosRegulares.getSelectedItem();
+            pos = cb_usuariosRegulares.getSelectedIndex();
+            if (usuario != null) {
+                tf_nuevoNombre.setText(usuario.getNombre());
+                tf_nicknameNuevo.setText(usuario.getNickname());
+                tf_contraseñaNueva.setText(usuario.getContrasenia());
+                tf_paisNuevo.setText(usuario.getPais());
+                sp_nuevoDia.setValue(usuario.getFechaNacimiento().getDay());
+                int mes1 = usuario.getFechaNacimiento().getMonth();
+                String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+                String mes = meses[mes1];
+                sp_nuevoMes.setValue(mes);
+                sp_nuevoAño.setValue(usuario.getFechaNacimiento().getYear());
+                if (usuario.getFotografia() == null) {
+                    lb_nuevaFotoPerfil.setIcon(null);
+                } else {
+                    ImageIcon icono = (ImageIcon) usuario.getFotografia();
                     Image icono2 = (Image) icono.getImage();
-                    Image renderizada = icono2.getScaledInstance(145, 124, Image.SCALE_SMOOTH); 
+                    Image renderizada = icono2.getScaledInstance(145, 124, Image.SCALE_SMOOTH);
                     Icon renderizado2 = new ImageIcon(renderizada);
                     lb_nuevaFotoPerfil.setIcon(renderizado2);
-    }
-    }
-}
+                }
+            }
+        }
     }//GEN-LAST:event_cb_usuariosRegularesItemStateChanged
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+int dia1;
+int mes1;
+int año1;
+        String mesFromSp = sp_nuevoMes.getValue().toString();
 
-       DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
-       Usuario usuario1 = (Usuario) modelo.getElementAt(pos);
-       usuario1.setNombre(tf_nuevoNombre.getText());
-       usuario1.setContrasenia(tf_contraseñaNueva.getText());
-       usuario1.setNickname(tf_nicknameNuevo.getText());
-       usuario1.setPais(tf_paisNuevo.getText());
-       
-       administradorUsuario usuario = new administradorUsuario("./UsuariosRegulares.pfb");
-       usuario.cargarArchivo();
-       usuario.getUsuarios().get(pos).setNombre(tf_nuevoNombre.getText());
-       usuario.getUsuarios().get(pos).setContrasenia(tf_contraseñaNueva.getText());
-       usuario.getUsuarios().get(pos).setNickname(tf_nicknameNuevo.getText());
-       usuario.getUsuarios().get(pos).setPais(tf_paisNuevo.getText());
-       usuario.escribirArchivo();
-       JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Usuario modificado exitosamente");
- jd_muroPersonalAdministrador.setVisible(true);
-       jd_modificarUsuarios.setVisible(false);
+            if (mesFromSp.equals("Enero")) {
+                mes1 = 0;
+            } else if (mesFromSp.equals("Febrero")) {
+                mes1 = 1;
+            } else if (mesFromSp.equals("Marzo")) {
+                mes1 = 2;
+            } else if (mesFromSp.equals("Abril")) {
+                mes1 = 3;
+            } else if (mesFromSp.equals("Mayo")) {
+                mes1 = 4;
+            } else if (mesFromSp.equals("Junio")) {
+                mes1 = 5;
+            } else if (mesFromSp.equals("Julio")) {
+                mes1 = 6;
+            } else if (mesFromSp.equals("Agosto")) {
+                mes1 = 7;
+            } else if (mesFromSp.equals("Septiembre")) {
+                mes1 = 8;
+            } else if (mesFromSp.equals("Octubre")) {
+                mes1 = 9;
+            } else if (mesFromSp.equals("Noviembre")) {
+                mes1 = 10;
+            } else {
+                mes1 = 11;
+            }
+            
+dia1 = (int) sp_nuevoDia.getValue();
+año1 = (int) sp_nuevoAño.getValue();
+
+        Date nacimiento = new Date(dia1, mes1, año1);
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
+        Usuario usuario1 = (Usuario) modelo.getElementAt(pos);
+        usuario1.setNombre(tf_nuevoNombre.getText());
+        usuario1.setContrasenia(tf_contraseñaNueva.getText());
+        usuario1.setNickname(tf_nicknameNuevo.getText());
+        usuario1.setPais(tf_paisNuevo.getText());
+        usuario1.setFechaNacimiento(nacimiento);
+        
+        administradorUsuario usuario = new administradorUsuario("./UsuariosRegulares.pfb");
+        usuario.cargarArchivo();
+        usuario.getUsuarios().get(pos).setNombre(tf_nuevoNombre.getText());
+        usuario.getUsuarios().get(pos).setContrasenia(tf_contraseñaNueva.getText());
+        usuario.getUsuarios().get(pos).setNickname(tf_nicknameNuevo.getText());
+        usuario.getUsuarios().get(pos).setPais(tf_paisNuevo.getText());
+        usuario.getUsuarios().get(pos).setFechaNacimiento(nacimiento);
+        usuario.escribirArchivo();
+        JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Usuario modificado exitosamente");
+
+        jd_modificarUsuarios.setVisible(false);
+        jd_muroPersonalAdministrador.setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-     
+
         JFileChooser f = new JFileChooser();
         FileNameExtensionFilter r = new FileNameExtensionFilter("Imagenes", "png", "peg");
         f.setFileFilter(r);
         int opcion = f.showOpenDialog(this);
-        if(opcion == JFileChooser.APPROVE_OPTION){
+        if (opcion == JFileChooser.APPROVE_OPTION) {
             File file;
             file = f.getSelectedFile();
             Image img = Toolkit.getDefaultToolkit().createImage(file.getPath()).getScaledInstance(146, 124, 0);
             this.lb_nuevaFotoPerfil.setIcon(new ImageIcon(img));
-            
+
             DefaultComboBoxModel e = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
-        Usuario ts = (Usuario) e.getElementAt(pos);
-        ts.setFotografia(lb_nuevaFotoPerfil.getIcon());
-        cb_usuariosRegulares.setModel(e);
-        
-        administradorUsuario admin2 = new administradorUsuario("./UsuariosRegulares.pfb");
-        admin2.cargarArchivo();
-        admin2.getUsuarios().get(pos).setFotografia(lb_nuevaFotoPerfil.getIcon());
-        JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Foto de Perfil Modificada exitosamente");
-        }else{
-           JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "No ha modificado nada.");
-         
+            Usuario ts = (Usuario) e.getElementAt(pos);
+            ts.setFotografia(lb_nuevaFotoPerfil.getIcon());
+            cb_usuariosRegulares.setModel(e);
+
+            administradorUsuario admin2 = new administradorUsuario("./UsuariosRegulares.pfb");
+            admin2.cargarArchivo();
+            admin2.getUsuarios().get(pos).setFotografia(lb_nuevaFotoPerfil.getIcon());
+            JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Foto de Perfil Modificada exitosamente");
+            admin2.escribirArchivo();
+        } else {
+            JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "No ha modificado nada.");
+
+            jd_muroPersonalAdministrador.setVisible(true);
+            jd_modificarUsuarios.setVisible(false);
+
         }
-        
+
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void bt_listarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_listarUsuarioMouseClicked
+        jd_muroPersonalAdministrador.dispose();
+        jd_createUser.pack();
+        jd_createUser.setLocationRelativeTo(null);
+        jd_createUser.setVisible(true);
+    }//GEN-LAST:event_bt_listarUsuarioMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -3043,6 +3110,7 @@ if( evt.getStateChange() == 1){
         jd_crearPublicacion.pack();
         jd_crearPublicacion.setLocationRelativeTo(null);
     }
+    
 
     /**
      * @param args the command line arguments
@@ -3554,7 +3622,3 @@ if( evt.getStateChange() == 1){
         lb_proPicReg.setIcon(usuarioActual.getFotografia());
     }
 }
-
-
-
-
