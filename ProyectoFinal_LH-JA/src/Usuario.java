@@ -97,8 +97,8 @@ public class Usuario implements Serializable {
     
     @Override
     public String toString() {
-        return "Ususario{" + "nombre=" + nombre + ", nickname=" + nickname + ", contrasenia=" + contrasenia + ", pais=" + pais + ", fechaNacimiento=" + fechaNacimiento + '}';
-    }
+        return nombre;
+                }
     
     
 }

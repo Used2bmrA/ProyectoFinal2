@@ -20,6 +20,7 @@ import javafx.scene.Scene;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javax.swing.DefaultComboBoxModel;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
@@ -218,8 +219,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         jList3 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
         jSeparator13 = new javax.swing.JSeparator();
         jd_calendario = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
@@ -228,28 +227,35 @@ public class NewJFrame extends javax.swing.JFrame {
         jList4 = new javax.swing.JList<>();
         jScrollPane5 = new javax.swing.JScrollPane();
         jList5 = new javax.swing.JList<>();
-        jd_editarPerfil = new javax.swing.JDialog();
-        jPanel11 = new javax.swing.JPanel();
-        jc_nombre = new javax.swing.JCheckBox();
-        jc_fechaNacimiento = new javax.swing.JCheckBox();
-        jb_aplicarCambios = new javax.swing.JButton();
-        tf_paisNuevo = new javax.swing.JTextField();
-        tf_nombreNuevo = new javax.swing.JTextField();
-        sp_mesNuevo = new javax.swing.JSpinner();
-        sp_diaNuevo = new javax.swing.JSpinner();
-        jLabel12 = new javax.swing.JLabel();
-        jc_nickname = new javax.swing.JCheckBox();
-        jc_contraseña = new javax.swing.JCheckBox();
-        jc_pais = new javax.swing.JCheckBox();
-        tf_nicknameNuevo = new javax.swing.JTextField();
-        tf_contraseñaNueva = new javax.swing.JTextField();
-        sp_añoNuevo = new javax.swing.JSpinner();
         jd_solicitud = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         lb_imgSolicitud = new javax.swing.JLabel();
         lb_nombreSolicitud = new javax.swing.JLabel();
         bt_aceptar = new javax.swing.JButton();
         bt_rechazar = new javax.swing.JButton();
+        jd_modificarUsuarios = new javax.swing.JDialog();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
+        cb_usuariosRegulares = new javax.swing.JComboBox<>();
+        jSeparator14 = new javax.swing.JSeparator();
+        lb_nuevoNombre = new javax.swing.JLabel();
+        tf_nuevoNombre = new javax.swing.JTextField();
+        jLabel11 = new javax.swing.JLabel();
+        tf_contraseñaNueva = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        tf_paisNuevo = new javax.swing.JTextField();
+        jLabel15 = new javax.swing.JLabel();
+        tf_nicknameNuevo = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        lb_nuevaFotoPerfil = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        lb_nuevaFechaNacimiento = new javax.swing.JLabel();
+        sp_nuevoDia = new javax.swing.JSpinner();
+        sp_nuevoMes = new javax.swing.JSpinner();
+        sp_nuevoAño = new javax.swing.JSpinner();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -1589,10 +1595,21 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_listarUsuario.setText("Agregar Usuario Regular");
         jPanel16.add(bt_listarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, -1));
 
-        bt_modificarUsuario.setText("Modificar Usuario Administrador");
-        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
+        bt_modificarUsuario.setText("Modificar Usuario");
+        bt_modificarUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_modificarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_modificarUsuarioMouseClicked(evt);
+            }
+        });
+        jPanel16.add(bt_modificarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
 
         bt_eliminarUsuario.setText("Eliminar Usuario Administrador");
+        bt_eliminarUsuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_eliminarUsuarioMouseClicked(evt);
+            }
+        });
         jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, -1, -1));
 
         jScrollPane3.setViewportView(jList3);
@@ -1607,12 +1624,6 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel16.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, -1, -1));
-
-        jButton2.setText("Modificar Usuario Regular");
-        jPanel16.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 470, -1, -1));
-
-        jButton3.setText("Eliminar Usuario Regular");
-        jPanel16.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 510, -1, -1));
         jPanel16.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 220, 20));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
@@ -1686,67 +1697,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jc_nombre.setText("Nombre");
-        jPanel11.add(jc_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 85, 98, 27));
-
-        jc_fechaNacimiento.setText("Fecha de nacimiento");
-        jPanel11.add(jc_fechaNacimiento, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 295, 146, -1));
-
-        jb_aplicarCambios.setText("Aplicar Cambios");
-        jb_aplicarCambios.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jb_aplicarCambiosMouseClicked(evt);
-            }
-        });
-        jPanel11.add(jb_aplicarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(175, 353, -1, -1));
-        jPanel11.add(tf_paisNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 234, 215, -1));
-        jPanel11.add(tf_nombreNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 85, 215, -1));
-
-        sp_mesNuevo.setModel(new javax.swing.SpinnerNumberModel(12, null, 12, 1));
-        jPanel11.add(sp_mesNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 292, -1, -1));
-
-        sp_diaNuevo.setModel(new javax.swing.SpinnerNumberModel(0, null, 31, 1));
-        jPanel11.add(sp_diaNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 292, -1, -1));
-
-        jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel12.setText("Editar Perfil");
-        jPanel11.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(165, 31, -1, -1));
-
-        jc_nickname.setText("NickName");
-        jPanel11.add(jc_nickname, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 138, -1, -1));
-
-        jc_contraseña.setText("Contraseña");
-        jPanel11.add(jc_contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 193, -1, -1));
-
-        jc_pais.setText("Pais");
-        jPanel11.add(jc_pais, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 237, -1, -1));
-        jPanel11.add(tf_nicknameNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 135, 215, -1));
-        jPanel11.add(tf_contraseñaNueva, new org.netbeans.lib.awtextra.AbsoluteConstraints(164, 190, 215, -1));
-
-        sp_añoNuevo.setModel(new javax.swing.SpinnerNumberModel(2024, 1970, 2024, 1));
-        jPanel11.add(sp_añoNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(354, 292, -1, -1));
-
-        javax.swing.GroupLayout jd_editarPerfilLayout = new javax.swing.GroupLayout(jd_editarPerfil.getContentPane());
-        jd_editarPerfil.getContentPane().setLayout(jd_editarPerfilLayout);
-        jd_editarPerfilLayout.setHorizontalGroup(
-            jd_editarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE)
-        );
-        jd_editarPerfilLayout.setVerticalGroup(
-            jd_editarPerfilLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel11, javax.swing.GroupLayout.DEFAULT_SIZE, 415, Short.MAX_VALUE)
-        );
-
         jPanel7.setBackground(new java.awt.Color(255, 255, 255));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lb_imgSolicitud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel7.add(lb_imgSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 50, 130, 100));
 
-        lb_nombreSolicitud.setForeground(new java.awt.Color(0, 0, 0));
         lb_nombreSolicitud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jPanel7.add(lb_nombreSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 151, 20));
 
@@ -1776,6 +1732,169 @@ public class NewJFrame extends javax.swing.JFrame {
             jd_solicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
+
+        jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel9.setText("Modificar Usuario");
+
+        cb_usuariosRegulares.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                cb_usuariosRegularesItemStateChanged(evt);
+            }
+        });
+
+        lb_nuevoNombre.setText("Nombre:");
+
+        jLabel11.setText("Contraseña:");
+
+        jLabel12.setText("Pais:");
+
+        jLabel15.setText("NickName:");
+
+        jLabel16.setText("Foto de Perfil:");
+
+        lb_nuevaFotoPerfil.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+
+        jButton2.setText("Modificar");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
+        jButton3.setText("Modificar Foto de Perfil");
+        jButton3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+
+        lb_nuevaFechaNacimiento.setText("Fecha de Nacimiento:");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(17, 17, 17)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(9, 9, 9)
+                        .addComponent(lb_nuevoNombre)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(tf_paisNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tf_nuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(24, 24, 24)
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addGap(4, 4, 4)))
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_nicknameNuevo))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel12)
+                                    .addComponent(jLabel16))
+                                .addGap(72, 72, 72))
+                            .addComponent(jButton3)
+                            .addComponent(lb_nuevaFotoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(179, 179, 179)
+                                .addComponent(tf_contraseñaNueva, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lb_nuevaFechaNacimiento)
+                                .addGap(119, 119, 119))
+                            .addGroup(jPanel11Layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addComponent(sp_nuevoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(45, 45, 45)
+                                .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(50, 50, 50)
+                                .addComponent(sp_nuevoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(cb_usuariosRegulares, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(190, 190, 190))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel11Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(208, 208, 208))
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 568, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel11Layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator14, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cb_usuariosRegulares, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_nuevoNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_nuevoNombre)
+                    .addComponent(jLabel11)
+                    .addComponent(tf_contraseñaNueva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(tf_paisNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15)
+                    .addComponent(tf_nicknameNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(lb_nuevaFechaNacimiento))
+                .addGap(32, 32, 32)
+                .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(sp_nuevoDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sp_nuevoMes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(sp_nuevoAño, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(lb_nuevaFotoPerfil, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButton3)
+                .addGap(78, 78, 78)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
+        );
+
+        javax.swing.GroupLayout jd_modificarUsuariosLayout = new javax.swing.GroupLayout(jd_modificarUsuarios.getContentPane());
+        jd_modificarUsuarios.getContentPane().setLayout(jd_modificarUsuariosLayout);
+        jd_modificarUsuariosLayout.setHorizontalGroup(
+            jd_modificarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, 564, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jd_modificarUsuariosLayout.setVerticalGroup(
+            jd_modificarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_modificarUsuariosLayout.createSequentialGroup()
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jScrollPane1.setViewportView(jList1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Landing");
@@ -2517,8 +2636,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 indiceActual++;
             }
 
-
-
         } else {
             JOptionPane.showMessageDialog(this, "Registrate a Facebook para comenzar.");
         }
@@ -2728,55 +2845,12 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         }
         admin.escribirArchivo();
-        
+
     }//GEN-LAST:event_lb_proPicAdminPersMouseClicked
 
     private void PlayMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_PlayMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_PlayMouseClicked
-
-    private void jb_aplicarCambiosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_aplicarCambiosMouseClicked
-//esto no te lo pide el documento.
-/*
-        int diaNuevo;
-        int mesNuevo;
-        int añoNuevo;
-        administradorUsuario au = new administradorUsuario("./UsuariosRegulares.pfb");
-        au.cargarArchivo();
-        for (Usuario usuario2 : au.getUsuarios()) {
-            usuarioActual = usuario2;
-            if (jc_nombre.isSelected()) {
-                usuarioActual.setNickname(tf_nicknameNuevo.getText());
-            } else if (jc_nickname.isSelected()) {
-                usuarioActual.setNickname(tf_nicknameNuevo.getText());
-            } else if (jc_contraseña.isSelected()) {
-                usuarioActual.setContrasenia(tf_contraseñaNueva.getText());
-            } else if (jc_pais.isSelected()) {
-                usuarioActual.setPais(tf_paisNuevo.getText());
-            } else if (jc_fechaNacimiento.isSelected()) {
-                diaNuevo = (int) sp_diaNuevo.getValue();
-                mesNuevo = (int) sp_mesNuevo.getValue();
-                añoNuevo = (int) sp_añoNuevo.getValue();
-                Date nuevaFecha = new Date(diaNuevo, mesNuevo, añoNuevo);
-                usuarioActual.setFechaNacimiento(nuevaFecha);
-                JOptionPane.showMessageDialog(jd_muroPersonal, "Fecha de Nacimiento modificado exitosamente");
-            }else{
-                JOptionPane.showMessageDialog(jd_muroPersonal, "No ha modificado nada");
-            }
-        }
-        au.escribirArchivo();
-        tf_nombreNuevo.setText("");
-        tf_nicknameNuevo.setText("");
-        tf_contraseñaNueva.setText("");
-        tf_paisNuevo.setText("");
-        jc_contraseña.setSelected(false);
-        jc_nombre.setSelected(false);
-        jc_fechaNacimiento.setSelected(false);
-        jc_pais.setSelected(false);
-        jc_nickname.setSelected(false);
-         */
-
-    }//GEN-LAST:event_jb_aplicarCambiosMouseClicked
 
     private void bt_agregarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarAmigoMouseClicked
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
@@ -2788,7 +2862,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 encontrado = true;
             }
         }
-        
+
         if (!encontrado) {
             admin = new administradorUsuario("./Administradores.pfb");
             admin.cargarArchivo();
@@ -2798,7 +2872,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-        
+
     }//GEN-LAST:event_bt_agregarAmigoMouseClicked
 
     private void bt_verSolicitudesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_verSolicitudesMouseClicked
@@ -2817,7 +2891,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     encontrado = true;
                 }
             }
-            
+
             if (!encontrado) {
                 admin = new administradorUsuario("./Administradores.pfb");
                 admin.cargarArchivo();
@@ -2832,11 +2906,11 @@ public class NewJFrame extends javax.swing.JFrame {
                     }
                 }
             }
-            
+
             jd_solicitud.pack();
             jd_solicitud.setLocationRelativeTo(jd_muroPersonal);
             jd_solicitud.setVisible(true);
-        }else{
+        } else {
             JOptionPane.showMessageDialog(jd_muroPersonal, "No tienes solicitudes pendientes.");
         }
     }//GEN-LAST:event_bt_verSolicitudesMouseClicked
@@ -2863,15 +2937,101 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-        
-        JOptionPane.showMessageDialog(jd_solicitud, "Ahora " + lb_nombreSolicitud +" y tú, son amigos!");
+
+        JOptionPane.showMessageDialog(jd_solicitud, "Ahora " + lb_nombreSolicitud + " y tú, son amigos!");
     }//GEN-LAST:event_bt_aceptarMouseClicked
 
     private void bt_rechazarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_rechazarMouseClicked
         usuarioActual.getSolicitudes().remove(0);
         JOptionPane.showMessageDialog(jd_solicitud, "Has rechazado la solicitud de " + lb_nombreSolicitud.getText() + ".");
     }//GEN-LAST:event_bt_rechazarMouseClicked
-    
+
+    private void bt_modificarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificarUsuarioMouseClicked
+administradorUsuario u = new administradorUsuario("./UsuariosRegulares.pfb");
+u.cargarArchivo();        
+DefaultComboBoxModel e = new DefaultComboBoxModel(u.getUsuarios().toArray());
+cb_usuariosRegulares.setModel(e);
+
+jd_modificarUsuarios.pack();
+jd_modificarUsuarios.setLocationRelativeTo(null);
+jd_modificarUsuarios.setVisible(true);
+    }//GEN-LAST:event_bt_modificarUsuarioMouseClicked
+
+    private void bt_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_eliminarUsuarioMouseClicked
+
+    }//GEN-LAST:event_bt_eliminarUsuarioMouseClicked
+
+    private void cb_usuariosRegularesItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cb_usuariosRegularesItemStateChanged
+if( evt.getStateChange() == 1){
+    Usuario usuario = (Usuario) cb_usuariosRegulares.getSelectedItem();
+    pos = cb_usuariosRegulares.getSelectedIndex();
+    if(usuario!= null){
+        tf_nuevoNombre.setText(usuario.getNombre());
+        tf_nicknameNuevo.setText(usuario.getNickname());
+        tf_contraseñaNueva.setText(usuario.getContrasenia());
+        tf_paisNuevo.setText(usuario.getPais());
+        if(usuario.getFotografia() == null){
+            lb_nuevaFotoPerfil.setIcon(null);
+        }else{
+        ImageIcon icono = (ImageIcon) usuario.getFotografia();
+                    Image icono2 = (Image) icono.getImage();
+                    Image renderizada = icono2.getScaledInstance(145, 124, Image.SCALE_SMOOTH); 
+                    Icon renderizado2 = new ImageIcon(renderizada);
+                    lb_nuevaFotoPerfil.setIcon(renderizado2);
+    }
+    }
+}
+    }//GEN-LAST:event_cb_usuariosRegularesItemStateChanged
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+
+       DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
+       Usuario usuario1 = (Usuario) modelo.getElementAt(pos);
+       usuario1.setNombre(tf_nuevoNombre.getText());
+       usuario1.setContrasenia(tf_contraseñaNueva.getText());
+       usuario1.setNickname(tf_nicknameNuevo.getText());
+       usuario1.setPais(tf_paisNuevo.getText());
+       
+       administradorUsuario usuario = new administradorUsuario("./UsuariosRegulares.pfb");
+       usuario.cargarArchivo();
+       usuario.getUsuarios().get(pos).setNombre(tf_nuevoNombre.getText());
+       usuario.getUsuarios().get(pos).setContrasenia(tf_contraseñaNueva.getText());
+       usuario.getUsuarios().get(pos).setNickname(tf_nicknameNuevo.getText());
+       usuario.getUsuarios().get(pos).setPais(tf_paisNuevo.getText());
+       usuario.escribirArchivo();
+       JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Usuario modificado exitosamente");
+ jd_muroPersonalAdministrador.setVisible(true);
+       jd_modificarUsuarios.setVisible(false);
+    }//GEN-LAST:event_jButton2MouseClicked
+
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+     
+        JFileChooser f = new JFileChooser();
+        FileNameExtensionFilter r = new FileNameExtensionFilter("Imagenes", "png", "peg");
+        f.setFileFilter(r);
+        int opcion = f.showOpenDialog(this);
+        if(opcion == JFileChooser.APPROVE_OPTION){
+            File file;
+            file = f.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage(file.getPath()).getScaledInstance(146, 124, 0);
+            this.lb_nuevaFotoPerfil.setIcon(new ImageIcon(img));
+            
+            DefaultComboBoxModel e = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
+        Usuario ts = (Usuario) e.getElementAt(pos);
+        ts.setFotografia(lb_nuevaFotoPerfil.getIcon());
+        cb_usuariosRegulares.setModel(e);
+        
+        administradorUsuario admin2 = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin2.cargarArchivo();
+        admin2.getUsuarios().get(pos).setFotografia(lb_nuevaFotoPerfil.getIcon());
+        JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Foto de Perfil Modificada exitosamente");
+        }else{
+           JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "No ha modificado nada.");
+         
+        }
+        
+    }//GEN-LAST:event_jButton3MouseClicked
+
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
         jd_reproductorMusical.pack();
@@ -2958,6 +3118,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_reproductorPersAdmin;
     private javax.swing.JButton bt_reproductorRegular;
     private javax.swing.JButton bt_verSolicitudes;
+    private javax.swing.JComboBox<String> cb_usuariosRegulares;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
     private javax.swing.JButton jButton1;
@@ -2967,9 +3128,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel21;
@@ -3008,6 +3172,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JList<String> jList2;
     private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
@@ -3034,6 +3200,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
@@ -3043,6 +3210,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator11;
     private javax.swing.JSeparator jSeparator12;
     private javax.swing.JSeparator jSeparator13;
+    private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -3051,17 +3219,11 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
-    private javax.swing.JButton jb_aplicarCambios;
-    private javax.swing.JCheckBox jc_contraseña;
-    private javax.swing.JCheckBox jc_fechaNacimiento;
-    private javax.swing.JCheckBox jc_nickname;
-    private javax.swing.JCheckBox jc_nombre;
-    private javax.swing.JCheckBox jc_pais;
     private javax.swing.JDialog jd_calendario;
     private javax.swing.JDialog jd_crearPublicacion;
     private javax.swing.JDialog jd_createAdmin;
     private javax.swing.JDialog jd_createUser;
-    private javax.swing.JDialog jd_editarPerfil;
+    private javax.swing.JDialog jd_modificarUsuarios;
     private javax.swing.JDialog jd_muroPersonal;
     private javax.swing.JDialog jd_muroPersonalAdministrador;
     private javax.swing.JDialog jd_muroPrincipal;
@@ -3081,6 +3243,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lb_imgSolicitud;
     private javax.swing.JLabel lb_imgSugerencia;
     private javax.swing.JLabel lb_nombreSolicitud;
+    private javax.swing.JLabel lb_nuevaFechaNacimiento;
+    private javax.swing.JLabel lb_nuevaFotoPerfil;
+    private javax.swing.JLabel lb_nuevoNombre;
     private javax.swing.JLabel lb_proPicAdminPers;
     private javax.swing.JLabel lb_proPicPrincipalAdmin;
     private javax.swing.JLabel lb_proPicPrincipalReg;
@@ -3099,13 +3264,13 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel pn_postPrincipal1;
     private javax.swing.JPanel pn_postPrincipal2;
     private javax.swing.JLabel reproductorTexto;
-    private javax.swing.JSpinner sp_añoNuevo;
     private javax.swing.JSpinner sp_dateAdmin;
     private javax.swing.JSpinner sp_dateU;
-    private javax.swing.JSpinner sp_diaNuevo;
-    private javax.swing.JSpinner sp_mesNuevo;
     private javax.swing.JSpinner sp_monthAdmin;
     private javax.swing.JSpinner sp_monthU;
+    private javax.swing.JSpinner sp_nuevoAño;
+    private javax.swing.JSpinner sp_nuevoDia;
+    private javax.swing.JSpinner sp_nuevoMes;
     private javax.swing.JSpinner sp_yearAdmin;
     private javax.swing.JSpinner sp_yearU;
     private javax.swing.JTextField tf_apellidoAdmin;
@@ -3120,9 +3285,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField tf_likesPrin2;
     private javax.swing.JTextField tf_nicknameNuevo;
     private javax.swing.JTextField tf_nombreAdmin;
-    private javax.swing.JTextField tf_nombreNuevo;
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_nombreSugerencia;
+    private javax.swing.JTextField tf_nuevoNombre;
     private javax.swing.JTextField tf_paisAdmin;
     private javax.swing.JTextField tf_paisCreateU;
     private javax.swing.JTextField tf_paisNuevo;
@@ -3137,6 +3302,7 @@ public class NewJFrame extends javax.swing.JFrame {
     static ArrayList<Usuario> amigos;
     static int indiceActual;
     static int indiceAmigo;
+    static int pos;
 
     public void LlenarEspacios() {
 
@@ -3265,8 +3431,8 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void RefreshMuroPersonalUsuario() {
         SecureRandom sr = new SecureRandom();
-        int random = sr.nextInt(1,3);
-        
+        int random = sr.nextInt(1, 3);
+
         try {
             Publicacion publicacion1 = usuarioActual.getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
             if (publicacion1.getImagen() == null) {
@@ -3292,9 +3458,9 @@ public class NewJFrame extends javax.swing.JFrame {
             }
             tf_textoPubPers2.setText(publicacion2.getPublicador() + ": " + publicacion2.getComentario());
             tf_likesPers2.setText(Integer.toString(publicacion2.getLikes()));
-            
+
             administradorUsuario admin;
-            
+
             switch (random) {
                 case 1:
                     admin = new administradorUsuario("./UsuariosRegulares.pfb");
@@ -3322,17 +3488,16 @@ public class NewJFrame extends javax.swing.JFrame {
                     break;
                 default:
             }
-            
-                        
+
         } catch (IndexOutOfBoundsException e) {
-            
+
         }
 
     }
 
     private void RefreshMuroPrincipal() {
         SecureRandom sr = new SecureRandom();
-        int seleccion = sr.nextInt(1,3);
+        int seleccion = sr.nextInt(1, 3);
         Usuario amigo1;
         Usuario amigo2;
 
@@ -3344,7 +3509,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     case 1: //2 amigos
                         amigo1 = usuarioActual.getAmigos().get(sr.nextInt(0, usuarioActual.getAmigos().size()));
                         amigo2 = usuarioActual.getAmigos().get(sr.nextInt(0, usuarioActual.getAmigos().size()));
-                        if (amigo1.getPublicaciones().isEmpty() || amigo2.getPublicaciones().isEmpty()){
+                        if (amigo1.getPublicaciones().isEmpty() || amigo2.getPublicaciones().isEmpty()) {
 
                         } else {
                             Publicacion publicacion1 = amigo1.getPublicaciones().get(sr.nextInt(0, amigo1.getPublicaciones().size()));
@@ -3357,7 +3522,6 @@ public class NewJFrame extends javax.swing.JFrame {
                             lb_imagenPrincipal2.setIcon(publicacion2.getImagen());
                             tf_likesPrin2.setText(Integer.toString(publicacion2.getLikes()));
                         }
-                        
 
                         break;
                     case 2: //1 amigo, 1 personal
@@ -3381,15 +3545,16 @@ public class NewJFrame extends javax.swing.JFrame {
                     default:
                 }
             }
-            
 
         } catch (IndexOutOfBoundsException e) {
 
         }
-        
-        
+
         lb_proPicPrincipalReg.setIcon(usuarioActual.getFotografia());
         lb_proPicReg.setIcon(usuarioActual.getFotografia());
     }
-
 }
+
+
+
+
