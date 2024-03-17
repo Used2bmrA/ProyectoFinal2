@@ -86,6 +86,9 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_agregarAmigo = new javax.swing.JButton();
         tf_nombreSugerencia = new javax.swing.JTextField();
         bt_verSolicitudes = new javax.swing.JButton();
+        jPanel24 = new javax.swing.JPanel();
+        lb_fotoAmigo = new javax.swing.JLabel();
+        tf_nombreAmigo = new javax.swing.JTextField();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         lb_proPicPrincipalReg = new javax.swing.JLabel();
@@ -316,6 +319,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 130, 120));
 
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Regresar Menu Principal");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
@@ -520,6 +524,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel21.setBackground(new java.awt.Color(240, 242, 245));
 
         lb_imgSugerencia.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lb_imgSugerencia.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_imgSugerenciaMouseClicked(evt);
+            }
+        });
 
         bt_agregarAmigo.setText("Agregar amigo");
         bt_agregarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -537,14 +546,14 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(29, 29, 29)
-                        .addComponent(lb_imgSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel21Layout.createSequentialGroup()
                         .addGap(11, 11, 11)
                         .addComponent(bt_agregarAmigo))
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(tf_nombreSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(tf_nombreSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel21Layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addComponent(lb_imgSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(14, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
@@ -568,6 +577,41 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel3.add(bt_verSolicitudes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+
+        jPanel24.setBackground(new java.awt.Color(240, 242, 245));
+        jPanel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        lb_fotoAmigo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        lb_fotoAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_fotoAmigoMouseClicked(evt);
+            }
+        });
+
+        tf_nombreAmigo.setEditable(false);
+
+        javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
+        jPanel24.setLayout(jPanel24Layout);
+        jPanel24Layout.setHorizontalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
+                    .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel24Layout.setVerticalGroup(
+            jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel24Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        jPanel3.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 150, 140));
 
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
@@ -668,7 +712,8 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_agendaRegular.setText("Agendas");
         jPanel5.add(bt_agendaRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
-        jLabel10.setText("Ir a tu Muro Principal");
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setText("Ir a tu muro personal");
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
 
         pn_postPrincipal1.setBackground(new java.awt.Color(255, 255, 255));
@@ -2803,9 +2848,10 @@ public class NewJFrame extends javax.swing.JFrame {
                     RefreshMuroPrincipal();
                     jd_muroPrincipal.pack();
                     jd_muroPrincipal.setLocationRelativeTo(null);
-                    RefreshMuroPrincipal();
                     jd_muroPrincipal.setVisible(true);
                     this.setVisible(false);
+                    indiceActual++;
+                    break;
                 }
                 indiceActual++;
             }
@@ -2897,8 +2943,16 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_lb_agregarFotoMouseClicked
 
     private void bt_publicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarMouseClicked
-        Publicacion nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_crearPensamiento.getText(), lb_subirMedia.getIcon());
-        usuarioActual.getPublicaciones().add(nuevaPublicacion);
+        Publicacion nuevaPublicacion;
+        
+        if (lb_subirMedia.getIcon() == null) {
+            nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_crearPensamiento.getText());
+            usuarioActual.getPublicaciones().add(nuevaPublicacion);
+        }else{
+            nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_crearPensamiento.getText(), lb_subirMedia.getIcon());
+            usuarioActual.getPublicaciones().add(nuevaPublicacion);
+        }
+
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
         admin.cargarArchivo();
         admin.getUsuarios().get(indiceActual).getPublicaciones().add(nuevaPublicacion);
@@ -3047,11 +3101,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void bt_agregarAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarAmigoMouseClicked
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
-        boolean encontrado = false;
         admin.cargarArchivo();
+        boolean encontrado = false;
         for (Usuario reg : admin.getUsuarios()) {
             if (tf_nombreSugerencia.getText().equals(reg.getNombre())) {
-                reg.getSolicitudes().add(usuarioActual.getNombre());
+                admin.getUsuarios().get(indiceAmigo).getSolicitudes().add(usuarioActual.getNombre());
                 encontrado = true;
             }
         }
@@ -3061,10 +3115,13 @@ public class NewJFrame extends javax.swing.JFrame {
             admin.cargarArchivo();
             for (Usuario administrador : admin.getUsuarios()) {
                 if (tf_nombreSugerencia.getText().equals(administrador.getNombre())) {
-                    administrador.getSolicitudes().add(usuarioActual.getNombre());
+                    admin.getUsuarios().get(indiceAmigo).getSolicitudes().add(usuarioActual.getNombre());
                 }
             }
         }
+        
+        admin.escribirArchivo();
+        JOptionPane.showMessageDialog(jd_muroPersonal, "Solicitud enviada.");
 
     }//GEN-LAST:event_bt_agregarAmigoMouseClicked
 
@@ -3114,8 +3171,9 @@ public class NewJFrame extends javax.swing.JFrame {
         admin.cargarArchivo();
         for (Usuario reg : admin.getUsuarios()) {
             if (reg.getNombre().equals(usuarioActual.getSolicitudes().get(0))) {
-                reg.getAmigos().add(usuarioActual);
-                usuarioActual.getAmigos().add(reg);
+                admin.getUsuarios().get(indiceActual).getAmigos().add(admin.getUsuarios().get(indiceAmigo));
+                admin.getUsuarios().get(indiceAmigo).getAmigos().add(admin.getUsuarios().get(indiceActual));
+                admin.getUsuarios().get(indiceActual).getSolicitudes().remove(0);
                 encontrado = true;
             }
         }
@@ -3125,18 +3183,44 @@ public class NewJFrame extends javax.swing.JFrame {
             admin.cargarArchivo();
             for (Usuario administrador : admin.getUsuarios()) {
                 if (administrador.getNombre().equals(usuarioActual.getSolicitudes().get(0))) {
-                    administrador.getAmigos().add(usuarioActual);
-                    usuarioActual.getAmigos().add(administrador);
+                    admin.getUsuarios().get(indiceActual).getAmigos().add(admin.getUsuarios().get(indiceAmigo));
+                    admin.getUsuarios().get(indiceAmigo).getAmigos().add(admin.getUsuarios().get(indiceActual));
+                    admin.getUsuarios().get(indiceActual).getSolicitudes().remove(0);
                 }
             }
         }
-
-        JOptionPane.showMessageDialog(jd_solicitud, "Ahora " + lb_nombreSolicitud + " y tú, son amigos!");
+        
+        admin.escribirArchivo();
+        JOptionPane.showMessageDialog(jd_solicitud, "Ahora " + lb_nombreSolicitud.getText() + " y tú, son amigos!");
+        jd_solicitud.setVisible(false);
     }//GEN-LAST:event_bt_aceptarMouseClicked
 
     private void bt_rechazarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_rechazarMouseClicked
-        usuarioActual.getSolicitudes().remove(0);
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin.cargarArchivo();
+        boolean encontrado = false;
+        
+        for (Usuario regular : admin.getUsuarios()) {
+            if (usuarioActual.getNombre().equals(regular.getNombre())) {
+                usuarioActual.getSolicitudes().remove(0);
+                admin.getUsuarios().get(indiceActual).getSolicitudes().remove(0);
+                encontrado = true;
+            }
+        }
+        
+        if (!encontrado) {
+            admin = new administradorUsuario("./Administradores.pfb");
+            for (Usuario administradores : admin.getUsuarios()) {
+                if (usuarioActual.getNombre().equals(administradores.getNombre())) {
+                    usuarioActual.getSolicitudes().remove(0);
+                    admin.getUsuarios().get(indiceActual).getSolicitudes().remove(0);
+                }
+            }
+        }
+        
+        admin.escribirArchivo();
         JOptionPane.showMessageDialog(jd_solicitud, "Has rechazado la solicitud de " + lb_nombreSolicitud.getText() + ".");
+        jd_solicitud.setVisible(false);
     }//GEN-LAST:event_bt_rechazarMouseClicked
 
     private void bt_modificarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_modificarUsuarioMouseClicked
@@ -3346,6 +3430,34 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
  //El like aqui se agrega
     }//GEN-LAST:event_bt_likePubPers1MouseClicked
 
+    private void lb_imgSugerenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_imgSugerenciaMouseClicked
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        Usuario sugerencia = null;
+        boolean encontrado = false;
+        admin.cargarArchivo();
+        for (Usuario reg : admin.getUsuarios()) {
+            if (reg.getNombre().equals(tf_nombreSugerencia.getText())) {
+                sugerencia = reg;
+                encontrado = true;
+            }
+        }
+
+        if (!encontrado) {
+            admin = new administradorUsuario("./Administradores.pfb");
+            admin.cargarArchivo();
+            for (Usuario administrador : admin.getUsuarios()) {
+                if (administrador.getNombre().equals(tf_nombreSugerencia.getText())) {
+                    sugerencia = administrador;
+                }
+            }
+        }
+        RefreshMuroSugerencia(sugerencia);
+    }//GEN-LAST:event_lb_imgSugerenciaMouseClicked
+
+    private void lb_fotoAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_fotoAmigoMouseClicked
+        RefreshMuroAmigo(tf_nombreAmigo.getText());      
+    }//GEN-LAST:event_lb_fotoAmigoMouseClicked
+
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
         jd_reproductorMusical.pack();
@@ -3515,6 +3627,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3560,6 +3673,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
+    private javax.swing.JLabel lb_fotoAmigo;
     private javax.swing.JLabel lb_imagenEliminar;
     private javax.swing.JLabel lb_imagenPrincipal1;
     private javax.swing.JLabel lb_imagenPrincipal2;
@@ -3615,6 +3729,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JTextField tf_nicknameEliminar;
     private javax.swing.JTextField tf_nicknameNuevo;
     private javax.swing.JTextField tf_nombreAdmin;
+    private javax.swing.JTextField tf_nombreAmigo;
     private javax.swing.JTextField tf_nombreEliminar;
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_nombreSugerencia;
@@ -3764,7 +3879,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private void RefreshMuroPersonalUsuario() {
         SecureRandom sr = new SecureRandom();
         int random = sr.nextInt(1, 3);
-
+        
         try {
             Publicacion publicacion1 = usuarioActual.getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
             if (publicacion1.getImagen() == null) {
@@ -3791,40 +3906,51 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
             tf_textoPubPers2.setText(publicacion2.getPublicador() + ": " + publicacion2.getComentario());
             tf_likesPers2.setText(Integer.toString(publicacion2.getLikes()));
 
-            administradorUsuario admin;
-
-            switch (random) {
-                case 1:
-                    admin = new administradorUsuario("./UsuariosRegulares.pfb");
-                    admin.cargarArchivo();
-                    indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
-                    Usuario sugerencia = admin.getUsuarios().get(indiceAmigo);
-                    ImageIcon icono = (ImageIcon) sugerencia.getFotografia();
-                    Image icono2 = (Image) icono.getImage();
-                    Image renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
-                    Icon renderizado2 = new ImageIcon(renderizada);
-                    lb_imgSugerencia.setIcon(renderizado2);
-                    tf_nombreSugerencia.setText(sugerencia.getNombre());
-                    break;
-                case 2:
-                    admin = new administradorUsuario("./Administradores.pfb");
-                    admin.cargarArchivo();
-                    indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
-                    sugerencia = admin.getUsuarios().get(indiceAmigo);
-                    icono = (ImageIcon) sugerencia.getFotografia();
-                    icono2 = (Image) icono.getImage();
-                    renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
-                    renderizado2 = new ImageIcon(renderizada);
-                    lb_imgSugerencia.setIcon(renderizado2);
-                    tf_nombreSugerencia.setText(sugerencia.getNombre());
-                    break;
-                default:
-            }
+            
 
         } catch (IndexOutOfBoundsException e) {
-
         }
 
+        administradorUsuario admin;
+
+        switch (random) {
+            case 1:
+                admin = new administradorUsuario("./UsuariosRegulares.pfb");
+                admin.cargarArchivo();
+                indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
+                Usuario sugerencia = admin.getUsuarios().get(indiceAmigo);
+                ImageIcon icono = (ImageIcon) sugerencia.getFotografia();
+                Image icono2 = (Image) icono.getImage();
+                Image renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
+                Icon renderizado2 = new ImageIcon(renderizada);
+                lb_imgSugerencia.setIcon(renderizado2);
+                tf_nombreSugerencia.setText(sugerencia.getNombre());
+                break;
+            case 2:
+//                admin = new administradorUsuario("./Administradores.pfb");
+//                admin.cargarArchivo();
+//                indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
+//                sugerencia = admin.getUsuarios().get(indiceAmigo);
+//                icono = (ImageIcon) sugerencia.getFotografia();
+//                icono2 = (Image) icono.getImage();
+//                renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
+//                renderizado2 = new ImageIcon(renderizada);
+//                lb_imgSugerencia.setIcon(renderizado2);
+//                tf_nombreSugerencia.setText(sugerencia.getNombre());
+                break;
+            default:
+        }
+        
+        if (usuarioActual.getAmigos().isEmpty()) {
+        } else {
+            int indice = sr.nextInt(0, usuarioActual.getAmigos().size());
+            boolean encontrado = false;
+            administradorUsuario au = new administradorUsuario("./UsuariosRegulares.pfb");
+            au.cargarArchivo();
+            Usuario amigo = usuarioActual.getAmigos().get(indice);
+            lb_fotoAmigo.setIcon(amigo.getFotografia());
+            tf_nombreAmigo.setText(amigo.getNombre());
+        }
     }
 
     private void RefreshMuroPrincipal() {
@@ -3884,5 +4010,77 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
 
         lb_proPicPrincipalReg.setIcon(usuarioActual.getFotografia());
         lb_proPicReg.setIcon(usuarioActual.getFotografia());
+    }
+
+    private void RefreshMuroSugerencia(Usuario sugerencia) {
+        lb_proPicReg.setIcon(sugerencia.getFotografia());
+        tf_textoPubPers1.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
+        tf_textoPubPers2.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
+        lb_imagenPrincipal1.setIcon(null);
+        lb_imagenPrincipal2.setIcon(null);
+    }
+
+    private void RefreshMuroAmigo(String nombre) {
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+        admin.cargarArchivo();
+        boolean encontrado = false;
+        for (Usuario reg : admin.getUsuarios()) {
+            if (reg.getNombre().equals(nombre)) {
+                encontrado = true;
+                try {
+                    lb_imagenPrincipal1.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen());
+                    tf_textoPubPrin1.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getComentario());
+                    tf_likesPrin1.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getLikes()));
+                } catch (Exception e) {
+                    lb_imagenPrincipal1.setIcon(null);
+                    tf_textoPubPrin1.setText("");
+                    tf_likesPrin1.setText("0");
+                }
+                
+                
+                try {
+                    lb_imagenPrincipal2.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen());
+                    tf_textoPubPrin2.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getComentario());
+                    tf_likesPrin2.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getLikes()));
+                } catch (Exception e) {
+                    lb_imagenPrincipal2.setIcon(null);
+                    tf_textoPubPrin2.setText("");
+                    tf_likesPrin2.setText("0");
+                }
+            }
+        }
+        
+        if (!encontrado) {
+            admin = new administradorUsuario("./Administradores.pfb");
+            admin.cargarArchivo();
+            for (Usuario reg : admin.getUsuarios()) {
+            if (reg.getNombre().equals(nombre)) {
+                encontrado = true;
+                try {
+                    lb_imagenPrincipal1.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen());
+                    tf_textoPubPrin1.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getComentario());
+                    tf_likesPrin1.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getLikes()));
+                } catch (Exception e) {
+                    lb_imagenPrincipal1.setIcon(null);
+                    tf_textoPubPrin1.setText("");
+                    tf_likesPrin1.setText("0");
+                }
+                
+                
+                try {
+                    lb_imagenPrincipal2.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen());
+                    tf_textoPubPrin2.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getComentario());
+                    tf_likesPrin2.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getLikes()));
+                } catch (Exception e) {
+                    lb_imagenPrincipal2.setIcon(null);
+                    tf_textoPubPrin2.setText("");
+                    tf_likesPrin2.setText("0");
+                }
+            }
+        }
+            
+        }
+        
+        
     }
 }

@@ -22,6 +22,13 @@ class Publicacion implements Serializable{
     
     private static final long SerialVersionUID = 555L;
 
+    public Publicacion(String publicador, String comentario) {
+        this.publicador = publicador;
+        this.comentario = comentario;
+        Date fechaPublicacion = new Date();
+        likes = 0;
+    }
+
     public Publicacion(String publicador, String comentario, Icon imagen) {
         this.publicador = publicador;
         this.comentario = comentario;
