@@ -410,6 +410,11 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_imagenPublicacion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         bt_likePubPers1.setText("Like");
+        bt_likePubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likePubPers1MouseClicked(evt);
+            }
+        });
 
         bt_comentarPubPers1.setText("Comentar");
 
@@ -429,7 +434,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(bt_likePubPers1)
                 .addGap(18, 18, 18)
@@ -1803,7 +1808,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         sp_nuevoMes.setModel(new javax.swing.SpinnerListModel(new String[] {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"}));
 
-        sp_nuevoAño.setModel(new javax.swing.SpinnerNumberModel(1990, 0, 1990, 1));
+        sp_nuevoAño.setModel(new javax.swing.SpinnerNumberModel(1970, 1970, 2024, 1));
 
         javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
         jPanel11.setLayout(jPanel11Layout);
@@ -3167,12 +3172,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 tf_nicknameNuevo.setText(usuario.getNickname());
                 tf_contraseñaNueva.setText(usuario.getContrasenia());
                 tf_paisNuevo.setText(usuario.getPais());
-                sp_nuevoDia.setValue(usuario.getFechaNacimiento().getDay());
                 int mes1 = usuario.getFechaNacimiento().getMonth();
                 String[] meses = {"Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
                 String mes = meses[mes1];
                 sp_nuevoMes.setValue(mes);
                 sp_nuevoAño.setValue(usuario.getFechaNacimiento().getYear());
+                sp_nuevoDia.setValue(usuario.getFechaNacimiento().getDate());
                 if (usuario.getFotografia() == null) {
                     lb_nuevaFotoPerfil.setIcon(null);
                 } else {
@@ -3187,7 +3192,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_usuariosRegularesItemStateChanged
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        int dia1;
+        int dia11;
         int mes1;
         int año1;
         String mesFromSp = sp_nuevoMes.getValue().toString();
@@ -3218,9 +3223,9 @@ public class NewJFrame extends javax.swing.JFrame {
             mes1 = 11;
         }
 
-        dia1 = (int) sp_nuevoDia.getValue();
+        dia11 = (int) sp_nuevoDia.getValue();
         año1 = (int) sp_nuevoAño.getValue();
-        Date nacimiento = new Date(año1, mes1, dia1);
+        Date nacimiento = new Date(año1, mes1, dia11);
         DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegulares.getModel();
         Usuario usuario1 = (Usuario) modelo.getElementAt(pos);
         usuario1.setNombre(tf_nuevoNombre.getText());
@@ -3317,8 +3322,29 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_cb_usuariosRegularesEliminarItemStateChanged
 
     private void jb_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarUsuarioMouseClicked
-        //me falta programarlo tenia otras tareas
+        administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
+admin.cargarArchivo();
+DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegularesEliminar.getModel();
+int eliminarUsuario = cb_usuariosRegularesEliminar.getSelectedIndex(); 
+if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < modelo.getSize()) { 
+    int confirmacion = JOptionPane.showConfirmDialog(this, "¿Seguro que desea eliminar ese usuario?", "Eliminar", JOptionPane.YES_NO_OPTION);
+    if (confirmacion == JOptionPane.YES_OPTION) {
+        modelo.removeElementAt(eliminarUsuario);
+        admin.getUsuarios().remove(eliminarUsuario);
+        cb_usuariosRegularesEliminar.setModel(modelo);
+        admin.escribirArchivo();
+        JOptionPane.showMessageDialog(this, "Usuario eliminado correctamente");
+    } else {
+        JOptionPane.showMessageDialog(this, "Su usuario no ha sido eliminado");
+    }
+} else {
+    JOptionPane.showMessageDialog(this, "Selecciona un usuario válido");
+}
     }//GEN-LAST:event_jb_eliminarUsuarioMouseClicked
+
+    private void bt_likePubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers1MouseClicked
+ //El like aqui se agrega
+    }//GEN-LAST:event_bt_likePubPers1MouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
