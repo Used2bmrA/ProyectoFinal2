@@ -11,6 +11,15 @@ public class Usuario implements Serializable {
     private ArrayList<Usuario> amigos = new ArrayList();
     private ArrayList<String> solicitudes = new ArrayList();
     private ArrayList<Publicacion> publicaciones = new ArrayList();
+    private ArrayList<Actividad> actividades = new ArrayList();
+
+    public ArrayList<Actividad> getActividades() {
+        return actividades;
+    }
+
+    public void setActividades(ArrayList<Actividad> actividades) {
+        this.actividades = actividades;
+    }
     
     private static final long serialVersionUID = 444L;
 

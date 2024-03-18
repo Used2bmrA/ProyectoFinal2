@@ -9,12 +9,12 @@ import java.util.Date;
  *
  * @author josed
  */
-public class Tareas extends Actividades {
+public class Tarea extends Actividad {
 
     private String contenido;
     private String notas;
 
-    public Tareas(String contenido, String notas, Date fecha, String titulo, int recordatorioMinutos) {
+    public Tarea(String contenido, String notas, Date fecha, String titulo, Date recordatorioMinutos) {
         super(fecha, titulo, recordatorioMinutos);
         this.contenido = contenido;
         this.notas = notas;

@@ -10,12 +10,12 @@ import java.util.Date;
  *
  * @author josed
  */
-public class Eventos extends Actividades {
+public class Evento extends Actividad {
     
     private Date horaInicio;
     private Date horaFin;
 
-    public Eventos(Date horaInicio, Date horaFin, Date fecha, String titulo, int recordatorioMinutos) {
+    public Evento(Date horaInicio, Date horaFin, Date fecha, String titulo, Date recordatorioMinutos) {
         super(fecha, titulo, recordatorioMinutos);
         this.horaInicio = horaInicio;
         this.horaFin = horaFin;
@@ -35,11 +35,6 @@ public class Eventos extends Actividades {
 
     public void setHoraFin(Date horaFin) {
         this.horaFin = horaFin;
-    }
-
-    @Override
-    public String toString() {
-        return "Eventos{" + "horaInicio=" + horaInicio + ", horaFin=" + horaFin + '}';
     }
 
     

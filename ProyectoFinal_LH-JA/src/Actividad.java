@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.Date;
 
 /*
@@ -10,13 +11,16 @@ import java.util.Date;
  *
  * @author josed
  */
-public class Actividades {
+public class Actividad implements Serializable {
     
     private Date fecha;
     private String titulo;
-    private int recordatorioMinutos;
+    private Date recordatorioMinutos;
 
-    public Actividades(Date fecha, String titulo, int recordatorioMinutos) {
+    private static final long serialVersionUID = 4454L;
+    
+    
+    public Actividad(Date fecha, String titulo, Date recordatorioMinutos) {
         this.fecha = fecha;
         this.titulo = titulo;
         this.recordatorioMinutos = recordatorioMinutos;
@@ -38,17 +42,17 @@ public class Actividades {
         this.titulo = titulo;
     }
 
-    public int getRecordatorioMinutos() {
+    public Date getRecordatorioMinutos() {
         return recordatorioMinutos;
     }
 
-    public void setRecordatorioMinutos(int recordatorioMinutos) {
+    public void setRecordatorioMinutos(Date recordatorioMinutos) {
         this.recordatorioMinutos = recordatorioMinutos;
     }
 
     @Override
     public String toString() {
-        return "Actividades{" + "fecha=" + fecha + ", titulo=" + titulo + ", recordatorioMinutos=" + recordatorioMinutos + '}';
+        return titulo;
     }
 
     

@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.security.SecureRandom;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
@@ -29,6 +30,8 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeModel;
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 
@@ -276,6 +279,8 @@ public class NewJFrame extends javax.swing.JFrame {
         sp_ampm2 = new javax.swing.JSpinner();
         jLabel60 = new javax.swing.JLabel();
         jLabel61 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jt_actividades = new javax.swing.JTree();
         jd_solicitud = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         lb_imgSolicitud = new javax.swing.JLabel();
@@ -1995,6 +2000,14 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jPanel19.setBackground(new java.awt.Color(240, 242, 245));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jc_calendario.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+            public void propertyChange(java.beans.PropertyChangeEvent evt) {
+                jc_calendarioPropertyChange(evt);
+            }
+        });
+        jPanel19.add(jc_calendario, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 434, 312));
 
         bt_programarEvento.setBackground(new java.awt.Color(102, 255, 51));
         bt_programarEvento.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2006,6 +2019,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_programarEventoMouseClicked(evt);
             }
         });
+        jPanel19.add(bt_programarEvento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 166, 36));
 
         bt_programarTarea.setBackground(new java.awt.Color(102, 255, 51));
         bt_programarTarea.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2017,174 +2031,71 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_programarTareaMouseClicked(evt);
             }
         });
+        jPanel19.add(bt_programarTarea, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 161, 36));
 
         jLabel56.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel56.setText("Titulo");
+        jPanel19.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(632, 35, 47, -1));
 
         jLabel57.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel57.setText("Recordatorio Minutos");
+        jPanel19.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(536, 94, -1, -1));
 
         sp_recordatorioMinutos.setModel(new javax.swing.SpinnerNumberModel(0, 0, 60, 1));
+        jPanel19.add(sp_recordatorioMinutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 92, 249, -1));
+        jPanel19.add(tf_tituloRecordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 33, 231, -1));
+        jPanel19.add(tf_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 170, 220, 250));
 
         jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel58.setText("Contenido");
+        jPanel19.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, -1, -1));
+        jPanel19.add(tf_anotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 244, 247));
 
         jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel59.setText("Anotaciones");
+        jPanel19.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 150, -1, -1));
 
         sp_horaInicio.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        jPanel19.add(sp_horaInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 368, -1, -1));
 
         sp_minutosInicio.setModel(new javax.swing.SpinnerNumberModel(0, 0, 59, 1));
+        jPanel19.add(sp_minutosInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 368, -1, -1));
 
         sp_Ampm1.setModel(new javax.swing.SpinnerListModel(new String[] {"A.M", "P.M"}));
+        jPanel19.add(sp_Ampm1, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 368, -1, -1));
 
         sp_horaFinal.setModel(new javax.swing.SpinnerNumberModel(1, 1, 12, 1));
+        jPanel19.add(sp_horaFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
 
         sp_minutosFinal.setModel(new javax.swing.SpinnerNumberModel(0, 0, 59, 1));
+        jPanel19.add(sp_minutosFinal, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 450, -1, -1));
 
         sp_ampm2.setModel(new javax.swing.SpinnerListModel(new String[] {"A.M", "P.M"}));
+        jPanel19.add(sp_ampm2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 450, -1, -1));
 
         jLabel60.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel60.setText("Hora de Inicio");
+        jPanel19.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 330, -1, -1));
 
         jLabel61.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel61.setText("Hora de Cierre");
+        jPanel19.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel19Layout.createSequentialGroup()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(sp_ampm2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addGap(119, 119, 119)
-                                        .addComponent(sp_minutosFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                .addGap(9, 9, 9)
-                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(sp_minutosInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sp_horaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(sp_Ampm1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(sp_horaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(49, 49, 49))))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jc_calendario, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel19Layout.createSequentialGroup()
-                            .addContainerGap()
-                            .addComponent(jLabel60)
-                            .addGap(18, 18, 18)
-                            .addComponent(jLabel61))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel19Layout.createSequentialGroup()
-                            .addGap(61, 61, 61)
-                            .addComponent(bt_programarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addComponent(jLabel56, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(tf_tituloRecordatorio, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel57)
-                                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                                .addGap(16, 16, 16)
-                                                .addComponent(jLabel58)))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                                .addComponent(tf_anotaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                            .addGroup(jPanel19Layout.createSequentialGroup()
-                                                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addGroup(jPanel19Layout.createSequentialGroup()
-                                                        .addGap(0, 0, Short.MAX_VALUE)
-                                                        .addComponent(jLabel59))
-                                                    .addComponent(sp_recordatorioMinutos))
-                                                .addGap(74, 74, 74))))))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(tf_contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(216, 216, 216))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bt_programarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(111, 111, 111))))
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel19Layout.createSequentialGroup()
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jc_calendario, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                        .addGap(31, 31, 31)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel60)
-                            .addComponent(jLabel61))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sp_horaInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sp_horaFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sp_minutosInicio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sp_minutosFinal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(sp_Ampm1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(sp_ampm2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(68, 68, 68))
-                    .addGroup(jPanel19Layout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel56)
-                            .addComponent(tf_tituloRecordatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel57)
-                            .addComponent(sp_recordatorioMinutos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(39, 39, 39)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel58)
-                            .addComponent(jLabel59))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(tf_contenido, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tf_anotaciones, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(25, 25, 25)))
-                .addGroup(jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_programarEvento, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(bt_programarTarea, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27))
-        );
+        javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
+        jt_actividades.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jScrollPane1.setViewportView(jt_actividades);
+
+        jPanel19.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 336, 250, 250));
 
         javax.swing.GroupLayout jd_calendarioLayout = new javax.swing.GroupLayout(jd_calendario.getContentPane());
         jd_calendario.getContentPane().setLayout(jd_calendarioLayout);
         jd_calendarioLayout.setHorizontalGroup(
             jd_calendarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 1094, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jd_calendarioLayout.setVerticalGroup(
             jd_calendarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_calendarioLayout.createSequentialGroup()
-                .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel7.setBackground(new java.awt.Color(240, 242, 245));
@@ -4107,38 +4018,100 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void bt_programarTareaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_programarTareaMouseClicked
 
-        Date f = jc_calendario.getDate();
+        Date fecha = jc_calendario.getDate();
+        fecha.setHours(0);
+        fecha.setMinutes(0);
+        
         String titulo = tf_tituloRecordatorio.getText();
-        int recordatorio = (int) sp_recordatorioMinutos.getValue();
+        int minutos = (int) sp_recordatorioMinutos.getValue();
         String contenido = tf_contenido.getText();
         String anotaciones = tf_anotaciones.getText();
+        
+         int horaInicio = (int) sp_horaInicio.getValue();
+        int minutosInicio = (int) sp_minutosInicio.getValue();
+        String meridiano = (String) sp_Ampm1.getValue();
+        if (meridiano.equals("P.M")) {
+            horaInicio += 12;
+        }
+        
+        Date inicio = jc_calendario.getDate();
+        inicio.setHours(horaInicio);
+        inicio.setMinutes(minutosInicio);
+        
+        Date recordatorio = jc_calendario.getDate();
+        if (inicio.getMinutes() - minutos < 0) {
+            recordatorio.setHours(inicio.getHours() -1);
+            recordatorio.setMinutes(inicio.getMinutes() -  minutos + 60);
+        }else{
+            recordatorio.setHours(inicio.getHours());
+            recordatorio.setMinutes(inicio.getMinutes() - minutos);
+        }
 
-        Actividades actividad = new Tareas(contenido, anotaciones, f, titulo, recordatorio);
-        //agregarActividad al usuario actual y escribir el archivo
-
+        Actividad nuevaTarea = new Tarea(contenido, anotaciones, fecha, titulo, recordatorio);
+        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+        admin.cargarArchivo();
+        admin.getUsuarios().get(indiceActual).getActividades().add(nuevaTarea);
+        admin.escribirArchivo();
+        
+        SimpleDateFormat formato1 = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato2 = new SimpleDateFormat("hh:mm");
+        JOptionPane.showMessageDialog(jd_calendario, "Tu tarea \"" + titulo + "\" fue programado el día " + formato1.format(fecha) + ".\n"
+                + "Comienza a las: " +formato2.format(inicio) + ".\n"
+                + "Te enviaremos un recordatorio a las: " + formato2.format(recordatorio) +".");
     }//GEN-LAST:event_bt_programarTareaMouseClicked
 
     private void bt_programarEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_programarEventoMouseClicked
         Date fecha = jc_calendario.getDate();
+        fecha.setHours(0);
+        fecha.setMinutes(0);
         String titulo1 = tf_tituloRecordatorio.getText();
-        int recordatorio1 = (int) sp_recordatorioMinutos.getValue();
+        int minutos = (int) sp_recordatorioMinutos.getValue();
 
         int horaInicio = (int) sp_horaInicio.getValue();
         int minutosInicio = (int) sp_minutosInicio.getValue();
-        String AmPm = (String) sp_Ampm1.getValue();
-        Date Inicio = jc_calendario.getDate();
-        Inicio.setHours(horaInicio);
-        Inicio.setMinutes(minutosInicio);
+        String meridiano = (String) sp_Ampm1.getValue();
+        if (meridiano.equals("P.M")) {
+            horaInicio += 12;
+        }
+        
+        Date inicio = jc_calendario.getDate();
+        inicio.setHours(horaInicio);
+        inicio.setMinutes(minutosInicio);
 
         int horaFinalizar = (int) sp_horaFinal.getValue();
         int minutoFinal = (int) sp_minutosFinal.getValue();
-        String amPm1 = (String) sp_ampm2.getValue();
+        String meridianoFin = (String) sp_ampm2.getValue();
+        if (meridianoFin.equals("P.M")) {
+            horaFinalizar += 12;
+        }
         Date cierre = jc_calendario.getDate();
         cierre.setHours(horaFinalizar);
         cierre.setMinutes(minutoFinal);
-
-        Eventos nuevoEvento = new Eventos(Inicio, cierre, fecha, titulo1, recordatorio1);
-        //Actividades falta por realizar dude.
+        
+        
+        
+        Date recordatorio = jc_calendario.getDate();
+        if (inicio.getMinutes() - minutos < 0) {
+            recordatorio.setHours(inicio.getHours() -1);
+            recordatorio.setMinutes(inicio.getMinutes() -  minutos + 60);
+        }else{
+            recordatorio.setHours(inicio.getHours());
+            recordatorio.setMinutes(inicio.getMinutes() - minutos);
+        }
+        
+        
+        SimpleDateFormat formato1 = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato2 = new SimpleDateFormat("hh:mm");
+        Actividad nuevoEvento = new Evento(inicio, cierre, fecha, titulo1, recordatorio);
+        JOptionPane.showMessageDialog(jd_calendario, "Tu evento \"" + titulo1 + "\" fue programado el día " + formato1.format(fecha) + ".\n"
+                + "Comienza a las: " +formato2.format(inicio) + " y termina a las: " + formato2.format(cierre) + ".\n"
+                + "Te enviaremos un recordatorio a las: " + formato2.format(recordatorio) +".");
+        
+        
+        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+        admin.cargarArchivo();
+        admin.getUsuarios().get(indiceActual).getActividades().add(nuevoEvento);
+        admin.escribirArchivo();
     }//GEN-LAST:event_bt_programarEventoMouseClicked
 
     private void tf_pensamientoAdminMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_pensamientoAdminMousePressed
@@ -4155,6 +4128,39 @@ public class NewJFrame extends javax.swing.JFrame {
     private void jLabel13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MouseClicked
         crearPublicacion();
     }//GEN-LAST:event_jLabel13MouseClicked
+
+    private void jc_calendarioPropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_jc_calendarioPropertyChange
+        if (usuarioActual != null) {
+            String root = "Actividades";
+            DefaultTreeModel modelo = new DefaultTreeModel(new DefaultMutableTreeNode(root));
+            DefaultMutableTreeNode raiz = (DefaultMutableTreeNode) modelo.getRoot();
+            
+            String eventos1 = "Eventos", tareas1 = "Tareas";
+            DefaultMutableTreeNode eventos = new DefaultMutableTreeNode(eventos1);
+            DefaultMutableTreeNode tareas = new DefaultMutableTreeNode(tareas1);
+
+            administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+            admin.cargarArchivo();
+            ArrayList<Actividad> actividades = new ArrayList();
+            actividades = admin.getUsuarios().get(indiceActual).getActividades();
+            for (Actividad actividad : actividades) {
+                if (actividad.getFecha().getDate() == jc_calendario.getDate().getDate() && actividad.getFecha().getMonth() == jc_calendario.getDate().getMonth() && actividad.getFecha().getYear() == jc_calendario.getDate().getYear()) {
+                    if (actividad instanceof Evento) {
+                        DefaultMutableTreeNode nuevoEvento = new DefaultMutableTreeNode(actividad);
+                        eventos.add(nuevoEvento);
+                    } else {
+                        DefaultMutableTreeNode nuevaTarea = new DefaultMutableTreeNode(actividad);
+                        tareas.add(nuevaTarea);
+                    }
+                }
+            }
+            raiz.add(eventos);
+            raiz.add(tareas);
+            jt_actividades.setModel(modelo);
+            modelo.reload();
+        }
+        
+    }//GEN-LAST:event_jc_calendarioPropertyChange
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4351,6 +4357,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator10;
@@ -4394,6 +4401,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JDialog jd_reproductorMusical;
     private javax.swing.JDialog jd_solicitud;
     private javax.swing.JLabel jl_muroPersonalAdmin;
+    private javax.swing.JTree jt_actividades;
     private javax.swing.JLabel lb_agregarFoto;
     private javax.swing.JLabel lb_agregarVideo;
     private javax.swing.JLabel lb_amigoSugerenciaAdmin;
@@ -4930,5 +4938,27 @@ public class NewJFrame extends javax.swing.JFrame {
 
         }
 
+    }
+
+    private String Buscar(Usuario usuarioActual) {
+        String direccion = "./UsuariosRegulares.pfb";
+        administradorUsuario admin = new administradorUsuario(direccion);
+        admin.cargarArchivo();
+        for (Usuario persona : admin.getUsuarios()) {
+            if (usuarioActual.getNombre().equals(persona.getNombre())) {
+                return direccion;
+            }
+        }
+        
+        direccion = "./Administradores.pfb";
+        admin = new administradorUsuario(direccion);
+        admin.cargarArchivo();
+        for (Usuario persona : admin.getUsuarios()) {
+            if (usuarioActual.getNombre().equals(persona.getNombre())) {
+                return direccion;
+            }
+        }
+        
+        return "Persona no encontrada";
     }
 }
