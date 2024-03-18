@@ -89,6 +89,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel24 = new javax.swing.JPanel();
         lb_fotoAmigo = new javax.swing.JLabel();
         tf_nombreAmigo = new javax.swing.JTextField();
+        jButton5 = new javax.swing.JButton();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         lb_proPicPrincipalReg = new javax.swing.JLabel();
@@ -191,8 +192,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel21 = new javax.swing.JLabel();
         jSeparator9 = new javax.swing.JSeparator();
         jLabel22 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel19 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jl_muroPersonalAdmin = new javax.swing.JLabel();
         bt_reproductorAdmin = new javax.swing.JButton();
@@ -201,6 +200,18 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane2 = new javax.swing.JScrollPane();
         jList2 = new javax.swing.JList<>();
         jSeparator10 = new javax.swing.JSeparator();
+        jPanel25 = new javax.swing.JPanel();
+        lb_picPub2Admin = new javax.swing.JLabel();
+        tf_textPub2Admin = new javax.swing.JTextField();
+        jb_likeAdminpub2 = new javax.swing.JButton();
+        jb_comentAdminPub2 = new javax.swing.JButton();
+        tf_likeAdmin2 = new javax.swing.JTextField();
+        jPanel27 = new javax.swing.JPanel();
+        lb_picPub1Admin = new javax.swing.JLabel();
+        tf_textPub1Admin = new javax.swing.JTextField();
+        jb_likeAdminpub1 = new javax.swing.JButton();
+        jb_comentAdminPub1 = new javax.swing.JButton();
+        tf_likeAdmin1 = new javax.swing.JTextField();
         jd_muroPersonalAdministrador = new javax.swing.JDialog();
         jPanel16 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -209,8 +220,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel49 = new javax.swing.JLabel();
         jSeparator11 = new javax.swing.JSeparator();
         jLabel50 = new javax.swing.JLabel();
-        jPanel18 = new javax.swing.JPanel();
-        jLabel51 = new javax.swing.JLabel();
         lb_proPicAdminPers = new javax.swing.JLabel();
         bt_reproductorPersAdmin = new javax.swing.JButton();
         bt_calendarioPersAdmin = new javax.swing.JButton();
@@ -220,10 +229,27 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_listarUsuario = new javax.swing.JButton();
         bt_modificarUsuario = new javax.swing.JButton();
         bt_eliminarUsuario = new javax.swing.JButton();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jList3 = new javax.swing.JList<>();
         jButton1 = new javax.swing.JButton();
         jSeparator13 = new javax.swing.JSeparator();
+        jPanel15 = new javax.swing.JPanel();
+        lb_pubPersonAdmin1 = new javax.swing.JLabel();
+        tf_likePersonAdmin1 = new javax.swing.JTextField();
+        tf_comentPersonAdmin1 = new javax.swing.JTextField();
+        jb_likePersonAdmin1 = new javax.swing.JButton();
+        jb_comenPersonAdmin1 = new javax.swing.JButton();
+        jPanel18 = new javax.swing.JPanel();
+        lb_pubPersonAdmin2 = new javax.swing.JLabel();
+        tf_likePersonAdmin2 = new javax.swing.JTextField();
+        tf_comentPersonAdmin2 = new javax.swing.JTextField();
+        jb_likePersonAdmin2 = new javax.swing.JButton();
+        jb_comenPersonAdmin2 = new javax.swing.JButton();
+        jPanel26 = new javax.swing.JPanel();
+        lb_fotoAmigoAdmin = new javax.swing.JLabel();
+        tf_nombreAmigoAdmin = new javax.swing.JTextField();
+        jPanel28 = new javax.swing.JPanel();
+        lb_amigoSugerenciaAdmin = new javax.swing.JLabel();
+        tf_nombreSugerenciaAdmin = new javax.swing.JTextField();
+        jb_agregarAmigoAdmin = new javax.swing.JButton();
         jd_calendario = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
         jCalendar1 = new com.toedter.calendar.JCalendar();
@@ -278,6 +304,15 @@ public class NewJFrame extends javax.swing.JFrame {
         sp_mesEliminar = new javax.swing.JSpinner();
         sp_añoEliminar = new javax.swing.JSpinner();
         jb_eliminarUsuario = new javax.swing.JButton();
+        jd_crearPublicacionAdmin = new javax.swing.JDialog();
+        jPanel29 = new javax.swing.JPanel();
+        jLabel19 = new javax.swing.JLabel();
+        jSeparator16 = new javax.swing.JSeparator();
+        tf_pensamientoAdmin = new javax.swing.JTextField();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        lb_fotosPublicacionAdmin = new javax.swing.JLabel();
+        jb_publicarAdmin = new javax.swing.JButton();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -319,7 +354,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 130, 120));
 
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Regresar Menu Principal");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
 
@@ -432,18 +466,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(bt_likePubPers1)
                 .addGap(18, 18, 18)
                 .addComponent(bt_comentarPubPers1)
                 .addGap(21, 21, 21))
+            .addGroup(jPanel20Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -452,15 +488,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bt_comentarPubPers1)
-                            .addComponent(bt_likePubPers1))
-                        .addGap(0, 21, Short.MAX_VALUE)))
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(bt_comentarPubPers1)
+                    .addComponent(bt_likePubPers1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -594,24 +626,32 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel24Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE)
-                    .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 86, Short.MAX_VALUE)
+                .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         jPanel3.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 150, 140));
+
+        jButton5.setText(" Crear Admin");
+        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton5MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
@@ -712,7 +752,6 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_agendaRegular.setText("Agendas");
         jPanel5.add(bt_agendaRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, -1, -1));
 
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Ir a tu muro personal");
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
 
@@ -736,8 +775,8 @@ public class NewJFrame extends javax.swing.JFrame {
             pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
@@ -763,7 +802,7 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(bt_comentarPubPers4)
                             .addComponent(bt_likePubPers4))
-                        .addGap(0, 21, Short.MAX_VALUE)))
+                        .addGap(0, 25, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -789,8 +828,8 @@ public class NewJFrame extends javax.swing.JFrame {
             pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
             .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
@@ -1473,29 +1512,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 6, -1, -1));
 
-        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel19.setText("Muro Principal Admin");
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addComponent(jLabel19)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel19)
-                .addGap(181, 181, 181))
-        );
-
-        jPanel13.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 174, 428, 391));
-
         jLabel23.setText("Ir al muro Personal");
         jPanel13.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(723, 44, -1, -1));
 
@@ -1524,6 +1540,112 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jSeparator10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel13.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 334, 202, 12));
+
+        jPanel25.setBackground(new java.awt.Color(255, 255, 255));
+
+        tf_textPub2Admin.setEditable(false);
+        tf_textPub2Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_textPub2AdminActionPerformed(evt);
+            }
+        });
+
+        jb_likeAdminpub2.setText("Like");
+
+        jb_comentAdminPub2.setText("Comentar");
+
+        tf_likeAdmin2.setEditable(false);
+
+        javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
+        jPanel25.setLayout(jPanel25Layout);
+        jPanel25Layout.setHorizontalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_textPub2Admin)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jb_likeAdminpub2)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_comentAdminPub2)
+                        .addGap(0, 15, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel25Layout.setVerticalGroup(
+            jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel25Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_textPub2Admin)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addGap(0, 9, Short.MAX_VALUE)
+                        .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_likeAdminpub2)
+                    .addComponent(jb_comentAdminPub2)
+                    .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19))
+        );
+
+        jPanel13.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 380, 190));
+
+        jPanel27.setBackground(new java.awt.Color(255, 255, 255));
+
+        tf_textPub1Admin.setEditable(false);
+        tf_textPub1Admin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tf_textPub1AdminActionPerformed(evt);
+            }
+        });
+
+        jb_likeAdminpub1.setText("Like");
+
+        jb_comentAdminPub1.setText("Comentar");
+
+        tf_likeAdmin1.setEditable(false);
+
+        javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
+        jPanel27.setLayout(jPanel27Layout);
+        jPanel27Layout.setHorizontalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_textPub1Admin)
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jb_likeAdminpub1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jb_comentAdminPub1)
+                        .addGap(0, 15, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel27Layout.setVerticalGroup(
+            jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel27Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_textPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
+                    .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jb_likeAdminpub1)
+                    .addComponent(jb_comentAdminPub1)
+                    .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(19, 19, 19))
+        );
+
+        jPanel13.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 380, 180));
 
         javax.swing.GroupLayout jd_muroPrincipalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPrincipalAdministrador.getContentPane());
         jd_muroPrincipalAdministrador.getContentPane().setLayout(jd_muroPrincipalAdministradorLayout);
@@ -1578,54 +1700,30 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                        .addComponent(jLabel49)
-                        .addGap(18, 18, 18))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                        .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                .addComponent(jLabel49)
+                .addGap(18, 18, 18))
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(141, 141, 141)
+                .addGap(128, 128, 128)
                 .addComponent(jLabel50)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
+                .addContainerGap(31, Short.MAX_VALUE)
                 .addComponent(jLabel49)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator11, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel50, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
-
-        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel51.setText("Muro");
-
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel18Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel51, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(128, 128, 128))
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel18Layout.createSequentialGroup()
-                .addGap(158, 158, 158)
-                .addComponent(jLabel51)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 340, 391));
+        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, 130));
 
         lb_proPicAdminPers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_proPicAdminPers.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
@@ -1689,10 +1787,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel16.add(bt_eliminarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
 
-        jScrollPane3.setViewportView(jList3);
-
-        jPanel16.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 160, 177, 350));
-
         jButton1.setBackground(new java.awt.Color(255, 51, 102));
         jButton1.setText("Cerrar Sesion");
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -1702,6 +1796,162 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel16.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 520, -1, -1));
         jPanel16.add(jSeparator13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 430, 220, 20));
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        tf_likePersonAdmin1.setEditable(false);
+
+        tf_comentPersonAdmin1.setEditable(false);
+
+        jb_likePersonAdmin1.setText("Like");
+
+        jb_comenPersonAdmin1.setText("Comentar");
+
+        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
+        jPanel15.setLayout(jPanel15Layout);
+        jPanel15Layout.setHorizontalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lb_pubPersonAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_comentPersonAdmin1))
+                    .addGroup(jPanel15Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(tf_likePersonAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jb_likePersonAdmin1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_comenPersonAdmin1)
+                        .addGap(0, 17, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel15Layout.setVerticalGroup(
+            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_comentPersonAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_pubPersonAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_likePersonAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_likePersonAdmin1)
+                    .addComponent(jb_comenPersonAdmin1))
+                .addGap(19, 19, 19))
+        );
+
+        jPanel16.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 150, 340, 170));
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        tf_likePersonAdmin2.setEditable(false);
+
+        tf_comentPersonAdmin2.setEditable(false);
+
+        jb_likePersonAdmin2.setText("Like");
+
+        jb_comenPersonAdmin2.setText("Comentar");
+
+        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
+        jPanel18.setLayout(jPanel18Layout);
+        jPanel18Layout.setHorizontalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lb_pubPersonAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_comentPersonAdmin2))
+                    .addGroup(jPanel18Layout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(tf_likePersonAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(jb_likePersonAdmin2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jb_comenPersonAdmin2)
+                        .addGap(0, 17, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        jPanel18Layout.setVerticalGroup(
+            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel18Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_comentPersonAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lb_pubPersonAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, Short.MAX_VALUE)
+                .addGroup(jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tf_likePersonAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jb_likePersonAdmin2)
+                    .addComponent(jb_comenPersonAdmin2))
+                .addGap(19, 19, 19))
+        );
+
+        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 340, 340, 180));
+
+        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel26Layout = new javax.swing.GroupLayout(jPanel26);
+        jPanel26.setLayout(jPanel26Layout);
+        jPanel26Layout.setHorizontalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_nombreAmigoAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, 139, Short.MAX_VALUE)
+                    .addComponent(lb_fotoAmigoAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel26Layout.setVerticalGroup(
+            jPanel26Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel26Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(lb_fotoAmigoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 79, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(tf_nombreAmigoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel16.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 160, 150));
+
+        jPanel28.setBackground(new java.awt.Color(255, 255, 255));
+
+        jb_agregarAmigoAdmin.setText("Agregar Amigo");
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb_amigoSugerenciaAdmin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel28Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(jb_agregarAmigoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 9, Short.MAX_VALUE))
+                    .addComponent(tf_nombreSugerenciaAdmin))
+                .addContainerGap())
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(lb_amigoSugerenciaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tf_nombreSugerenciaAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jb_agregarAmigoAdmin)
+                .addContainerGap(10, Short.MAX_VALUE))
+        );
+
+        jPanel16.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 160, 180));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
         jd_muroPersonalAdministrador.getContentPane().setLayout(jd_muroPersonalAdministradorLayout);
@@ -2131,6 +2381,118 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_eliminarUsuarioLayout.setVerticalGroup(
             jd_eliminarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel29.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel19.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel19.setText("Crear Publicacion");
+
+        tf_pensamientoAdmin.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tf_pensamientoAdmin.setForeground(new java.awt.Color(153, 153, 153));
+        tf_pensamientoAdmin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_pensamientoAdmin.setText("¿Que estás pensando?");
+        tf_pensamientoAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tf_pensamientoAdminMouseClicked(evt);
+            }
+        });
+
+        jLabel51.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel51.setText("Agregar Videos");
+        jLabel51.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel51.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel51MouseClicked(evt);
+            }
+        });
+
+        jLabel55.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel55.setText("Agregar Fotos");
+        jLabel55.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel55.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel55MouseClicked(evt);
+            }
+        });
+
+        lb_fotosPublicacionAdmin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jb_publicarAdmin.setBackground(new java.awt.Color(0, 153, 255));
+        jb_publicarAdmin.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jb_publicarAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jb_publicarAdmin.setText("Publicar");
+        jb_publicarAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_publicarAdminMouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel29Layout = new javax.swing.GroupLayout(jPanel29);
+        jPanel29.setLayout(jPanel29Layout);
+        jPanel29Layout.setHorizontalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel29Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jSeparator16))
+                    .addGroup(jPanel29Layout.createSequentialGroup()
+                        .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel29Layout.createSequentialGroup()
+                                .addGap(114, 114, 114)
+                                .addComponent(jLabel51)
+                                .addGap(87, 87, 87)
+                                .addComponent(jLabel55))
+                            .addGroup(jPanel29Layout.createSequentialGroup()
+                                .addGap(31, 31, 31)
+                                .addComponent(tf_pensamientoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 31, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel19)
+                .addGap(192, 192, 192))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lb_fotosPublicacionAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGap(153, 153, 153)
+                .addComponent(jb_publicarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel29Layout.setVerticalGroup(
+            jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel29Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel19)
+                .addGap(18, 18, 18)
+                .addComponent(jSeparator16, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tf_pensamientoAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(34, 34, 34)
+                .addGroup(jPanel29Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel51)
+                    .addComponent(jLabel55))
+                .addGap(26, 26, 26)
+                .addComponent(lb_fotosPublicacionAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
+                .addComponent(jb_publicarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+
+        javax.swing.GroupLayout jd_crearPublicacionAdminLayout = new javax.swing.GroupLayout(jd_crearPublicacionAdmin.getContentPane());
+        jd_crearPublicacionAdmin.getContentPane().setLayout(jd_crearPublicacionAdminLayout);
+        jd_crearPublicacionAdminLayout.setHorizontalGroup(
+            jd_crearPublicacionAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel29, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jd_crearPublicacionAdminLayout.setVerticalGroup(
+            jd_crearPublicacionAdminLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jd_crearPublicacionAdminLayout.createSequentialGroup()
+                .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2944,11 +3306,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void bt_publicarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarMouseClicked
         Publicacion nuevaPublicacion;
-        
+
         if (lb_subirMedia.getIcon() == null) {
             nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_crearPensamiento.getText());
             usuarioActual.getPublicaciones().add(nuevaPublicacion);
-        }else{
+        } else {
             nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_crearPensamiento.getText(), lb_subirMedia.getIcon());
             usuarioActual.getPublicaciones().add(nuevaPublicacion);
         }
@@ -2967,11 +3329,11 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_publicarMouseClicked
 
     private void jLabel22MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel22MouseClicked
-        crearPublicacion();
+        crearPublicacionAdmin();
     }//GEN-LAST:event_jLabel22MouseClicked
 
     private void jLabel21MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel21MouseClicked
-        crearPublicacion();
+        crearPublicacionAdmin();
     }//GEN-LAST:event_jLabel21MouseClicked
 
     private void jl_muroPersonalAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jl_muroPersonalAdminMouseClicked
@@ -2989,11 +3351,11 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel43MouseClicked
 
     private void jLabel50MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel50MouseClicked
-        crearPublicacion();
+        crearPublicacionAdmin();
     }//GEN-LAST:event_jLabel50MouseClicked
 
     private void jLabel49MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel49MouseClicked
-        crearPublicacion();
+        crearPublicacionAdmin();
     }//GEN-LAST:event_jLabel49MouseClicked
 
     private void bt_cerrarSesionMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseEntered
@@ -3119,7 +3481,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         admin.escribirArchivo();
         JOptionPane.showMessageDialog(jd_muroPersonal, "Solicitud enviada.");
 
@@ -3189,7 +3551,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         admin.escribirArchivo();
         JOptionPane.showMessageDialog(jd_solicitud, "Ahora " + lb_nombreSolicitud.getText() + " y tú, son amigos!");
         jd_solicitud.setVisible(false);
@@ -3199,7 +3561,7 @@ public class NewJFrame extends javax.swing.JFrame {
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
         admin.cargarArchivo();
         boolean encontrado = false;
-        
+
         for (Usuario regular : admin.getUsuarios()) {
             if (usuarioActual.getNombre().equals(regular.getNombre())) {
                 usuarioActual.getSolicitudes().remove(0);
@@ -3207,7 +3569,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 encontrado = true;
             }
         }
-        
+
         if (!encontrado) {
             admin = new administradorUsuario("./Administradores.pfb");
             for (Usuario administradores : admin.getUsuarios()) {
@@ -3217,7 +3579,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
         }
-        
+
         admin.escribirArchivo();
         JOptionPane.showMessageDialog(jd_solicitud, "Has rechazado la solicitud de " + lb_nombreSolicitud.getText() + ".");
         jd_solicitud.setVisible(false);
@@ -3407,27 +3769,27 @@ public class NewJFrame extends javax.swing.JFrame {
 
     private void jb_eliminarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_eliminarUsuarioMouseClicked
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
-admin.cargarArchivo();
-DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegularesEliminar.getModel();
-int eliminarUsuario = cb_usuariosRegularesEliminar.getSelectedIndex(); 
-if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < modelo.getSize()) { 
-    int confirmacion = JOptionPane.showConfirmDialog(this, "¿Seguro que desea eliminar ese usuario?", "Eliminar", JOptionPane.YES_NO_OPTION);
-    if (confirmacion == JOptionPane.YES_OPTION) {
-        modelo.removeElementAt(eliminarUsuario);
-        admin.getUsuarios().remove(eliminarUsuario);
-        cb_usuariosRegularesEliminar.setModel(modelo);
-        admin.escribirArchivo();
-        JOptionPane.showMessageDialog(this, "Usuario eliminado correctamente");
-    } else {
-        JOptionPane.showMessageDialog(this, "Su usuario no ha sido eliminado");
-    }
-} else {
-    JOptionPane.showMessageDialog(this, "Selecciona un usuario válido");
-}
+        admin.cargarArchivo();
+        DefaultComboBoxModel modelo = (DefaultComboBoxModel) cb_usuariosRegularesEliminar.getModel();
+        int eliminarUsuario = cb_usuariosRegularesEliminar.getSelectedIndex();
+        if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < modelo.getSize()) {
+            int confirmacion = JOptionPane.showConfirmDialog(this, "¿Seguro que desea eliminar ese usuario?", "Eliminar", JOptionPane.YES_NO_OPTION);
+            if (confirmacion == JOptionPane.YES_OPTION) {
+                modelo.removeElementAt(eliminarUsuario);
+                admin.getUsuarios().remove(eliminarUsuario);
+                cb_usuariosRegularesEliminar.setModel(modelo);
+                admin.escribirArchivo();
+                JOptionPane.showMessageDialog(this, "Usuario eliminado correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "Su usuario no ha sido eliminado");
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Selecciona un usuario válido");
+        }
     }//GEN-LAST:event_jb_eliminarUsuarioMouseClicked
 
     private void bt_likePubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers1MouseClicked
- //El like aqui se agrega
+        //El like aqui se agrega
     }//GEN-LAST:event_bt_likePubPers1MouseClicked
 
     private void lb_imgSugerenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_imgSugerenciaMouseClicked
@@ -3455,8 +3817,92 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     }//GEN-LAST:event_lb_imgSugerenciaMouseClicked
 
     private void lb_fotoAmigoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_fotoAmigoMouseClicked
-        RefreshMuroAmigo(tf_nombreAmigo.getText());      
+        RefreshMuroAmigo(tf_nombreAmigo.getText());
     }//GEN-LAST:event_lb_fotoAmigoMouseClicked
+
+    private void tf_textPub2AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_textPub2AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_textPub2AdminActionPerformed
+
+    private void tf_textPub1AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_textPub1AdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tf_textPub1AdminActionPerformed
+
+    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
+        jd_createAdmin.pack();
+        jd_createAdmin.setLocationRelativeTo(null);
+        jd_createAdmin.setVisible(true);
+    }//GEN-LAST:event_jButton5MouseClicked
+
+    private void jLabel55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MouseClicked
+
+        JFileChooser fc = new JFileChooser();
+        FileFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
+        fc.setMultiSelectionEnabled(true);
+        fc.setFileFilter(filtro);
+        File archivo;
+        int op = fc.showOpenDialog(jd_muroPrincipal);
+        if (op == JFileChooser.APPROVE_OPTION) {
+            archivo = fc.getSelectedFile();
+            Image img = Toolkit.getDefaultToolkit().createImage(archivo.getPath()).getScaledInstance(430, 280, 0);
+            this.lb_fotosPublicacionAdmin.setIcon(new ImageIcon(img));
+        }
+    }//GEN-LAST:event_jLabel55MouseClicked
+
+    private void tf_pensamientoAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_pensamientoAdminMouseClicked
+
+        if (tf_pensamientoAdmin.getText().equals("¿Que estás pensando?")) {
+            tf_apodoAdmin.setText("");
+            tf_apodoAdmin.setForeground(Color.black);
+        }
+
+        if (tf_pensamientoAdmin.getText().equals("")) {
+            tf_pensamientoAdmin.setText("¿Que estás pensando?");
+            tf_pensamientoAdmin.setForeground(Color.gray);
+        }
+    }//GEN-LAST:event_tf_pensamientoAdminMouseClicked
+
+    private void jLabel51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseClicked
+        JFileChooser fileChooser = new JFileChooser();
+        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Videos", "mp4", "Mp4");
+        fileChooser.setFileFilter(filtro);
+        int result = fileChooser.showOpenDialog(jd_crearPublicacion);
+        if (result == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            media = new MediaPlayer(new Media(selectedFile.toURI().toString()));
+            MediaView view = new MediaView(media);
+            jfx_panel.setScene(new Scene(new Group(view), 500, 600));
+            view.setFitHeight(500);
+            view.setFitWidth(600);
+            media.setVolume(0.2);
+            media.setCycleCount(MediaPlayer.INDEFINITE);
+
+        }
+    }//GEN-LAST:event_jLabel51MouseClicked
+
+    private void jb_publicarAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_publicarAdminMouseClicked
+
+        Publicacion nuevaPublicacion;
+
+        if (lb_fotosPublicacionAdmin.getIcon() == null) {
+            nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_pensamientoAdmin.getText());
+            usuarioActual.getPublicaciones().add(nuevaPublicacion);
+        } else {
+            nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_pensamientoAdmin.getText(), lb_fotosPublicacionAdmin.getIcon());
+            usuarioActual.getPublicaciones().add(nuevaPublicacion);
+        }
+
+        administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
+        admin.cargarArchivo();
+        admin.getUsuarios().get(indiceActual).getPublicaciones().add(nuevaPublicacion);
+        admin.escribirArchivo();
+        RefresfhMuroPersonalAdmin();
+
+        JOptionPane.showMessageDialog(jd_crearPublicacionAdmin, "Post ingresado correctamente");
+        jd_crearPublicacion.setVisible(false);
+        lb_subirMedia.setIcon(null);
+        tf_crearPensamiento.setText("¿Qué estás pensando?");
+    }//GEN-LAST:event_jb_publicarAdminMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -3468,6 +3914,12 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
         jd_crearPublicacion.setVisible(true);
         jd_crearPublicacion.pack();
         jd_crearPublicacion.setLocationRelativeTo(null);
+    }
+
+    public void crearPublicacionAdmin() {
+        jd_crearPublicacionAdmin.pack();
+        jd_crearPublicacionAdmin.setLocationRelativeTo(null);
+        jd_crearPublicacionAdmin.setVisible(true);
     }
 
     /**
@@ -3552,6 +4004,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private com.toedter.calendar.JCalendar jCalendar1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -3603,12 +4056,12 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JLabel jLabel52;
     private javax.swing.JLabel jLabel53;
     private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JList<String> jList2;
-    private javax.swing.JList<String> jList3;
     private javax.swing.JList<String> jList4;
     private javax.swing.JList<String> jList5;
     private javax.swing.JPanel jPanel1;
@@ -3628,6 +4081,11 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -3636,7 +4094,6 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JSeparator jSeparator1;
@@ -3646,6 +4103,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JSeparator jSeparator13;
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
+    private javax.swing.JSeparator jSeparator16;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
@@ -3654,9 +4112,20 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
+    private javax.swing.JButton jb_agregarAmigoAdmin;
+    private javax.swing.JButton jb_comenPersonAdmin1;
+    private javax.swing.JButton jb_comenPersonAdmin2;
+    private javax.swing.JButton jb_comentAdminPub1;
+    private javax.swing.JButton jb_comentAdminPub2;
     private javax.swing.JButton jb_eliminarUsuario;
+    private javax.swing.JButton jb_likeAdminpub1;
+    private javax.swing.JButton jb_likeAdminpub2;
+    private javax.swing.JButton jb_likePersonAdmin1;
+    private javax.swing.JButton jb_likePersonAdmin2;
+    private javax.swing.JButton jb_publicarAdmin;
     private javax.swing.JDialog jd_calendario;
     private javax.swing.JDialog jd_crearPublicacion;
+    private javax.swing.JDialog jd_crearPublicacionAdmin;
     private javax.swing.JDialog jd_createAdmin;
     private javax.swing.JDialog jd_createUser;
     private javax.swing.JDialog jd_eliminarUsuario;
@@ -3670,10 +4139,13 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JLabel jl_muroPersonalAdmin;
     private javax.swing.JLabel lb_agregarFoto;
     private javax.swing.JLabel lb_agregarVideo;
+    private javax.swing.JLabel lb_amigoSugerenciaAdmin;
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
     private javax.swing.JLabel lb_fotoAmigo;
+    private javax.swing.JLabel lb_fotoAmigoAdmin;
+    private javax.swing.JLabel lb_fotosPublicacionAdmin;
     private javax.swing.JLabel lb_imagenEliminar;
     private javax.swing.JLabel lb_imagenPrincipal1;
     private javax.swing.JLabel lb_imagenPrincipal2;
@@ -3685,10 +4157,14 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JLabel lb_nuevaFechaNacimiento;
     private javax.swing.JLabel lb_nuevaFotoPerfil;
     private javax.swing.JLabel lb_nuevoNombre;
+    private javax.swing.JLabel lb_picPub1Admin;
+    private javax.swing.JLabel lb_picPub2Admin;
     private javax.swing.JLabel lb_proPicAdminPers;
     private javax.swing.JLabel lb_proPicPrincipalAdmin;
     private javax.swing.JLabel lb_proPicPrincipalReg;
     private javax.swing.JLabel lb_proPicReg;
+    private javax.swing.JLabel lb_pubPersonAdmin1;
+    private javax.swing.JLabel lb_pubPersonAdmin2;
     private javax.swing.JLabel lb_subirMedia;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPasswordField pf_password;
@@ -3719,9 +4195,15 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JTextField tf_apellidoRegistrarU;
     private javax.swing.JTextField tf_apodoAdmin;
     private javax.swing.JTextField tf_apodoRegistrarU;
+    private javax.swing.JTextField tf_comentPersonAdmin1;
+    private javax.swing.JTextField tf_comentPersonAdmin2;
     private javax.swing.JTextField tf_contraseñaEliminar;
     private javax.swing.JTextField tf_contraseñaNueva;
     private javax.swing.JTextField tf_crearPensamiento;
+    private javax.swing.JTextField tf_likeAdmin1;
+    private javax.swing.JTextField tf_likeAdmin2;
+    private javax.swing.JTextField tf_likePersonAdmin1;
+    private javax.swing.JTextField tf_likePersonAdmin2;
     private javax.swing.JTextField tf_likesPers1;
     private javax.swing.JTextField tf_likesPers2;
     private javax.swing.JTextField tf_likesPrin1;
@@ -3730,14 +4212,19 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private javax.swing.JTextField tf_nicknameNuevo;
     private javax.swing.JTextField tf_nombreAdmin;
     private javax.swing.JTextField tf_nombreAmigo;
+    private javax.swing.JTextField tf_nombreAmigoAdmin;
     private javax.swing.JTextField tf_nombreEliminar;
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_nombreSugerencia;
+    private javax.swing.JTextField tf_nombreSugerenciaAdmin;
     private javax.swing.JTextField tf_nuevoNombre;
     private javax.swing.JTextField tf_paisAdmin;
     private javax.swing.JTextField tf_paisCreateU;
     private javax.swing.JTextField tf_paisEliminar;
     private javax.swing.JTextField tf_paisNuevo;
+    private javax.swing.JTextField tf_pensamientoAdmin;
+    private javax.swing.JTextField tf_textPub1Admin;
+    private javax.swing.JTextField tf_textPub2Admin;
     private javax.swing.JTextField tf_textoPubPers1;
     private javax.swing.JTextField tf_textoPubPers2;
     private javax.swing.JTextField tf_textoPubPrin1;
@@ -3879,7 +4366,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
     private void RefreshMuroPersonalUsuario() {
         SecureRandom sr = new SecureRandom();
         int random = sr.nextInt(1, 3);
-        
+
         try {
             Publicacion publicacion1 = usuarioActual.getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
             if (publicacion1.getImagen() == null) {
@@ -3905,8 +4392,6 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
             }
             tf_textoPubPers2.setText(publicacion2.getPublicador() + ": " + publicacion2.getComentario());
             tf_likesPers2.setText(Integer.toString(publicacion2.getLikes()));
-
-            
 
         } catch (IndexOutOfBoundsException e) {
         }
@@ -3940,7 +4425,7 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
                 break;
             default:
         }
-        
+
         if (usuarioActual.getAmigos().isEmpty()) {
         } else {
             int indice = sr.nextInt(0, usuarioActual.getAmigos().size());
@@ -3948,11 +4433,83 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
             administradorUsuario au = new administradorUsuario("./UsuariosRegulares.pfb");
             au.cargarArchivo();
             Usuario amigo = usuarioActual.getAmigos().get(indice);
-            lb_fotoAmigo.setIcon(amigo.getFotografia());
+            ImageIcon icono = (ImageIcon) amigo.getFotografia();
+            Image icono2 = (Image) icono.getImage();
+            Image renderizada = icono2.getScaledInstance(134, 90, Image.SCALE_SMOOTH);
+            Icon renderizado2 = new ImageIcon(renderizada);
+            lb_fotoAmigo.setIcon(renderizado2);
             tf_nombreAmigo.setText(amigo.getNombre());
         }
     }
 
+    
+    public void RefresfhMuroPersonalAdmin(){
+        
+     SecureRandom sr = new SecureRandom();
+        int random = sr.nextInt(1, 3);
+        
+        try {
+            Publicacion publicacion1 = usuarioActual.getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
+            if (publicacion1.getImagen() == null) {
+                lb_pubPersonAdmin1.setIcon(null);
+            } else {
+                ImageIcon icono = (ImageIcon) publicacion1.getImagen();
+                Image icono2 = (Image) icono.getImage();
+                Image renderizada = icono2.getScaledInstance(120, 106, Image.SCALE_SMOOTH);
+                Icon renderizado2 = new ImageIcon(renderizada);
+                lb_pubPersonAdmin1.setIcon(renderizado2);
+            }
+            tf_comentPersonAdmin1.setText(publicacion1.getPublicador() + ": " + publicacion1.getComentario());
+            tf_likePersonAdmin1.setText(Integer.toString(publicacion1.getLikes()));
+
+            Publicacion publicacion2 = usuarioActual.getPublicaciones().get(usuarioActual.getPublicaciones().size() - 2);
+            if (publicacion2.getImagen() == null) {
+            } else {
+                ImageIcon icono = (ImageIcon) publicacion2.getImagen();
+                Image icono2 = (Image) icono.getImage();
+                Image renderizada = icono2.getScaledInstance(120, 110, Image.SCALE_SMOOTH);
+                Icon renderizado2 = new ImageIcon(renderizada);
+                lb_pubPersonAdmin2.setIcon(renderizado2);
+            }
+            tf_comentPersonAdmin2.setText(publicacion2.getPublicador() + ": " + publicacion2.getComentario());
+            tf_likePersonAdmin2.setText(Integer.toString(publicacion2.getLikes()));
+
+        } catch (IndexOutOfBoundsException e) {
+        }
+
+        administradorUsuario admin;
+
+        switch (random) {
+            case 1:
+                admin = new administradorUsuario("./Administradores.pfb");
+                admin.cargarArchivo();
+                indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
+                Usuario sugerencia = admin.getUsuarios().get(indiceAmigo);
+                ImageIcon icono = (ImageIcon) sugerencia.getFotografia();
+                Image icono2 = (Image) icono.getImage();
+                Image renderizada = icono2.getScaledInstance(142, 93, Image.SCALE_SMOOTH);
+                Icon renderizado2 = new ImageIcon(renderizada);
+                lb_amigoSugerenciaAdmin.setIcon(renderizado2);
+                tf_nombreSugerenciaAdmin.setText(sugerencia.getNombre());
+                break;
+
+            case 2:
+//Aqui era la logica del regular
+            default:
+        }
+        
+        if (usuarioActual.getAmigos().isEmpty()) {
+        } else {
+            int indice = sr.nextInt(0, usuarioActual.getAmigos().size());
+            boolean encontrado = false;
+            administradorUsuario au = new administradorUsuario("./Administradores.pfb");
+            au.cargarArchivo();
+            Usuario amigo = usuarioActual.getAmigos().get(indice);
+            lb_fotoAmigo.setIcon(amigo.getFotografia());
+            tf_nombreAmigo.setText(amigo.getNombre());
+        }   
+    }
+ 
     private void RefreshMuroPrincipal() {
         SecureRandom sr = new SecureRandom();
         int seleccion = sr.nextInt(1, 3);
@@ -3973,11 +4530,20 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
                             Publicacion publicacion1 = amigo1.getPublicaciones().get(sr.nextInt(0, amigo1.getPublicaciones().size()));
                             Publicacion publicacion2 = amigo2.getPublicaciones().get(sr.nextInt(0, amigo2.getPublicaciones().size()));
                             tf_textoPubPrin1.setText(publicacion1.getPublicador() + ": " + publicacion1.getComentario());
-                            lb_imagenPrincipal1.setIcon(publicacion1.getImagen());
+                            ImageIcon icono = (ImageIcon) publicacion1.getImagen();
+                            Image icono2 = (Image) icono.getImage();
+                            Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                            Icon renderizado2 = new ImageIcon(renderizada);
+                            lb_imagenPrincipal1.setIcon(renderizado2);
                             tf_likesPrin1.setText(Integer.toString(publicacion1.getLikes()));
 
                             tf_textoPubPrin2.setText(publicacion2.getPublicador() + ": " + publicacion2.getComentario());
-                            lb_imagenPrincipal2.setIcon(publicacion2.getImagen());
+                            ImageIcon icono1 = (ImageIcon) publicacion2.getImagen();
+                            Image icono3 = (Image) icono1.getImage();
+                            Image renderizada1 = icono3.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                            Icon renderizado3 = new ImageIcon(renderizada1);
+                            lb_imagenPrincipal2.setIcon(renderizado3);
+
                             tf_likesPrin2.setText(Integer.toString(publicacion2.getLikes()));
                         }
 
@@ -3989,13 +4555,19 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
                         } else {
                             Publicacion publicacion3 = amigo1.getPublicaciones().get(sr.nextInt(0, amigo1.getPublicaciones().size()));
                             Publicacion publicacion4 = usuarioActual.getPublicaciones().get(sr.nextInt(0, usuarioActual.getPublicaciones().size()));
-
                             tf_textoPubPrin1.setText(publicacion3.getPublicador() + ": " + publicacion3.getComentario());
-                            lb_imagenPrincipal1.setIcon(publicacion3.getImagen());
+                            ImageIcon icono = (ImageIcon) publicacion3.getImagen();
+                            Image icono2 = (Image) icono.getImage();
+                            Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                            Icon renderizado2 = new ImageIcon(renderizada);
+                            lb_imagenPrincipal1.setIcon(renderizado2);
                             tf_likesPrin1.setText(Integer.toString(publicacion3.getLikes()));
-
                             tf_textoPubPrin2.setText(publicacion4.getPublicador() + ": " + publicacion4.getComentario());
-                            lb_imagenPrincipal2.setIcon(publicacion4.getImagen());
+                            ImageIcon icono1 = (ImageIcon) publicacion4.getImagen();
+                            Image icono3 = (Image) icono1.getImage();
+                            Image renderizada1 = icono3.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                            Icon renderizado4 = new ImageIcon(renderizada1);
+                            lb_imagenPrincipal2.setIcon(renderizado4);
                             tf_likesPrin2.setText(Integer.toString(publicacion4.getLikes()));
                         }
 
@@ -4028,7 +4600,11 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
             if (reg.getNombre().equals(nombre)) {
                 encontrado = true;
                 try {
-                    lb_imagenPrincipal1.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen());
+                    ImageIcon icono = (ImageIcon) reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen();
+                    Image icono2 = (Image) icono.getImage();
+                    Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                    Icon renderizado2 = new ImageIcon(renderizada);
+                    lb_imagenPrincipal1.setIcon(renderizado2);
                     tf_textoPubPrin1.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getComentario());
                     tf_likesPrin1.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getLikes()));
                 } catch (Exception e) {
@@ -4036,10 +4612,12 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
                     tf_textoPubPrin1.setText("");
                     tf_likesPrin1.setText("0");
                 }
-                
-                
+
                 try {
-                    lb_imagenPrincipal2.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen());
+                    Image icono2 = (Image) reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen();
+                    Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                    Icon renderizado2 = new ImageIcon(renderizada);
+                    lb_imagenPrincipal2.setIcon(renderizado2);
                     tf_textoPubPrin2.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getComentario());
                     tf_likesPrin2.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getLikes()));
                 } catch (Exception e) {
@@ -4049,38 +4627,43 @@ if (admin.getUsuarios() != null && eliminarUsuario != -1 && eliminarUsuario < mo
                 }
             }
         }
-        
+
         if (!encontrado) {
             admin = new administradorUsuario("./Administradores.pfb");
             admin.cargarArchivo();
             for (Usuario reg : admin.getUsuarios()) {
-            if (reg.getNombre().equals(nombre)) {
-                encontrado = true;
-                try {
-                    lb_imagenPrincipal1.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen());
-                    tf_textoPubPrin1.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getComentario());
-                    tf_likesPrin1.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getLikes()));
-                } catch (Exception e) {
-                    lb_imagenPrincipal1.setIcon(null);
-                    tf_textoPubPrin1.setText("");
-                    tf_likesPrin1.setText("0");
-                }
-                
-                
-                try {
-                    lb_imagenPrincipal2.setIcon(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen());
-                    tf_textoPubPrin2.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getComentario());
-                    tf_likesPrin2.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getLikes()));
-                } catch (Exception e) {
-                    lb_imagenPrincipal2.setIcon(null);
-                    tf_textoPubPrin2.setText("");
-                    tf_likesPrin2.setText("0");
+                if (reg.getNombre().equals(nombre)) {
+                    encontrado = true;
+                    try {
+                        ImageIcon icono = (ImageIcon) reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getImagen();
+                        Image icono2 = (Image) icono.getImage();
+                        Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                        Icon renderizado2 = new ImageIcon(renderizada);
+                        lb_imagenPrincipal1.setIcon(renderizado2);
+                        tf_textoPubPrin1.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getComentario());
+                        tf_likesPrin1.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 1).getLikes()));
+                    } catch (Exception e) {
+                        lb_imagenPrincipal1.setIcon(null);
+                        tf_textoPubPrin1.setText("");
+                        tf_likesPrin1.setText("0");
+                    }
+
+                    try {
+                        Image icono2 = (Image) reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getImagen();
+                        Image renderizada = icono2.getScaledInstance(112, 110, Image.SCALE_SMOOTH);
+                        Icon renderizado2 = new ImageIcon(renderizada);
+                        lb_imagenPrincipal2.setIcon(renderizado2);
+                        tf_textoPubPrin2.setText(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getComentario());
+                        tf_likesPrin2.setText(String.valueOf(reg.getPublicaciones().get(reg.getPublicaciones().size() - 2).getLikes()));
+                    } catch (Exception e) {
+                        lb_imagenPrincipal2.setIcon(null);
+                        tf_textoPubPrin2.setText("");
+                        tf_likesPrin2.setText("0");
+                    }
                 }
             }
+
         }
-            
-        }
-        
-        
+
     }
 }
