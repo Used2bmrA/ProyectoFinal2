@@ -42,7 +42,9 @@ public class NewJFrame extends javax.swing.JFrame {
     Player player;
     File file = null;
     private final JFXPanel jfx_panel = new JFXPanel();
+    private final JFXPanel jfx_panelAdmin = new JFXPanel();
     private MediaPlayer media;
+    private MediaPlayer media1;
 
     public NewJFrame() {
         initComponents();
@@ -50,6 +52,8 @@ public class NewJFrame extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
         lb_subirMedia.setLayout(new BorderLayout());
         lb_subirMedia.add(jfx_panel, BorderLayout.CENTER);
+        lb_fotosPublicacionAdmin.add(jfx_panelAdmin, BorderLayout.CENTER);
+        lb_fotosPublicacionAdmin.setLayout(new BorderLayout());
 
     }
 
@@ -1524,14 +1528,19 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel13.add(jl_muroPersonalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(739, 78, -1, -1));
 
-        bt_reproductorAdmin.setText("Reproductor Musica");
-        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
+        bt_reproductorAdmin.setText("Reproductor Musical");
+        bt_reproductorAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_reproductorAdminMouseClicked(evt);
+            }
+        });
+        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 150, -1));
 
         bt_agendaAdmin.setText("Agenda");
-        jPanel13.add(bt_agendaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
+        jPanel13.add(bt_agendaAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
 
         bt_chatAdmin.setText("Chat");
-        jPanel13.add(bt_chatAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        jPanel13.add(bt_chatAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 260, -1, -1));
 
         jList2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jScrollPane2.setViewportView(jList2);
@@ -2285,28 +2294,23 @@ public class NewJFrame extends javax.swing.JFrame {
                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel23Layout.createSequentialGroup()
                                 .addGap(48, 48, 48)
-                                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addGroup(jPanel23Layout.createSequentialGroup()
                                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel18)
                                             .addComponent(jLabel20))
-                                        .addGap(18, 18, 18)
-                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addGap(21, 21, 21)
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(tf_nombreEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(41, 41, 41)
                                         .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addComponent(jLabel54)
                                             .addComponent(jLabel24))
                                         .addGap(18, 18, 18)
-                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(tf_contraseñaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                    .addGroup(jPanel23Layout.createSequentialGroup()
-                                        .addGap(51, 51, 51)
-                                        .addComponent(jLabel52)
-                                        .addGap(171, 171, 171)
-                                        .addComponent(jLabel53))
+                                        .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(tf_contraseñaEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 166, javax.swing.GroupLayout.PREFERRED_SIZE)))
                                     .addGroup(jPanel23Layout.createSequentialGroup()
                                         .addComponent(lb_imagenEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(50, 50, 50)
@@ -2314,7 +2318,13 @@ public class NewJFrame extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(sp_mesEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(12, 12, 12)
-                                        .addComponent(sp_añoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                        .addComponent(sp_añoEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(jPanel23Layout.createSequentialGroup()
+                                        .addGap(51, 51, 51)
+                                        .addComponent(jLabel52)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel53)
+                                        .addGap(111, 111, 111))))
                             .addGroup(jPanel23Layout.createSequentialGroup()
                                 .addGap(235, 235, 235)
                                 .addComponent(jb_eliminarUsuario)))
@@ -2349,8 +2359,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel20)
                     .addComponent(jLabel54)
-                    .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tf_nicknameEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_paisEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(56, 56, 56)
                 .addGroup(jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel52)
@@ -2453,13 +2463,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel19)
                 .addGap(192, 192, 192))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lb_fotosPublicacionAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel29Layout.createSequentialGroup()
                 .addGap(153, 153, 153)
                 .addComponent(jb_publicarAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel29Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lb_fotosPublicacionAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel29Layout.setVerticalGroup(
@@ -3340,6 +3350,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_muroPrincipalAdministrador.setVisible(false);
         jd_muroPersonalAdministrador.pack();
         jd_muroPersonalAdministrador.setLocationRelativeTo(null);
+        RefresfhMuroPersonalAdmin();
         jd_muroPersonalAdministrador.setVisible(true);
     }//GEN-LAST:event_jl_muroPersonalAdminMouseClicked
 
@@ -3413,7 +3424,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_lb_proPicRegMouseClicked
 
     private void bt_agregarAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_agregarAdminMouseClicked
-        jd_muroPersonalAdministrador.dispose();
+
         jd_createAdmin.pack();
         jd_createAdmin.setLocationRelativeTo(null);
         jd_createAdmin.setVisible(true);
@@ -3863,19 +3874,19 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_tf_pensamientoAdminMouseClicked
 
     private void jLabel51MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel51MouseClicked
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filtro = new FileNameExtensionFilter("Videos", "mp4", "Mp4");
-        fileChooser.setFileFilter(filtro);
-        int result = fileChooser.showOpenDialog(jd_crearPublicacion);
+        JFileChooser fileChooser1 = new JFileChooser();
+        FileNameExtensionFilter filtro1 = new FileNameExtensionFilter("Videos", "mp4", "Mp4");
+        fileChooser1.setFileFilter(filtro1);
+        int result = fileChooser1.showOpenDialog(jd_crearPublicacionAdmin);
         if (result == JFileChooser.APPROVE_OPTION) {
-            File selectedFile = fileChooser.getSelectedFile();
-            media = new MediaPlayer(new Media(selectedFile.toURI().toString()));
-            MediaView view = new MediaView(media);
-            jfx_panel.setScene(new Scene(new Group(view), 500, 600));
-            view.setFitHeight(500);
-            view.setFitWidth(600);
-            media.setVolume(0.2);
-            media.setCycleCount(MediaPlayer.INDEFINITE);
+            File selectedFile1 = fileChooser1.getSelectedFile();
+            media1 = new MediaPlayer(new Media(selectedFile1.toURI().toString()));
+            MediaView view1 = new MediaView(media1);
+            jfx_panelAdmin.setScene(new Scene(new Group(view1), 500, 600));
+            view1.setFitHeight(500);
+            view1.setFitWidth(600);
+            media1.setVolume(0.2);
+            media1.setCycleCount(MediaPlayer.INDEFINITE);
 
         }
     }//GEN-LAST:event_jLabel51MouseClicked
@@ -3903,6 +3914,10 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_subirMedia.setIcon(null);
         tf_crearPensamiento.setText("¿Qué estás pensando?");
     }//GEN-LAST:event_jb_publicarAdminMouseClicked
+
+    private void bt_reproductorAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reproductorAdminMouseClicked
+     ReproductorMusical();
+    }//GEN-LAST:event_bt_reproductorAdminMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4411,18 +4426,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 lb_imgSugerencia.setIcon(renderizado2);
                 tf_nombreSugerencia.setText(sugerencia.getNombre());
                 break;
-            case 2:
-//                admin = new administradorUsuario("./Administradores.pfb");
-//                admin.cargarArchivo();
-//                indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
-//                sugerencia = admin.getUsuarios().get(indiceAmigo);
-//                icono = (ImageIcon) sugerencia.getFotografia();
-//                icono2 = (Image) icono.getImage();
-//                renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
-//                renderizado2 = new ImageIcon(renderizada);
-//                lb_imgSugerencia.setIcon(renderizado2);
-//                tf_nombreSugerencia.setText(sugerencia.getNombre());
-                break;
             default:
         }
 
@@ -4453,8 +4456,8 @@ public class NewJFrame extends javax.swing.JFrame {
             if (publicacion1.getImagen() == null) {
                 lb_pubPersonAdmin1.setIcon(null);
             } else {
-                ImageIcon icono = (ImageIcon) publicacion1.getImagen();
-                Image icono2 = (Image) icono.getImage();
+                ImageIcon iconos = (ImageIcon) publicacion1.getImagen();
+                Image icono2 = (Image) iconos.getImage();
                 Image renderizada = icono2.getScaledInstance(120, 106, Image.SCALE_SMOOTH);
                 Icon renderizado2 = new ImageIcon(renderizada);
                 lb_pubPersonAdmin1.setIcon(renderizado2);
@@ -4481,6 +4484,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         switch (random) {
             case 1:
+                
                 admin = new administradorUsuario("./Administradores.pfb");
                 admin.cargarArchivo();
                 indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
@@ -4491,13 +4495,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 Icon renderizado2 = new ImageIcon(renderizada);
                 lb_amigoSugerenciaAdmin.setIcon(renderizado2);
                 tf_nombreSugerenciaAdmin.setText(sugerencia.getNombre());
+                
                 break;
-
-            case 2:
-//Aqui era la logica del regular
             default:
         }
-        
+
         if (usuarioActual.getAmigos().isEmpty()) {
         } else {
             int indice = sr.nextInt(0, usuarioActual.getAmigos().size());
@@ -4509,6 +4511,7 @@ public class NewJFrame extends javax.swing.JFrame {
             tf_nombreAmigo.setText(amigo.getNombre());
         }   
     }
+
  
     private void RefreshMuroPrincipal() {
         SecureRandom sr = new SecureRandom();
