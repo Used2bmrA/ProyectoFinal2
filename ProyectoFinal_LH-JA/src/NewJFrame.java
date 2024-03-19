@@ -4022,7 +4022,43 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_eliminarUsuarioMouseClicked
 
     private void bt_likePubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers1MouseClicked
-        //El like aqui se agrega
+        if (amigo) {
+            administradorUsuario admin = new administradorUsuario(Buscar(amigoActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceAmigo).getPublicaciones().get(amigoActual.getPublicaciones().size() - 1);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                }
+                
+
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }else {
+            administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceActual).getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                }
+                
+
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }
+        
+        
     }//GEN-LAST:event_bt_likePubPers1MouseClicked
 
     private void lb_imgSugerenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_imgSugerenciaMouseClicked
@@ -4685,6 +4721,8 @@ public class NewJFrame extends javax.swing.JFrame {
     static int pos;
     static DefaultMutableTreeNode nodo_seleccionado;
     static Actividad actividadSeleccionada;
+    static boolean amigo;
+    private Usuario amigoActual;
 
     public void LlenarEspacios() {
 
@@ -4856,6 +4894,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 while (sugerencia.getNombre().equals(usuarioActual.getNombre())) {
                     indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
                     sugerencia = admin.getUsuarios().get(indiceAmigo);
+                    amigoActual = sugerencia;
                 }
                 ImageIcon icono = (ImageIcon) sugerencia.getFotografia();
                 Image icono2 = (Image) icono.getImage();
@@ -4864,7 +4903,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 lb_imgSugerencia.setIcon(renderizado2);
                 tf_nombreSugerencia.setText(sugerencia.getNombre());
             } catch (NullPointerException e) {
-
             }
             break;
             default:
@@ -4963,6 +5001,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     private void RefreshMuroPrincipal() {
+        amigo = false;
         SecureRandom sr = new SecureRandom();
         int seleccion = sr.nextInt(1, 3);
         Usuario amigo1;
@@ -5135,6 +5174,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     private void RefreshMuroAmigo(String nombre) {
+        amigo = true;
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
         admin.cargarArchivo();
         boolean encontrado = false;

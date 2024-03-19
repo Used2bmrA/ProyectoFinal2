@@ -15,9 +15,15 @@ class Publicacion implements Serializable{
     private Icon imagen;
     private MediaPlayer video;
     private Date fechaPublicacion = new Date();
-//    private int llave;
-//    private Video videos = new ArrayList(); Dirección para un video
-//    private ArrayList<String> fotos = new ArrayList(); Dirección para fotos
+    private ArrayList<String> peopleLikes = new ArrayList();
+
+    public ArrayList<String> getPeopleLikes() {
+        return peopleLikes;
+    }
+
+    public void setPeopleLikes(ArrayList<String> peopleLikes) {
+        this.peopleLikes = peopleLikes;
+    }
 
     
     private static final long SerialVersionUID = 555L;
