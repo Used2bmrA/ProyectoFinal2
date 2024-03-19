@@ -13,44 +13,22 @@ import javax.swing.JSpinner;
  * @author josed
  */
 public class HiloRecordatorio extends Thread{
-    private JSpinner minuto;
-    private JSpinner hora;
-    private JSpinner tiempoAmPm;
-    private JSpinner minutosRecordatorio;
-    private JOptionPane aviso;
-    private Calendar calendario;
+    private Actividad actividades;
 
-    public HiloRecordatorio(JSpinner minuto, JSpinner hora, JSpinner tiempoAmPm, JSpinner minutosRecordatorio, JOptionPane aviso, Calendar calendario) {
-        this.minuto = minuto;
-        this.hora = hora;
-        this.tiempoAmPm = tiempoAmPm;
-        this.minutosRecordatorio = minutosRecordatorio;
-        this.aviso = aviso;
-        this.calendario = calendario;
+    public HiloRecordatorio(Actividad actividades) {
+        this.actividades = actividades;
+    }
+
+    public Actividad getActividades() {
+        return actividades;
+    }
+
+    public void setActividades(Actividad actividades) {
+        this.actividades = actividades;
     }
     
     public void run(){
-        while(true){
-       int minutoRecordatorio = (int) minutosRecordatorio.getValue();
-    int horaRecordatorio = (int) hora.getValue();
-    int minutoHoraRecordatorio = (int) minuto.getValue();
-    String amPm = (String) tiempoAmPm.getValue();
-
-    int diferenciaHora = horaRecordatorio - minutoRecordatorio;
-    int diferenciaMinuto = minutoHoraRecordatorio - minutoRecordatorio;
-    int tiempoRestante = (diferenciaHora * 60) + diferenciaMinuto - minutoRecordatorio;
-
-    try {
-        Thread.sleep(tiempoRestante * 60 * 1000); 
-        aviso.showMessageDialog(null, "Ya es horra de tu actividad");
-    } catch (InterruptedException e) {
-        e.printStackTrace();
+        
     }
-        }
-    }
-    
-    
-    
 
-    
 }

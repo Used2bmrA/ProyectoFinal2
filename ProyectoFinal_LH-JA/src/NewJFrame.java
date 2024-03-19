@@ -84,10 +84,10 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_likesPers1 = new javax.swing.JTextField();
         jPanel22 = new javax.swing.JPanel();
         lb_imagenPublicacion2 = new javax.swing.JLabel();
-        bt_likePubPers2 = new javax.swing.JButton();
         bt_comentarPubPers2 = new javax.swing.JButton();
         tf_textoPubPers2 = new javax.swing.JTextField();
         tf_likesPers2 = new javax.swing.JTextField();
+        bt_likePubPers2 = new javax.swing.JButton();
         jPanel21 = new javax.swing.JPanel();
         lb_imgSugerencia = new javax.swing.JLabel();
         bt_agregarAmigo = new javax.swing.JButton();
@@ -98,7 +98,6 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_nombreAmigo = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         bt_Agenda = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         lb_proPicPrincipalReg = new javax.swing.JLabel();
@@ -116,12 +115,14 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_comentarPubPers4 = new javax.swing.JButton();
         tf_textoPubPrin1 = new javax.swing.JTextField();
         tf_likesPrin1 = new javax.swing.JTextField();
+        jLabel63 = new javax.swing.JLabel();
         pn_postPrincipal2 = new javax.swing.JPanel();
         lb_imagenPrincipal2 = new javax.swing.JLabel();
         bt_likePubPers5 = new javax.swing.JButton();
-        bt_comentarPubPers5 = new javax.swing.JButton();
         tf_textoPubPrin2 = new javax.swing.JTextField();
         tf_likesPrin2 = new javax.swing.JTextField();
+        bt_comentarPubPers6 = new javax.swing.JButton();
+        jLabel64 = new javax.swing.JLabel();
         jd_createUser = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
@@ -465,7 +466,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel3.add(bt_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 80, 20));
 
         jButton4.setText("Continuar navegando");
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, -1, -1));
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 500, -1, -1));
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -473,38 +474,45 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_imagenPublicacion1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lb_imagenPublicacion1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
-        bt_likePubPers1.setText("Like");
+        bt_likePubPers1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likePubPers1.setBorder(null);
+        bt_likePubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_likePubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_likePubPers1MouseClicked(evt);
             }
         });
 
+        bt_comentarPubPers1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         bt_comentarPubPers1.setText("Comentar");
+        bt_comentarPubPers1.setBorder(null);
+        bt_comentarPubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         tf_textoPubPers1.setEditable(false);
         tf_textoPubPers1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         tf_likesPers1.setEditable(false);
+        tf_likesPers1.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likesPers1.setText("0");
+        tf_likesPers1.setBorder(null);
 
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(bt_likePubPers1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(bt_likePubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(bt_comentarPubPers1)
-                .addGap(21, 21, 21))
+                .addComponent(bt_comentarPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(25, 25, 25))
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
@@ -514,11 +522,13 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(bt_comentarPubPers1)
-                    .addComponent(bt_likePubPers1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(bt_likePubPers1)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(bt_comentarPubPers1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
+                            .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
@@ -529,32 +539,42 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_imagenPublicacion2.setBackground(new java.awt.Color(255, 255, 255));
         lb_imagenPublicacion2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        bt_likePubPers2.setText("Like");
-
         bt_comentarPubPers2.setText("Comentar");
 
         tf_textoPubPers2.setEditable(false);
         tf_textoPubPers2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         tf_likesPers2.setEditable(false);
+        tf_likesPers2.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likesPers2.setText("0");
+        tf_likesPers2.setBorder(null);
+
+        bt_likePubPers2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likePubPers2.setBorder(null);
+        bt_likePubPers2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_likePubPers2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likePubPers2MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(6, 6, 6)
+                        .addComponent(bt_likePubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bt_likePubPers2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(bt_comentarPubPers2)))
+                        .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(22, 22, 22)
+                        .addComponent(bt_comentarPubPers2))
+                    .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(12, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
@@ -562,19 +582,17 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE))
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bt_likePubPers2)
-                            .addComponent(bt_comentarPubPers2))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(bt_comentarPubPers2)
+                            .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(bt_likePubPers2)))
+                .addContainerGap(11, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, 160));
@@ -687,9 +705,6 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel3.add(bt_Agenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
 
-        jButton6.setText("Ver Actividades");
-        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
-
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
         jd_muroPersonalLayout.setHorizontalGroup(
@@ -729,12 +744,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_reproductorRegularMouseClicked(evt);
             }
         });
-        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, -1, -1));
+        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(153, 153, 153));
         jLabel7.setText("¿Qué estás pensando?");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -763,12 +778,12 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(129, 129, 129)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(93, 93, 93)
+                                .addComponent(jLabel7))
                             .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(83, 83, 83)
-                                .addComponent(jLabel7)))
-                        .addGap(0, 89, Short.MAX_VALUE)))
+                                .addGap(138, 138, 138)
+                                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 93, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -783,10 +798,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addGap(12, 12, 12))
         );
 
-        jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 360, 130));
+        jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 370, 130));
 
         bt_chatRegular.setText("Chat");
-        jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, -1, -1));
+        bt_chatRegular.setBorder(null);
+        jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 110, 30));
 
         jLabel10.setText("Ir a tu muro personal");
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
@@ -796,14 +812,25 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_imagenPrincipal1.setBackground(new java.awt.Color(255, 255, 255));
         lb_imagenPrincipal1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        bt_likePubPers4.setText("Like");
+        bt_likePubPers4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likePubPers4.setBorder(null);
+        bt_likePubPers4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        bt_comentarPubPers4.setText("Comentar");
+        bt_comentarPubPers4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        bt_comentarPubPers4.setBorder(null);
+        bt_comentarPubPers4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         tf_textoPubPrin1.setEditable(false);
         tf_textoPubPrin1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         tf_likesPrin1.setEditable(false);
+        tf_likesPrin1.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likesPrin1.setText("0");
+        tf_likesPrin1.setBorder(null);
+
+        jLabel63.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel63.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel63.setText("Comentar");
 
         javax.swing.GroupLayout pn_postPrincipal1Layout = new javax.swing.GroupLayout(pn_postPrincipal1);
         pn_postPrincipal1.setLayout(pn_postPrincipal1Layout);
@@ -812,51 +839,64 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
-                .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_likePubPers4)
-                .addGap(18, 18, 18)
-                .addComponent(bt_comentarPubPers4)
-                .addGap(21, 21, 21))
+                .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_comentarPubPers4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel63))
+                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
         pn_postPrincipal1Layout.setVerticalGroup(
             pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
-                        .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bt_comentarPubPers4)
-                            .addComponent(bt_likePubPers4))
-                        .addGap(0, 25, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel63)
+                        .addComponent(bt_comentarPubPers4)
+                        .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        jPanel5.add(pn_postPrincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 320, 170));
+        jPanel5.add(pn_postPrincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 340, 180));
 
         pn_postPrincipal2.setBackground(new java.awt.Color(255, 255, 255));
 
         lb_imagenPrincipal2.setBackground(new java.awt.Color(255, 255, 255));
         lb_imagenPrincipal2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        bt_likePubPers5.setText("Like");
-
-        bt_comentarPubPers5.setText("Comentar");
+        bt_likePubPers5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likePubPers5.setBorder(null);
+        bt_likePubPers5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         tf_textoPubPrin2.setEditable(false);
         tf_textoPubPrin2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         tf_likesPrin2.setEditable(false);
+        tf_likesPrin2.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likesPrin2.setText("0");
+        tf_likesPrin2.setBorder(null);
+
+        bt_comentarPubPers6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        bt_comentarPubPers6.setBorder(null);
+        bt_comentarPubPers6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel64.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel64.setText("Comentar");
 
         javax.swing.GroupLayout pn_postPrincipal2Layout = new javax.swing.GroupLayout(pn_postPrincipal2);
         pn_postPrincipal2.setLayout(pn_postPrincipal2Layout);
@@ -866,15 +906,19 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
-            .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_likePubPers5)
-                .addGap(18, 18, 18)
-                .addComponent(bt_comentarPubPers5)
-                .addGap(21, 21, 21))
+                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
+                        .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
+                        .addComponent(bt_likePubPers5)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(bt_comentarPubPers6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel64)
+                        .addGap(12, 12, 12))))
         );
         pn_postPrincipal2Layout.setVerticalGroup(
             pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -885,17 +929,20 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bt_likePubPers5))
                     .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bt_comentarPubPers5)
-                            .addComponent(bt_likePubPers5))
-                        .addGap(0, 25, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addGap(21, 21, 21)
+                        .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(bt_comentarPubPers6)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jPanel5.add(pn_postPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 330, -1, -1));
+        jPanel5.add(pn_postPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 340, -1));
 
         javax.swing.GroupLayout jd_muroPrincipalLayout = new javax.swing.GroupLayout(jd_muroPrincipal.getContentPane());
         jd_muroPrincipal.getContentPane().setLayout(jd_muroPrincipalLayout);
@@ -3491,6 +3538,15 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_cerrarSesionMouseExited
 
     private void bt_cerrarSesionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_cerrarSesionMouseClicked
+        if(player != null){
+           player.close();
+        reproductorTexto.setText(""); 
+         jd_muroPersonal.dispose();
+         file = null;
+         this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        }else{
         jd_muroPersonal.dispose();
         lb_imagenPrincipal1.setIcon(null);
         lb_imagenPrincipal2.setIcon(null);
@@ -3504,9 +3560,11 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_textoPubPrin2.setText("");
         tf_likesPrin1.setText("");
         tf_likesPrin2.setText("");
+
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+        }
     }//GEN-LAST:event_bt_cerrarSesionMouseClicked
 
     private void lb_proPicRegMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicRegMouseClicked
@@ -3544,10 +3602,20 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_agregarAdminMouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+if(player != null){
+           player.close();
+        reproductorTexto.setText(""); 
+         jd_muroPersonalAdministrador.dispose();
+         file = null;
+         this.pack();
+        this.setLocationRelativeTo(null);
+        this.setVisible(true);
+        }else{
         jd_muroPersonalAdministrador.dispose();
         this.pack();
         this.setVisible(true);
         this.setLocationRelativeTo(null);
+}
     }//GEN-LAST:event_jButton1MouseClicked
 
     private void bt_reproductorPersAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reproductorPersAdminMouseClicked
@@ -4222,6 +4290,10 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jt_actividadesMouseClicked
 
+    private void bt_likePubPers2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_likePubPers2MouseClicked
+
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
         jd_reproductorMusical.pack();
@@ -4295,7 +4367,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_comentarPubPers1;
     private javax.swing.JButton bt_comentarPubPers2;
     private javax.swing.JButton bt_comentarPubPers4;
-    private javax.swing.JButton bt_comentarPubPers5;
+    private javax.swing.JButton bt_comentarPubPers6;
     private javax.swing.JButton bt_eliminarUsuario;
     private javax.swing.JButton bt_homeMuroAdmin;
     private javax.swing.JButton bt_homeMuroRegular;
@@ -4325,7 +4397,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -4385,6 +4456,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
     private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
