@@ -470,7 +470,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
 
         lb_imagenPublicacion1.setBackground(new java.awt.Color(255, 255, 255));
-        lb_imagenPublicacion1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_imagenPublicacion1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb_imagenPublicacion1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         bt_likePubPers1.setText("Like");
         bt_likePubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -533,7 +534,7 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_comentarPubPers2.setText("Comentar");
 
         tf_textoPubPers2.setEditable(false);
-        tf_textoPubPers2.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        tf_textoPubPers2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
         tf_likesPers2.setEditable(false);
 
@@ -2044,12 +2045,16 @@ public class NewJFrame extends javax.swing.JFrame {
         sp_recordatorioMinutos.setModel(new javax.swing.SpinnerNumberModel(0, 0, 60, 1));
         jPanel19.add(sp_recordatorioMinutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(703, 92, 249, -1));
         jPanel19.add(tf_tituloRecordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(697, 33, 231, -1));
-        jPanel19.add(tf_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 170, 220, 250));
+
+        tf_contenido.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel19.add(tf_contenido, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 180, 220, 250));
 
         jLabel58.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel58.setText("Contenido");
         jPanel19.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, -1, -1));
-        jPanel19.add(tf_anotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, 244, 247));
+
+        tf_anotaciones.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        jPanel19.add(tf_anotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 180, 244, 247));
 
         jLabel59.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel59.setText("Anotaciones");
@@ -4187,6 +4192,11 @@ public class NewJFrame extends javax.swing.JFrame {
             raiz.add(tareas);
             jt_actividades.setModel(modelo);
             modelo.reload();
+            
+            
+            tf_tituloRecordatorio.setText("");
+            tf_contenido.setText("");
+            tf_anotaciones.setText("");
         }
         
     }//GEN-LAST:event_jc_calendarioPropertyChange

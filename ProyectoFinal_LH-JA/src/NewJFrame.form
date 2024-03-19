@@ -296,7 +296,8 @@
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="ff" green="ff" red="ff" type="rgb"/>
                     </Property>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="horizontalAlignment" type="int" value="2"/>
+                    <Property name="verticalAlignment" type="int" value="1"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JButton" name="bt_likePubPers1">
@@ -409,7 +410,7 @@
                 <Component class="javax.swing.JTextField" name="tf_textoPubPers2">
                   <Properties>
                     <Property name="editable" type="boolean" value="false"/>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="horizontalAlignment" type="int" value="2"/>
                   </Properties>
                 </Component>
                 <Component class="javax.swing.JTextField" name="tf_likesPers2">
@@ -3348,9 +3349,12 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="tf_contenido">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="850" y="170" width="220" height="250"/>
+                  <AbsoluteConstraints x="580" y="180" width="220" height="250"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -3368,9 +3372,12 @@
               </Constraints>
             </Component>
             <Component class="javax.swing.JTextField" name="tf_anotaciones">
+              <Properties>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+              </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="590" y="170" width="244" height="247"/>
+                  <AbsoluteConstraints x="810" y="180" width="244" height="247"/>
                 </Constraint>
               </Constraints>
             </Component>
