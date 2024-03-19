@@ -2083,6 +2083,11 @@ public class NewJFrame extends javax.swing.JFrame {
 
         javax.swing.tree.DefaultMutableTreeNode treeNode1 = new javax.swing.tree.DefaultMutableTreeNode("root");
         jt_actividades.setModel(new javax.swing.tree.DefaultTreeModel(treeNode1));
+        jt_actividades.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jt_actividadesMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(jt_actividades);
 
         jPanel19.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 336, 250, 250));
@@ -4058,6 +4063,18 @@ public class NewJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(jd_calendario, "Tu tarea \"" + titulo + "\" fue programado el día " + formato1.format(fecha) + ".\n"
                 + "Comienza a las: " +formato2.format(inicio) + ".\n"
                 + "Te enviaremos un recordatorio a las: " + formato2.format(recordatorio) +".");
+        
+        tf_tituloRecordatorio.setText("");
+        sp_recordatorioMinutos.setValue(0);
+        tf_anotaciones.setText("");
+        tf_contenido.setText("");
+        jc_calendario.setDate(new Date());
+        sp_horaInicio.setValue(1);
+        sp_minutosInicio.setValue(0);
+        sp_Ampm1.setValue("A.M");
+        sp_horaFinal.setValue(1);
+        sp_minutosFinal.setValue(0);
+        sp_ampm2.setValue("A.M");
     }//GEN-LAST:event_bt_programarTareaMouseClicked
 
     private void bt_programarEventoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_programarEventoMouseClicked
@@ -4112,6 +4129,18 @@ public class NewJFrame extends javax.swing.JFrame {
         admin.cargarArchivo();
         admin.getUsuarios().get(indiceActual).getActividades().add(nuevoEvento);
         admin.escribirArchivo();
+        
+        tf_tituloRecordatorio.setText("");
+        sp_recordatorioMinutos.setValue(0);
+        tf_anotaciones.setText("");
+        tf_contenido.setText("");
+        jc_calendario.setDate(new Date());
+        sp_horaInicio.setValue(1);
+        sp_minutosInicio.setValue(0);
+        sp_Ampm1.setValue("A.M");
+        sp_horaFinal.setValue(1);
+        sp_minutosFinal.setValue(0);
+        sp_ampm2.setValue("A.M");
     }//GEN-LAST:event_bt_programarEventoMouseClicked
 
     private void tf_pensamientoAdminMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tf_pensamientoAdminMousePressed
@@ -4161,6 +4190,27 @@ public class NewJFrame extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_jc_calendarioPropertyChange
+
+    private void jt_actividadesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jt_actividadesMouseClicked
+        if (evt.getButton() == 1) {
+            int row = jt_actividades.getClosestRowForLocation(evt.getX(), evt.getY());
+            
+            jt_actividades.setSelectionRow(row);
+            Object objeto = jt_actividades.getSelectionPath().getLastPathComponent();
+            nodo_seleccionado = (DefaultMutableTreeNode) objeto;
+            
+            if (nodo_seleccionado.getUserObject() instanceof Tarea) {
+                actividadSeleccionada = (Tarea) nodo_seleccionado.getUserObject();
+                tf_anotaciones.setText(((Tarea) actividadSeleccionada).getNotas());
+                tf_contenido.setText(((Tarea) actividadSeleccionada).getContenido());
+                tf_tituloRecordatorio.setText(((Tarea) actividadSeleccionada).getTitulo());
+            }else{
+                tf_anotaciones.setText("");
+                tf_contenido.setText("");
+                tf_tituloRecordatorio.setText("");
+            }
+        }
+    }//GEN-LAST:event_jt_actividadesMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4512,6 +4562,8 @@ public class NewJFrame extends javax.swing.JFrame {
     static int indiceActual;
     static int indiceAmigo;
     static int pos;
+    static DefaultMutableTreeNode nodo_seleccionado;
+    static Actividad actividadSeleccionada;
 
     public void LlenarEspacios() {
 
