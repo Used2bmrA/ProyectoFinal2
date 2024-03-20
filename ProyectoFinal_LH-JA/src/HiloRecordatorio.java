@@ -25,11 +25,6 @@ public class HiloRecordatorio extends Thread{
         this.label = label;
         this.dialog = dialog;
     }
-
-
-
-    
-
     public Actividad getActividades() {
         return actividadActual;
     }

@@ -79,15 +79,17 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel20 = new javax.swing.JPanel();
         lb_imagenPublicacion1 = new javax.swing.JLabel();
         bt_likePubPers1 = new javax.swing.JButton();
-        bt_comentarPubPers1 = new javax.swing.JButton();
         tf_textoPubPers1 = new javax.swing.JTextField();
         tf_likesPers1 = new javax.swing.JTextField();
+        bt_comentarPubPers1 = new javax.swing.JButton();
+        jLabel67 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         lb_imagenPublicacion2 = new javax.swing.JLabel();
-        bt_comentarPubPers2 = new javax.swing.JButton();
         tf_textoPubPers2 = new javax.swing.JTextField();
         tf_likesPers2 = new javax.swing.JTextField();
         bt_likePubPers2 = new javax.swing.JButton();
+        bt_comentarPubPers2 = new javax.swing.JButton();
+        jLabel68 = new javax.swing.JLabel();
         jPanel21 = new javax.swing.JPanel();
         lb_imgSugerencia = new javax.swing.JLabel();
         bt_agregarAmigo = new javax.swing.JButton();
@@ -98,6 +100,11 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_nombreAmigo = new javax.swing.JTextField();
         jButton5 = new javax.swing.JButton();
         bt_Agenda = new javax.swing.JButton();
+        jLabel69 = new javax.swing.JLabel();
+        jSeparator19 = new javax.swing.JSeparator();
+        jLabel70 = new javax.swing.JLabel();
+        jSeparator20 = new javax.swing.JSeparator();
+        jLabel71 = new javax.swing.JLabel();
         jd_muroPrincipal = new javax.swing.JDialog();
         jPanel5 = new javax.swing.JPanel();
         lb_proPicPrincipalReg = new javax.swing.JLabel();
@@ -107,7 +114,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jSeparator7 = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
-        bt_chatRegular = new javax.swing.JButton();
         jLabel10 = new javax.swing.JLabel();
         pn_postPrincipal1 = new javax.swing.JPanel();
         lb_imagenPrincipal1 = new javax.swing.JLabel();
@@ -123,6 +129,8 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_likesPrin2 = new javax.swing.JTextField();
         bt_comentarPubPers6 = new javax.swing.JButton();
         jLabel64 = new javax.swing.JLabel();
+        jLabel72 = new javax.swing.JLabel();
+        jSeparator21 = new javax.swing.JSeparator();
         jd_createUser = new javax.swing.JDialog();
         jPanel8 = new javax.swing.JPanel();
         jLabel25 = new javax.swing.JLabel();
@@ -204,20 +212,22 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jl_muroPersonalAdmin = new javax.swing.JLabel();
         bt_reproductorAdmin = new javax.swing.JButton();
-        bt_chatAdmin = new javax.swing.JButton();
         jSeparator10 = new javax.swing.JSeparator();
         jPanel25 = new javax.swing.JPanel();
         lb_picPub2Admin = new javax.swing.JLabel();
         tf_textPub2Admin = new javax.swing.JTextField();
-        jb_likeAdminpub2 = new javax.swing.JButton();
-        jb_comentAdminPub2 = new javax.swing.JButton();
         tf_likeAdmin2 = new javax.swing.JTextField();
+        bt_likeAdminpub2 = new javax.swing.JButton();
+        jb_comentAdminPub4 = new javax.swing.JButton();
+        jLabel75 = new javax.swing.JLabel();
         jPanel27 = new javax.swing.JPanel();
         lb_picPub1Admin = new javax.swing.JLabel();
         tf_textPub1Admin = new javax.swing.JTextField();
-        jb_likeAdminpub1 = new javax.swing.JButton();
-        jb_comentAdminPub1 = new javax.swing.JButton();
         tf_likeAdmin1 = new javax.swing.JTextField();
+        bt_likeAdminpub1 = new javax.swing.JButton();
+        jb_comentAdminPub1 = new javax.swing.JButton();
+        jLabel74 = new javax.swing.JLabel();
+        jLabel73 = new javax.swing.JLabel();
         jd_muroPersonalAdministrador = new javax.swing.JDialog();
         jPanel16 = new javax.swing.JPanel();
         jLabel31 = new javax.swing.JLabel();
@@ -227,9 +237,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jSeparator11 = new javax.swing.JSeparator();
         jLabel50 = new javax.swing.JLabel();
         lb_proPicAdminPers = new javax.swing.JLabel();
-        bt_reproductorPersAdmin = new javax.swing.JButton();
         bt_calendarioPersAdmin = new javax.swing.JButton();
-        bt_chatPersAdmin = new javax.swing.JButton();
         bt_agregarAdmin = new javax.swing.JButton();
         jSeparator12 = new javax.swing.JSeparator();
         bt_listarUsuario = new javax.swing.JButton();
@@ -256,6 +264,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_amigoSugerenciaAdmin = new javax.swing.JLabel();
         tf_nombreSugerenciaAdmin = new javax.swing.JTextField();
         jb_agregarAmigoAdmin = new javax.swing.JButton();
+        jLabel76 = new javax.swing.JLabel();
         jd_calendario = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
         jc_calendario = new com.toedter.calendar.JCalendar();
@@ -338,6 +347,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_recordatorio = new javax.swing.JDialog();
         jPanel12 = new javax.swing.JPanel();
         lb_recordatorio = new javax.swing.JLabel();
+        jLabel66 = new javax.swing.JLabel();
+        jSeparator18 = new javax.swing.JSeparator();
         jd_comentario = new javax.swing.JDialog();
         jPanel30 = new javax.swing.JPanel();
         lb_comment1 = new javax.swing.JLabel();
@@ -346,6 +357,8 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_comment2 = new javax.swing.JLabel();
         tf_nuevoComentario = new javax.swing.JTextField();
         bt_publicarComentario = new javax.swing.JButton();
+        jLabel65 = new javax.swing.JLabel();
+        jSeparator17 = new javax.swing.JSeparator();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -385,10 +398,11 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_abrirReproductorMouseClicked(evt);
             }
         });
-        jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 420, 80, 80));
+        jPanel3.add(bt_abrirReproductor, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 80, 80));
 
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel4.setText("Regresar Menu Principal");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 10, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 20, -1, -1));
 
         jPanel10.setBackground(new java.awt.Color(255, 255, 255));
         jPanel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -453,10 +467,10 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_homeMuroAdminMouseClicked(evt);
             }
         });
-        jPanel3.add(bt_homeMuroAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 40, -1, -1));
+        jPanel3.add(bt_homeMuroAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 50, -1, -1));
 
         bt_cerrarSesion.setBackground(new java.awt.Color(255, 80, 107));
-        bt_cerrarSesion.setFont(new java.awt.Font("Roboto", 0, 12)); // NOI18N
+        bt_cerrarSesion.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         bt_cerrarSesion.setText("Cerrar Sesión");
         bt_cerrarSesion.setBorder(null);
         bt_cerrarSesion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -471,7 +485,12 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_cerrarSesionMouseExited(evt);
             }
         });
-        jPanel3.add(bt_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, 80, 20));
+        bt_cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bt_cerrarSesionActionPerformed(evt);
+            }
+        });
+        jPanel3.add(bt_cerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 470, 90, 30));
 
         jPanel20.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -488,16 +507,6 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        bt_comentarPubPers1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        bt_comentarPubPers1.setText("Comentar");
-        bt_comentarPubPers1.setBorder(null);
-        bt_comentarPubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bt_comentarPubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bt_comentarPubPers1MouseClicked(evt);
-            }
-        });
-
         tf_textoPubPers1.setEditable(false);
         tf_textoPubPers1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
 
@@ -506,40 +515,53 @@ public class NewJFrame extends javax.swing.JFrame {
         tf_likesPers1.setText("0");
         tf_likesPers1.setBorder(null);
 
+        bt_comentarPubPers1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        bt_comentarPubPers1.setBorder(null);
+        bt_comentarPubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel67.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel67.setText("Comentar");
+
         javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
         jPanel20.setLayout(jPanel20Layout);
         jPanel20Layout.setHorizontalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(bt_likePubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(bt_comentarPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 89, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(12, Short.MAX_VALUE))
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(bt_likePubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_comentarPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel67)
+                        .addGap(6, 6, 6))
+                    .addGroup(jPanel20Layout.createSequentialGroup()
+                        .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(17, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel20Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_textoPubPers1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lb_imagenPublicacion1, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                    .addComponent(tf_textoPubPers1))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(bt_likePubPers1)
                     .addGroup(jPanel20Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(8, 8, 8)
                         .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(bt_comentarPubPers1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE)
-                            .addComponent(tf_likesPers1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
+                            .addComponent(jLabel67)
+                            .addComponent(bt_comentarPubPers1)
+                            .addComponent(tf_likesPers1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(9, Short.MAX_VALUE))
         );
 
         jPanel3.add(jPanel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 140, 320, 170));
@@ -548,8 +570,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         lb_imagenPublicacion2.setBackground(new java.awt.Color(255, 255, 255));
         lb_imagenPublicacion2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        bt_comentarPubPers2.setText("Comentar");
 
         tf_textoPubPers2.setEditable(false);
         tf_textoPubPers2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -568,44 +588,57 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        bt_comentarPubPers2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        bt_comentarPubPers2.setBorder(null);
+        bt_comentarPubPers2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel68.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel68.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel68.setText("Comentar");
+
         javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
         jPanel22.setLayout(jPanel22Layout);
         jPanel22Layout.setHorizontalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addGap(6, 6, 6)
+                        .addContainerGap()
+                        .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel22Layout.createSequentialGroup()
+                        .addGap(118, 118, 118)
                         .addComponent(bt_likePubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addComponent(bt_comentarPubPers2))
-                    .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(bt_comentarPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel68)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel22Layout.setVerticalGroup(
             jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel22Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addComponent(lb_imagenPublicacion2, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addGap(23, 23, 23)
+                        .addGroup(jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(bt_comentarPubPers2)
-                            .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(tf_likesPers2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel68)))
                     .addGroup(jPanel22Layout.createSequentialGroup()
-                        .addComponent(tf_textoPubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 98, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(bt_likePubPers2)))
-                .addContainerGap(11, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bt_likePubPers2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        jPanel3.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, 160));
+        jPanel3.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 320, -1, 180));
 
         jPanel21.setBackground(new java.awt.Color(240, 242, 245));
 
@@ -616,6 +649,9 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
+        bt_agregarAmigo.setBackground(new java.awt.Color(51, 255, 51));
+        bt_agregarAmigo.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        bt_agregarAmigo.setForeground(new java.awt.Color(255, 255, 255));
         bt_agregarAmigo.setText("Agregar amigo");
         bt_agregarAmigo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -632,15 +668,15 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jPanel21Layout.createSequentialGroup()
                 .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(11, 11, 11)
-                        .addComponent(bt_agregarAmigo))
+                        .addGap(35, 35, 35)
+                        .addComponent(lb_imgSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel21Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(tf_nombreSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tf_nombreSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel21Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addComponent(lb_imgSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(14, Short.MAX_VALUE))
+                        .addGap(14, 14, 14)
+                        .addComponent(bt_agregarAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(16, Short.MAX_VALUE))
         );
         jPanel21Layout.setVerticalGroup(
             jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -649,20 +685,21 @@ public class NewJFrame extends javax.swing.JFrame {
                 .addComponent(lb_imgSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(tf_nombreSugerencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(bt_agregarAmigo)
-                .addGap(15, 15, 15))
+                .addContainerGap())
         );
 
-        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 310, 160, 160));
+        jPanel3.add(jPanel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 300, 170, 160));
 
-        bt_verSolicitudes.setText("Solicitudes de amistad");
+        bt_verSolicitudes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/solicitudesFacebook.png"))); // NOI18N
+        bt_verSolicitudes.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_verSolicitudes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_verSolicitudesMouseClicked(evt);
             }
         });
-        jPanel3.add(bt_verSolicitudes, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jPanel3.add(bt_verSolicitudes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 80, 70));
 
         jPanel24.setBackground(new java.awt.Color(240, 242, 245));
         jPanel24.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -675,29 +712,32 @@ public class NewJFrame extends javax.swing.JFrame {
         });
 
         tf_nombreAmigo.setEditable(false);
+        tf_nombreAmigo.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
         javax.swing.GroupLayout jPanel24Layout = new javax.swing.GroupLayout(jPanel24);
         jPanel24.setLayout(jPanel24Layout);
         jPanel24Layout.setHorizontalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+            .addGroup(jPanel24Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
+                .addGroup(jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel24Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         jPanel24Layout.setVerticalGroup(
             jPanel24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel24Layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(12, 12, 12)
                 .addComponent(lb_fotoAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(tf_nombreAmigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        jPanel3.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 150, 140));
+        jPanel3.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 170, 160));
 
         jButton5.setText(" Crear Admin");
         jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -705,15 +745,30 @@ public class NewJFrame extends javax.swing.JFrame {
                 jButton5MouseClicked(evt);
             }
         });
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, -1, -1));
 
-        bt_Agenda.setText("Agregar Actividad");
+        bt_Agenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actividadesFacebook.png"))); // NOI18N
+        bt_Agenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_Agenda.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_AgendaMouseClicked(evt);
             }
         });
-        jPanel3.add(bt_Agenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        jPanel3.add(bt_Agenda, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, 70, 60));
+
+        jLabel69.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel69.setText("Solicitudes de Amistad");
+        jPanel3.add(jLabel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 130, -1));
+        jPanel3.add(jSeparator19, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 270, 190, 10));
+
+        jLabel70.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel70.setText("Actividades");
+        jPanel3.add(jLabel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, -1));
+        jPanel3.add(jSeparator20, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 200, -1));
+
+        jLabel71.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel71.setText("Reproductor Musical");
+        jPanel3.add(jLabel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, -1, -1));
 
         javax.swing.GroupLayout jd_muroPersonalLayout = new javax.swing.GroupLayout(jd_muroPersonal.getContentPane());
         jd_muroPersonal.getContentPane().setLayout(jd_muroPersonalLayout);
@@ -746,15 +801,16 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_homeMuroRegularMouseClicked(evt);
             }
         });
-        jPanel5.add(bt_homeMuroRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
+        jPanel5.add(bt_homeMuroRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, -1, -1));
 
-        bt_reproductorRegular.setText("Reproductor Musical");
+        bt_reproductorRegular.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproductorMusical.png"))); // NOI18N
+        bt_reproductorRegular.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_reproductorRegular.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_reproductorRegularMouseClicked(evt);
             }
         });
-        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+        jPanel5.add(bt_reproductorRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 80, 80));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -810,13 +866,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel5.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 10, 370, 130));
 
-        bt_chatRegular.setText("Chat");
-        bt_chatRegular.setBorder(null);
-        jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 110, 30));
-
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel10.setText("Ir a tu muro personal");
-        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
+        jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 30, -1, -1));
 
         pn_postPrincipal1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -855,39 +907,42 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(18, 18, 18)
+                .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
-                        .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(bt_comentarPubPers4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel63))
-                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                    .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE))
         );
         pn_postPrincipal1Layout.setVerticalGroup(
             pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
+                        .addComponent(lb_imagenPrincipal1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(14, 14, 14))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pn_postPrincipal1Layout.createSequentialGroup()
+                        .addComponent(tf_textoPubPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                 .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jLabel63)
-                        .addComponent(bt_comentarPubPers4)
-                        .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
-                .addContainerGap(16, Short.MAX_VALUE))
+                    .addGroup(pn_postPrincipal1Layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(pn_postPrincipal1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tf_likesPrin1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bt_comentarPubPers4)
+                            .addComponent(jLabel63)))
+                    .addComponent(bt_likePubPers4, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jPanel5.add(pn_postPrincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 340, 180));
+        jPanel5.add(pn_postPrincipal1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 350, 180));
 
         pn_postPrincipal2.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -926,58 +981,59 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addComponent(bt_likePubPers5)
-                        .addGap(18, 18, 18)
+                        .addGap(12, 12, 12)
+                        .addComponent(bt_likePubPers5, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(30, 30, 30)
+                        .addGap(18, 18, 18)
                         .addComponent(bt_comentarPubPers6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel64)
-                        .addGap(12, 12, 12))))
+                        .addComponent(jLabel64)))
+                .addGap(38, 38, 38))
         );
         pn_postPrincipal2Layout.setVerticalGroup(
             pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tf_textoPubPrin2, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
-                    .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(bt_likePubPers5, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(bt_likePubPers5))
-                    .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                        .addGap(21, 21, 21)
+                        .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lb_imagenPrincipal2, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
+                            .addComponent(tf_textoPubPrin2))
+                        .addGap(23, 23, 23)
                         .addGroup(pn_postPrincipal2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pn_postPrincipal2Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel64)
                             .addComponent(bt_comentarPubPers6)
-                            .addComponent(jLabel64, javax.swing.GroupLayout.Alignment.TRAILING))))
-                .addContainerGap(19, Short.MAX_VALUE))
+                            .addComponent(tf_likesPrin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         jPanel5.add(pn_postPrincipal2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 340, 340, -1));
+
+        jLabel72.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel72.setText("Reproductor Musical");
+        jPanel5.add(jLabel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
+        jPanel5.add(jSeparator21, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 190, 10));
 
         javax.swing.GroupLayout jd_muroPrincipalLayout = new javax.swing.GroupLayout(jd_muroPrincipal.getContentPane());
         jd_muroPrincipal.getContentPane().setLayout(jd_muroPrincipalLayout);
         jd_muroPrincipalLayout.setHorizontalGroup(
             jd_muroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_muroPrincipalLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jd_muroPrincipalLayout.createSequentialGroup()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 753, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         jd_muroPrincipalLayout.setVerticalGroup(
             jd_muroPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jd_muroPrincipalLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 536, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jd_createUser.setUndecorated(true);
@@ -1207,6 +1263,7 @@ public class NewJFrame extends javax.swing.JFrame {
         reproductorTexto.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.add(reproductorTexto, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 326, 32));
 
+        AgregarMusica.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         AgregarMusica.setText("...........");
         AgregarMusica.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -1215,6 +1272,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel2.add(AgregarMusica, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 360, 130, -1));
 
+        Play.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Play.setText("Play");
         Play.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1226,6 +1284,7 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel2.add(Play, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 300, 83, -1));
 
+        Pausa.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Pausa.setText("Pause");
         Pausa.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
@@ -1234,16 +1293,17 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel2.add(Pausa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 300, -1, -1));
 
+        Stop.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         Stop.setText("Stop");
         Stop.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseReleased(java.awt.event.MouseEvent evt) {
                 StopMouseReleased(evt);
             }
         });
-        jPanel2.add(Stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
+        jPanel2.add(Stop, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, 70, -1));
 
         jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/iconoreproductor2.png"))); // NOI18N
-        jPanel2.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 40, 160, 170));
+        jPanel2.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 160, 170));
 
         javax.swing.GroupLayout jd_reproductorMusicalLayout = new javax.swing.GroupLayout(jd_reproductorMusical.getContentPane());
         jd_reproductorMusical.getContentPane().setLayout(jd_reproductorMusicalLayout);
@@ -1553,7 +1613,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel14.setBackground(new java.awt.Color(255, 255, 255));
         jPanel14.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jLabel21.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(102, 102, 102));
         jLabel21.setText("¿Qué estás pensando?");
         jLabel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1584,20 +1644,20 @@ public class NewJFrame extends javax.swing.JFrame {
                     .addGroup(jPanel14Layout.createSequentialGroup()
                         .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addGap(97, 97, 97)
+                                .addGap(105, 105, 105)
                                 .addComponent(jLabel21))
                             .addGroup(jPanel14Layout.createSequentialGroup()
-                                .addGap(149, 149, 149)
+                                .addGap(150, 150, 150)
                                 .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 115, Short.MAX_VALUE)))
+                        .addGap(0, 111, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel14Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel21)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jSeparator9, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel22, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)
@@ -1606,8 +1666,9 @@ public class NewJFrame extends javax.swing.JFrame {
 
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 6, 400, -1));
 
+        jLabel23.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel23.setText("Ir al muro Personal");
-        jPanel13.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 30, -1, -1));
+        jPanel13.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 30, -1, -1));
 
         jl_muroPersonalAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Icons/home.png"))); // NOI18N
         jl_muroPersonalAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -1616,21 +1677,18 @@ public class NewJFrame extends javax.swing.JFrame {
                 jl_muroPersonalAdminMouseClicked(evt);
             }
         });
-        jPanel13.add(jl_muroPersonalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 60, 50));
+        jPanel13.add(jl_muroPersonalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 60, 50));
 
-        bt_reproductorAdmin.setText("Reproductor Musical");
+        bt_reproductorAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproductorMusical.png"))); // NOI18N
         bt_reproductorAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_reproductorAdminMouseClicked(evt);
             }
         });
-        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 150, -1));
-
-        bt_chatAdmin.setText("Chat");
-        jPanel13.add(bt_chatAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 300, -1, -1));
+        jPanel13.add(bt_reproductorAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 190, 90, 80));
 
         jSeparator10.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel13.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 334, 202, 12));
+        jPanel13.add(jSeparator10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 320, 220, 12));
 
         jPanel25.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1641,11 +1699,27 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jb_likeAdminpub2.setText("Like");
-
-        jb_comentAdminPub2.setText("Comentar");
-
         tf_likeAdmin2.setEditable(false);
+        tf_likeAdmin2.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likeAdmin2.setText("0");
+        tf_likeAdmin2.setBorder(null);
+
+        bt_likeAdminpub2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likeAdminpub2.setBorder(null);
+        bt_likeAdminpub2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_likeAdminpub2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likeAdminpub2MouseClicked(evt);
+            }
+        });
+
+        jb_comentAdminPub4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        jb_comentAdminPub4.setBorder(null);
+        jb_comentAdminPub4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel75.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel75.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel75.setText("Comentar");
 
         javax.swing.GroupLayout jPanel25Layout = new javax.swing.GroupLayout(jPanel25);
         jPanel25.setLayout(jPanel25Layout);
@@ -1653,38 +1727,43 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_textPub2Admin)
+                .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel25Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jb_likeAdminpub2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jb_comentAdminPub2)
-                        .addGap(0, 15, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addComponent(bt_likeAdminpub2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(27, 27, 27)
+                        .addComponent(jb_comentAdminPub4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel75))
+                    .addComponent(tf_textPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
         jPanel25Layout.setVerticalGroup(
             jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel25Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_textPub2Admin, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(lb_picPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tf_textPub2Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_likeAdminpub2)
-                    .addComponent(jb_comentAdminPub2)
-                    .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19))
+                .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel25Layout.createSequentialGroup()
+                        .addComponent(bt_likeAdminpub2, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel25Layout.createSequentialGroup()
+                        .addGap(0, 6, Short.MAX_VALUE)
+                        .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel75)
+                            .addGroup(jPanel25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jb_comentAdminPub4)
+                                .addComponent(tf_likeAdmin2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(26, 26, 26))))
         );
 
-        jPanel13.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 340, 380, 190));
+        jPanel13.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 340, 350, 190));
 
         jPanel27.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -1695,11 +1774,27 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
 
-        jb_likeAdminpub1.setText("Like");
-
-        jb_comentAdminPub1.setText("Comentar");
-
         tf_likeAdmin1.setEditable(false);
+        tf_likeAdmin1.setBackground(new java.awt.Color(255, 255, 255));
+        tf_likeAdmin1.setText("0");
+        tf_likeAdmin1.setBorder(null);
+
+        bt_likeAdminpub1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
+        bt_likeAdminpub1.setBorder(null);
+        bt_likeAdminpub1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_likeAdminpub1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likeAdminpub1MouseClicked(evt);
+            }
+        });
+
+        jb_comentAdminPub1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
+        jb_comentAdminPub1.setBorder(null);
+        jb_comentAdminPub1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        jLabel74.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel74.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel74.setText("Comentar");
 
         javax.swing.GroupLayout jPanel27Layout = new javax.swing.GroupLayout(jPanel27);
         jPanel27.setLayout(jPanel27Layout);
@@ -1707,44 +1802,55 @@ public class NewJFrame extends javax.swing.JFrame {
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
-                    .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_textPub1Admin)
                     .addGroup(jPanel27Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jb_likeAdminpub1)
-                        .addGap(18, 18, 18)
+                        .addGap(6, 6, 6)
+                        .addComponent(bt_likeAdminpub1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(25, 25, 25)
                         .addComponent(jb_comentAdminPub1)
-                        .addGap(0, 15, Short.MAX_VALUE)))
-                .addContainerGap())
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel74))
+                    .addComponent(tf_textPub1Admin, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(58, 58, 58))
         );
         jPanel27Layout.setVerticalGroup(
             jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel27Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel27Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tf_textPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, 114, Short.MAX_VALUE)
-                    .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jb_likeAdminpub1)
-                    .addComponent(jb_comentAdminPub1)
-                    .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19))
+                    .addComponent(lb_picPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tf_textPub1Admin, javax.swing.GroupLayout.DEFAULT_SIZE, 101, Short.MAX_VALUE))
+                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel27Layout.createSequentialGroup()
+                                .addGroup(jPanel27Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jb_comentAdminPub1)
+                                    .addComponent(jLabel74))
+                                .addGap(2, 2, 2))
+                            .addComponent(tf_likeAdmin1, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel27Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(bt_likeAdminpub1, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(12, 12, 12))
         );
 
-        jPanel13.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 380, 180));
+        jPanel13.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 150, 350, 170));
+
+        jLabel73.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel73.setText("Reproductor Musical");
+        jPanel13.add(jLabel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, -1, -1));
 
         javax.swing.GroupLayout jd_muroPrincipalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPrincipalAdministrador.getContentPane());
         jd_muroPrincipalAdministrador.getContentPane().setLayout(jd_muroPrincipalAdministradorLayout);
         jd_muroPrincipalAdministradorLayout.setHorizontalGroup(
             jd_muroPrincipalAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_muroPrincipalAdministradorLayout.createSequentialGroup()
-                .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 856, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 22, Short.MAX_VALUE))
+            .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 807, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         jd_muroPrincipalAdministradorLayout.setVerticalGroup(
             jd_muroPrincipalAdministradorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1828,25 +1934,14 @@ public class NewJFrame extends javax.swing.JFrame {
         });
         jPanel16.add(lb_proPicAdminPers, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 190, 148));
 
-        bt_reproductorPersAdmin.setText("Reproductor de Musica");
-        bt_reproductorPersAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bt_reproductorPersAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                bt_reproductorPersAdminMouseClicked(evt);
-            }
-        });
-        jPanel16.add(bt_reproductorPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-
-        bt_calendarioPersAdmin.setText("Agregar Actividad");
+        bt_calendarioPersAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actividadesFacebook.png"))); // NOI18N
+        bt_calendarioPersAdmin.setBorder(null);
         bt_calendarioPersAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_calendarioPersAdminMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 240, 130, -1));
-
-        bt_chatPersAdmin.setText("Chat");
-        jPanel16.add(bt_chatPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 80, -1));
+        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 70, 60));
 
         bt_agregarAdmin.setText("Agregar Usuario Administrador");
         bt_agregarAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -2050,6 +2145,10 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jPanel16.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 160, 180));
+
+        jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel76.setText("Agregar Actividades");
+        jPanel16.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
         jd_muroPersonalAdministrador.getContentPane().setLayout(jd_muroPersonalAdministradorLayout);
@@ -2685,13 +2784,16 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jPanel12.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel12.setForeground(new java.awt.Color(0, 0, 0));
         jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lb_recordatorio.setForeground(new java.awt.Color(0, 0, 0));
         lb_recordatorio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lb_recordatorio.setText("jLabel65");
-        jPanel12.add(lb_recordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 60, 240, 170));
+        jPanel12.add(lb_recordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 100, 310, 30));
+
+        jLabel66.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel66.setText("Recordatorio");
+        jPanel12.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, 120, 40));
+        jPanel12.add(jSeparator18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, 380, -1));
 
         javax.swing.GroupLayout jd_recordatorioLayout = new javax.swing.GroupLayout(jd_recordatorio.getContentPane());
         jd_recordatorio.getContentPane().setLayout(jd_recordatorioLayout);
@@ -2701,40 +2803,46 @@ public class NewJFrame extends javax.swing.JFrame {
         );
         jd_recordatorioLayout.setVerticalGroup(
             jd_recordatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+            .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel30.setBackground(new java.awt.Color(255, 255, 255));
         jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lb_comment1.setForeground(new java.awt.Color(0, 0, 0));
         lb_comment1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lb_comment1.setText("comentario 1");
         lb_comment1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel30.add(lb_comment1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 180, 100));
+        jPanel30.add(lb_comment1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 120, 260, 90));
 
-        lb_nomComent1.setForeground(new java.awt.Color(0, 0, 0));
+        lb_nomComent1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         lb_nomComent1.setText("Comentador");
-        jPanel30.add(lb_nomComent1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 90, 20));
+        jPanel30.add(lb_nomComent1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, 110, 30));
 
-        lb_nomComent2.setForeground(new java.awt.Color(0, 0, 0));
-        lb_nomComent2.setText("jLabel67");
-        jPanel30.add(lb_nomComent2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 90, -1));
+        lb_nomComent2.setText("Comentador");
+        jPanel30.add(lb_nomComent2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 90, -1));
 
-        lb_comment2.setForeground(new java.awt.Color(0, 0, 0));
+        lb_comment2.setBackground(new java.awt.Color(255, 255, 255));
         lb_comment2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        lb_comment2.setText("jLabel68");
+        lb_comment2.setText("Comentario");
         lb_comment2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jPanel30.add(lb_comment2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 180, 110));
-        jPanel30.add(tf_nuevoComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 174, 111));
+        jPanel30.add(lb_comment2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 260, 70));
+        jPanel30.add(tf_nuevoComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 310, 150));
 
+        bt_publicarComentario.setBackground(new java.awt.Color(51, 255, 51));
+        bt_publicarComentario.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        bt_publicarComentario.setForeground(new java.awt.Color(255, 255, 255));
         bt_publicarComentario.setText("Publicar comentario");
         bt_publicarComentario.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_publicarComentarioMouseClicked(evt);
             }
         });
-        jPanel30.add(bt_publicarComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
+        jPanel30.add(bt_publicarComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 490, 200, 40));
+
+        jLabel65.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        jLabel65.setText("Comentarios");
+        jPanel30.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 150, 40));
+        jPanel30.add(jSeparator17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 450, 20));
 
         javax.swing.GroupLayout jd_comentarioLayout = new javax.swing.GroupLayout(jd_comentario.getContentPane());
         jd_comentario.getContentPane().setLayout(jd_comentarioLayout);
@@ -3705,10 +3813,6 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton1MouseClicked
 
-    private void bt_reproductorPersAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_reproductorPersAdminMouseClicked
-        ReproductorMusical();
-    }//GEN-LAST:event_bt_reproductorPersAdminMouseClicked
-
     private void lb_proPicAdminPersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_proPicAdminPersMouseClicked
         JFileChooser fc = new JFileChooser();
         FileFilter filtro = new FileNameExtensionFilter("Imagenes", "png", "jpg", "jpeg", "gif");
@@ -4554,48 +4658,6 @@ public class NewJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_bt_likePubPers5MouseClicked
 
-    private void bt_comentarPubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_comentarPubPers1MouseClicked
-        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
-        admin.cargarArchivo();
-        int tamano = admin.getUsuarios().get(indiceActual).getPublicaciones().size();
-        Publicacion publicacionActual;
-        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
-
-        if (tamano > 0) {
-            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
-            int cantidadComentarios = publicacionActual.getComentarios().size();
-            if (cantidadComentarios >= 1) {
-                lb_nomComent1.setText(publicacionActual.getPublicador() + ": ");
-                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1).getFechaPublicacion();
-                lb_comment1.setText(publicacionActual.getComentarios().get(cantidadComentarios - 1).getComentario() + "   \n" + sd.format(fechaComentario));
-            } else {
-                lb_nomComent1.setText("");
-                lb_comment1.setText("Sé el primero en comentar!");
-                lb_nomComent2.setText("");
-                lb_comment2.setText("");
-            }
-        }
-
-        if (tamano > 1) {
-            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
-            int cantidadComentarios = publicacionActual.getComentarios().size();
-            if (cantidadComentarios >= 2) {
-                lb_nomComent2.setText(publicacionActual.getPublicador() + ": ");
-                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 2).getFechaPublicacion();
-                lb_comment2.setText(publicacionActual.getComentarios().get(cantidadComentarios - 2).getComentario() + "   \n" +sd.format(fechaComentario));
-            }
-        }else{
-            lb_nomComent2.setText("");
-            lb_comment2.setText("");
-        }
-        
-        jd_comentario.pack();
-        jd_comentario.setLocationRelativeTo(jd_muroPersonal);
-        jd_comentario.setModal(true);
-        jd_comentario.setVisible(true);
-        
-    }//GEN-LAST:event_bt_comentarPubPers1MouseClicked
-
     private void bt_publicarComentarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarComentarioMouseClicked
         Publicacion nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_nuevoComentario.getText());
         administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
@@ -4613,6 +4675,18 @@ public class NewJFrame extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(jd_comentario, "Comentario publicado exitosamente");
         jd_comentario.dispose();
     }//GEN-LAST:event_bt_publicarComentarioMouseClicked
+
+    private void bt_cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bt_cerrarSesionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_cerrarSesionActionPerformed
+
+    private void bt_likeAdminpub1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likeAdminpub1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_likeAdminpub1MouseClicked
+
+    private void bt_likeAdminpub2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likeAdminpub2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bt_likeAdminpub2MouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4680,9 +4754,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_agregarAmigo;
     private javax.swing.JButton bt_calendarioPersAdmin;
     private javax.swing.JButton bt_cerrarSesion;
-    private javax.swing.JButton bt_chatAdmin;
-    private javax.swing.JButton bt_chatPersAdmin;
-    private javax.swing.JButton bt_chatRegular;
     private javax.swing.JButton bt_comentarPubPers1;
     private javax.swing.JButton bt_comentarPubPers2;
     private javax.swing.JButton bt_comentarPubPers4;
@@ -4690,6 +4761,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_eliminarUsuario;
     private javax.swing.JButton bt_homeMuroAdmin;
     private javax.swing.JButton bt_homeMuroRegular;
+    private javax.swing.JButton bt_likeAdminpub1;
+    private javax.swing.JButton bt_likeAdminpub2;
     private javax.swing.JButton bt_likePubPers1;
     private javax.swing.JButton bt_likePubPers2;
     private javax.swing.JButton bt_likePubPers4;
@@ -4705,7 +4778,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_registrarAdmin;
     private javax.swing.JButton bt_registrarteU;
     private javax.swing.JButton bt_reproductorAdmin;
-    private javax.swing.JButton bt_reproductorPersAdmin;
     private javax.swing.JButton bt_reproductorRegular;
     private javax.swing.JButton bt_verSolicitudes;
     private javax.swing.JComboBox<String> cb_usuariosRegulares;
@@ -4777,7 +4849,19 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
+    private javax.swing.JLabel jLabel66;
+    private javax.swing.JLabel jLabel67;
+    private javax.swing.JLabel jLabel68;
+    private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel70;
+    private javax.swing.JLabel jLabel71;
+    private javax.swing.JLabel jLabel72;
+    private javax.swing.JLabel jLabel73;
+    private javax.swing.JLabel jLabel74;
+    private javax.swing.JLabel jLabel75;
+    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
@@ -4819,7 +4903,12 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator14;
     private javax.swing.JSeparator jSeparator15;
     private javax.swing.JSeparator jSeparator16;
+    private javax.swing.JSeparator jSeparator17;
+    private javax.swing.JSeparator jSeparator18;
+    private javax.swing.JSeparator jSeparator19;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator20;
+    private javax.swing.JSeparator jSeparator21;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
@@ -4831,10 +4920,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jb_comenPersonAdmin1;
     private javax.swing.JButton jb_comenPersonAdmin2;
     private javax.swing.JButton jb_comentAdminPub1;
-    private javax.swing.JButton jb_comentAdminPub2;
+    private javax.swing.JButton jb_comentAdminPub4;
     private javax.swing.JButton jb_eliminarUsuario;
-    private javax.swing.JButton jb_likeAdminpub1;
-    private javax.swing.JButton jb_likeAdminpub2;
     private javax.swing.JButton jb_likePersonAdmin1;
     private javax.swing.JButton jb_likePersonAdmin2;
     private javax.swing.JButton jb_publicarAdmin;
