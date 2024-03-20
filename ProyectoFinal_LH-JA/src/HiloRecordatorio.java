@@ -37,34 +37,32 @@ public class HiloRecordatorio extends Thread{
         boolean bandera = true;
         while (bandera) {
             Date ahora = new Date();
-            Date recordatorio = actividadActual.getRecordatorioMinutos();
+            Date horaInicio = actividadActual.getFecha();
             
-            if (ahora.getYear() == recordatorio.getYear()) {
-                if (ahora.getMonth() == recordatorio.getMonth()) {
-                    if (ahora.getDate() == recordatorio.getDate()) {
-                        if (ahora.getHours() == recordatorio.getHours()) {
-                            if (ahora.getMinutes() == recordatorio.getMinutes()) {
-                                dialog.pack();
-                                dialog.setLocationRelativeTo(null);
-                                dialog.setVisible(true);
-                                dialog.setModal(true);
-                                label.setText("Este es tu recordatorio de la tarea " + actividadActual.getTitulo() + ".");
-                                bandera = false;
-                            }
-                        }
-                    }
-                }
+            if (ahora.equals(horaInicio)) { // Si la hora actual es igual a la hora de inicio de la actividad
+                mostrarRecordatorio();
+                bandera = false; // Salir del bucle después de mostrar el recordatorio
             }
-            
+
             try {
-                Thread.sleep(1000);
+                Thread.sleep(1000); // Esperar un segundo antes de verificar de nuevo
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-
     }
 
+    private void mostrarRecordatorio() {
+        dialog.pack();
+        dialog.setLocationRelativeTo(null);
+        dialog.setVisible(true);
+        dialog.setModal(true);
+        label.setText("Este es tu recordatorio de la tarea " + actividadActual.getTitulo() + ".");
+    }
 }
+
+    
+
+
 
 

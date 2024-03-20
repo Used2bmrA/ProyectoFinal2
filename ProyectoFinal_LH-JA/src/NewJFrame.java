@@ -57,6 +57,13 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_subirMedia.add(jfx_panel, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.add(jfx_panelAdmin, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.setLayout(new BorderLayout());
+        if(actividadSeleccionada == null){
+            
+        }else{
+        HiloRecordatorio hiloRecordatorio = new HiloRecordatorio(actividadSeleccionada, lb_recordatorio, jd_recordatorio);
+        Thread hilo = new Thread(hiloRecordatorio);
+        hilo.start();
+        }
         
 
     }
@@ -202,6 +209,8 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_publicar = new javax.swing.JButton();
         lb_agregarVideo = new javax.swing.JLabel();
         lb_agregarFoto = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
         jd_muroPrincipalAdministrador = new javax.swing.JDialog();
         jPanel13 = new javax.swing.JPanel();
         lb_proPicPrincipalAdmin = new javax.swing.JLabel();
@@ -524,6 +533,11 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_comentarPubPers1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
         bt_comentarPubPers1.setBorder(null);
         bt_comentarPubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_comentarPubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_comentarPubPers1MouseClicked(evt);
+            }
+        });
 
         jLabel67.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel67.setForeground(new java.awt.Color(153, 153, 153));
@@ -1576,7 +1590,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_publicarMouseClicked(evt);
             }
         });
-        jPanel6.add(bt_publicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 490, 266, 42));
+        jPanel6.add(bt_publicar, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 500, 180, 42));
 
         lb_agregarVideo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         lb_agregarVideo.setText("Agregar Videos");
@@ -1597,6 +1611,28 @@ public class NewJFrame extends javax.swing.JFrame {
             }
         });
         jPanel6.add(lb_agregarFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(265, 133, -1, 30));
+
+        jButton4.setBackground(new java.awt.Color(0, 102, 255));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Detener Video");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, 30));
+
+        jButton6.setBackground(new java.awt.Color(0, 102, 255));
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Reanudar Video");
+        jButton6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton6MouseClicked(evt);
+            }
+        });
+        jPanel6.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 120, 30));
 
         javax.swing.GroupLayout jd_crearPublicacionLayout = new javax.swing.GroupLayout(jd_crearPublicacion.getContentPane());
         jd_crearPublicacion.getContentPane().setLayout(jd_crearPublicacionLayout);
@@ -1686,6 +1722,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel13.add(jl_muroPersonalAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 70, 60, 50));
 
         bt_reproductorAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/reproductorMusical.png"))); // NOI18N
+        bt_reproductorAdmin.setBorder(null);
+        bt_reproductorAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_reproductorAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_reproductorAdminMouseClicked(evt);
@@ -1943,6 +1981,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         bt_calendarioPersAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actividadesFacebook.png"))); // NOI18N
         bt_calendarioPersAdmin.setBorder(null);
+        bt_calendarioPersAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         bt_calendarioPersAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 bt_calendarioPersAdminMouseClicked(evt);
@@ -2164,6 +2203,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 150, 160, 160));
 
         jPanel28.setBackground(new java.awt.Color(255, 255, 255));
+
+        lb_amigoSugerenciaAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_amigoSugerenciaAdminMouseClicked(evt);
+            }
+        });
 
         jb_agregarAmigoAdmin.setBackground(new java.awt.Color(51, 255, 0));
         jb_agregarAmigoAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -3668,10 +3713,7 @@ public class NewJFrame extends javax.swing.JFrame {
             }
             
             
-            for (Actividad actividadActual : admin.getUsuarios().get(indiceActual).getActividades()) {
-                HiloRecordatorio nuevoHilo = new HiloRecordatorio(actividadActual,lb_recordatorio, jd_recordatorio);
-                nuevoHilo.start();
-            }
+            
             
 
         } else {
@@ -3759,6 +3801,17 @@ public class NewJFrame extends javax.swing.JFrame {
         jd_crearPublicacion.setVisible(false);
         lb_subirMedia.setIcon(null);
         tf_crearPensamiento.setText("¿Qué estás pensando?");
+        
+        if (media != null) {
+            media.stop();
+            media = null;
+                jfx_panel.setScene(null);
+            jfx_panel.removeAll();
+            jfx_panel.revalidate();
+            jfx_panel.repaint();
+            
+} else {      
+        } 
 
     }//GEN-LAST:event_bt_publicarMouseClicked
 
@@ -4212,7 +4265,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void bt_listarUsuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_listarUsuarioMouseClicked
-        jd_muroPersonalAdministrador.dispose();
+
         jd_createUser.pack();
         jd_createUser.setLocationRelativeTo(null);
         jd_createUser.setVisible(true);
@@ -4338,6 +4391,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_likePubPers1MouseClicked
 
     private void lb_imgSugerenciaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_imgSugerenciaMouseClicked
+
         administradorUsuario admin = new administradorUsuario("./UsuariosRegulares.pfb");
         Usuario sugerencia = null;
         boolean encontrado = false;
@@ -4751,20 +4805,162 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_bt_cerrarSesionActionPerformed
 
     private void bt_likeAdminpub1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likeAdminpub1MouseClicked
-        // TODO add your handling code here:
+       administradorUsuario admin = new administradorUsuario(Buscar(amigo1));
+        admin.cargarArchivo();
+        try {
+            Publicacion publicacion = admin.getUsuarios().get(indice1).getPublicaciones().get(amigo1.getPublicaciones().size() - 1);
+            if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                publicacion.setLikes(publicacion.getLikes() - 1);
+                publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                tf_likeAdmin1.setText(String.valueOf(publicacion.getLikes()));
+            } else {
+                publicacion.setLikes(publicacion.getLikes() + 1);
+                publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                tf_likeAdmin1.setText(String.valueOf(publicacion.getLikes()));
+            }
+
+            admin.escribirArchivo();
+        } catch (IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+        }
     }//GEN-LAST:event_bt_likeAdminpub1MouseClicked
 
     private void bt_likeAdminpub2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likeAdminpub2MouseClicked
-        // TODO add your handling code here:
+       administradorUsuario admin = new administradorUsuario(Buscar(amigo1));
+        admin.cargarArchivo();
+        try {
+            Publicacion publicacion = admin.getUsuarios().get(indice1).getPublicaciones().get(amigo1.getPublicaciones().size() - 1);
+            if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                publicacion.setLikes(publicacion.getLikes() - 1);
+                publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                tf_likeAdmin1.setText(String.valueOf(publicacion.getLikes()));
+            } else {
+                publicacion.setLikes(publicacion.getLikes() + 1);
+                publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                tf_likeAdmin1.setText(String.valueOf(publicacion.getLikes()));
+            }
+
+            admin.escribirArchivo();
+        } catch (IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+        }
     }//GEN-LAST:event_bt_likeAdminpub2MouseClicked
 
     private void jb_likePersonAdmin1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_likePersonAdmin1MouseClicked
-        // TODO add your handling code here:
+        if (amigo) {
+            administradorUsuario admin = new administradorUsuario(Buscar(amigoActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceAmigo).getPublicaciones().get(amigoActual.getPublicaciones().size() - 1);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }else {
+            administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceActual).getPublicaciones().get(usuarioActual.getPublicaciones().size() - 1);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likePersonAdmin1.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likePersonAdmin1.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }
     }//GEN-LAST:event_jb_likePersonAdmin1MouseClicked
 
     private void jb_likePersonAdmin2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_likePersonAdmin2MouseClicked
-        // TODO add your handling code here:
+       if (amigo) {
+            administradorUsuario admin = new administradorUsuario(Buscar(amigoActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceAmigo).getPublicaciones().get(amigoActual.getPublicaciones().size() - 2);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() - 1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                     tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }else {
+            administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceActual).getPublicaciones().get(usuarioActual.getPublicaciones().size() - 2);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                     tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                     tf_likePersonAdmin2.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }
     }//GEN-LAST:event_jb_likePersonAdmin2MouseClicked
+
+    private void bt_comentarPubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_comentarPubPers1MouseClicked
+jd_comentario.pack();
+jd_comentario.setLocationRelativeTo(null);
+jd_comentario.setVisible(true);
+    }//GEN-LAST:event_bt_comentarPubPers1MouseClicked
+
+    private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
+if (media != null) {
+            media.play();
+        }      
+    }//GEN-LAST:event_jButton6MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+      if (media != null) {
+            media.pause();
+        }
+    }//GEN-LAST:event_jButton4MouseClicked
+
+    private void lb_amigoSugerenciaAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lb_amigoSugerenciaAdminMouseClicked
+       administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
+        Usuario sugerencia = null;
+        boolean encontrado = false;
+        admin.cargarArchivo();
+        for (Usuario reg : admin.getUsuarios()) {
+            if (reg.getNombre().equals(tf_nombreSugerencia.getText())) {
+                sugerencia = reg;
+                encontrado = true;
+            }
+        }
+        RefreshMuroSugerencia(sugerencia);
+    }//GEN-LAST:event_lb_amigoSugerenciaAdminMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4779,9 +4975,10 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     public void crearPublicacionAdmin() {
+        jd_crearPublicacionAdmin.setVisible(true);
         jd_crearPublicacionAdmin.pack();
         jd_crearPublicacionAdmin.setLocationRelativeTo(null);
-        jd_crearPublicacionAdmin.setVisible(true);
+        
     }
 
     /**
@@ -4865,7 +5062,9 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
+    private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -5401,7 +5600,7 @@ public class NewJFrame extends javax.swing.JFrame {
 
         switch (random1) {
             case 1:
-                try {
+                
                 admin1 = new administradorUsuario("./Administradores.pfb");
                 admin1.cargarArchivo();
                 indiceAmigo = sr1.nextInt(0, admin1.getUsuarios().size());
@@ -5416,9 +5615,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 Icon renderizado2 = new ImageIcon(renderizada);
                 lb_amigoSugerenciaAdmin.setIcon(renderizado2);
                 tf_nombreSugerenciaAdmin.setText(sugerencia.getNombre());
-            } catch (NullPointerException e) {
 
-            }
             break;
             default:
         }
@@ -5606,11 +5803,14 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     private void RefreshMuroSugerencia(Usuario sugerencia) {
+        
         lb_proPicReg.setIcon(sugerencia.getFotografia());
         tf_textoPubPers1.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
         tf_textoPubPers2.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
         lb_imagenPrincipal1.setIcon(null);
         lb_imagenPrincipal2.setIcon(null);
+
+
     }
 
     private void RefreshMuroAmigo(String nombre) {
@@ -5690,6 +5890,7 @@ public class NewJFrame extends javax.swing.JFrame {
     }
 
     private String Buscar(Usuario usuarioActual) {
+
         String direccion = "./UsuariosRegulares.pfb";
         administradorUsuario admin = new administradorUsuario(direccion);
         admin.cargarArchivo();
@@ -5698,7 +5899,6 @@ public class NewJFrame extends javax.swing.JFrame {
                 return direccion;
             }
         }
-
         direccion = "./Administradores.pfb";
         admin = new administradorUsuario(direccion);
         admin.cargarArchivo();
@@ -5707,7 +5907,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 return direccion;
             }
         }
-
         return "Persona no encontrada";
-    }
+    
+    
+}
 }
