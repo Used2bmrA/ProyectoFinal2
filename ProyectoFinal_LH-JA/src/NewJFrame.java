@@ -57,14 +57,6 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_subirMedia.add(jfx_panel, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.add(jfx_panelAdmin, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.setLayout(new BorderLayout());
-        if(actividadSeleccionada == null){
-            
-        }else{
-        HiloRecordatorio hiloRecordatorio = new HiloRecordatorio(actividadSeleccionada, lb_recordatorio, jd_recordatorio);
-        Thread hilo = new Thread(hiloRecordatorio);
-        hilo.start();
-        }
-        
 
     }
 
@@ -280,6 +272,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jSeparator13 = new javax.swing.JSeparator();
         jLabel79 = new javax.swing.JLabel();
         jLabel80 = new javax.swing.JLabel();
+        jButton7 = new javax.swing.JButton();
+        jLabel83 = new javax.swing.JLabel();
         jd_calendario = new javax.swing.JDialog();
         jPanel19 = new javax.swing.JPanel();
         jc_calendario = new com.toedter.calendar.JCalendar();
@@ -303,6 +297,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel61 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jt_actividades = new javax.swing.JTree();
+        horaRecordatorio = new javax.swing.JTextField();
         jd_solicitud = new javax.swing.JDialog();
         jPanel7 = new javax.swing.JPanel();
         lb_imgSolicitud = new javax.swing.JLabel();
@@ -1987,7 +1982,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_calendarioPersAdminMouseClicked(evt);
             }
         });
-        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, 70, 60));
+        jPanel16.add(bt_calendarioPersAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 70, 60));
 
         bt_agregarAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/agregarUsuario.png"))); // NOI18N
         bt_agregarAdmin.setBorder(null);
@@ -2214,6 +2209,11 @@ public class NewJFrame extends javax.swing.JFrame {
         jb_agregarAmigoAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jb_agregarAmigoAdmin.setForeground(new java.awt.Color(255, 255, 255));
         jb_agregarAmigoAdmin.setText("Agregar Amigo");
+        jb_agregarAmigoAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jb_agregarAmigoAdminMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
         jPanel28.setLayout(jPanel28Layout);
@@ -2245,8 +2245,8 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel16.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 320, 160, 180));
 
         jLabel76.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel76.setText("Agregar Actividades");
-        jPanel16.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, -1, -1));
+        jLabel76.setText("Actividades");
+        jPanel16.add(jLabel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
 
         jLabel77.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel77.setText("Agregar Administrador");
@@ -2264,6 +2264,20 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel80.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel80.setText("Modificar Usuario");
         jPanel16.add(jLabel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 490, -1, -1));
+
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/solicitudesFacebook.png"))); // NOI18N
+        jButton7.setBorder(null);
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton7MouseClicked(evt);
+            }
+        });
+        jPanel16.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 70, 60));
+
+        jLabel83.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        jLabel83.setText("Solicitudes");
+        jPanel16.add(jLabel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 240, 70, -1));
 
         javax.swing.GroupLayout jd_muroPersonalAdministradorLayout = new javax.swing.GroupLayout(jd_muroPersonalAdministrador.getContentPane());
         jd_muroPersonalAdministrador.getContentPane().setLayout(jd_muroPersonalAdministradorLayout);
@@ -2375,6 +2389,9 @@ public class NewJFrame extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jt_actividades);
 
         jPanel19.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 336, 250, 250));
+
+        horaRecordatorio.setEditable(false);
+        jPanel19.add(horaRecordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 500, 330, 30));
 
         javax.swing.GroupLayout jd_calendarioLayout = new javax.swing.GroupLayout(jd_calendario.getContentPane());
         jd_calendario.getContentPane().setLayout(jd_calendarioLayout);
@@ -3712,7 +3729,19 @@ public class NewJFrame extends javax.swing.JFrame {
                 }
             }
             
-            
+            try {
+          administradorUsuario u = new administradorUsuario("./UsuariosRegulares.pfb");
+        for (Actividad objects : u.getUsuarios().get(indiceActual).getActividades()) {
+            if(u.getUsuarios().get(indiceActual).getActividades() == null){
+                
+            }else{
+           HiloRecordatorio h = new HiloRecordatorio(objects, tf_tituloRecordatorio);
+        Thread hilo = new Thread(h);
+        hilo.start(); 
+        }  
+        }
+        } catch (IndexOutOfBoundsException e) {
+        }
             
             
 
@@ -4962,6 +4991,48 @@ if (media != null) {
         RefreshMuroSugerencia(sugerencia);
     }//GEN-LAST:event_lb_amigoSugerenciaAdminMouseClicked
 
+    private void jb_agregarAmigoAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jb_agregarAmigoAdminMouseClicked
+       administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
+        admin.cargarArchivo();
+        boolean encontrado = false;
+        for (Usuario reg : admin.getUsuarios()) {
+            if (tf_nombreSugerenciaAdmin.getText().equals(reg.getNombre())) {
+                admin.getUsuarios().get(indiceAmigo).getSolicitudes().add(usuarioActual.getNombre());
+                encontrado = true;
+            }
+        }
+        admin.escribirArchivo();
+        JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "Solicitud enviada.");
+    }//GEN-LAST:event_jb_agregarAmigoAdminMouseClicked
+
+    private void jButton7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton7MouseClicked
+       if (!usuarioActual.getSolicitudes().isEmpty()) {
+            boolean encontrado = false;
+            administradorUsuario admin = new administradorUsuario("./Administradores.pfb");
+            admin.cargarArchivo();
+            for (Usuario reg : admin.getUsuarios()) {
+                if (reg.getNombre().equals(usuarioActual.getSolicitudes().get(0))) {
+                    lb_nombreSolicitud.setText(reg.getNombre());
+                    try {
+                        ImageIcon icono = (ImageIcon) reg.getFotografia();
+                        Image icono2 = (Image) icono.getImage();
+                        Image renderizada = icono2.getScaledInstance(130, 100, Image.SCALE_SMOOTH);
+                        Icon renderizado2 = new ImageIcon(renderizada);
+                        lb_imgSolicitud.setIcon(renderizado2);
+                    } catch (NullPointerException e) {
+                    }
+                    encontrado = true;
+                }
+            }
+          jd_solicitud.pack();
+            jd_solicitud.setLocationRelativeTo(jd_muroPersonalAdministrador);
+            jd_solicitud.setVisible(true);
+        }else {
+            JOptionPane.showMessageDialog(jd_muroPersonalAdministrador, "No tienes solicitudes pendientes.");
+        }   
+       
+    }//GEN-LAST:event_jButton7MouseClicked
+
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
         jd_reproductorMusical.pack();
@@ -5059,12 +5130,14 @@ if (media != null) {
     private javax.swing.JComboBox<String> cb_usuariosRegularesEliminar;
     private javax.swing.JPanel header_register1;
     private javax.swing.JPanel header_registerAdmin;
+    private javax.swing.JTextField horaRecordatorio;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -5146,6 +5219,7 @@ if (media != null) {
     private javax.swing.JLabel jLabel80;
     private javax.swing.JLabel jLabel81;
     private javax.swing.JLabel jLabel82;
+    private javax.swing.JLabel jLabel83;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
@@ -5600,7 +5674,7 @@ if (media != null) {
 
         switch (random1) {
             case 1:
-                
+                try{
                 admin1 = new administradorUsuario("./Administradores.pfb");
                 admin1.cargarArchivo();
                 indiceAmigo = sr1.nextInt(0, admin1.getUsuarios().size());
@@ -5616,9 +5690,14 @@ if (media != null) {
                 lb_amigoSugerenciaAdmin.setIcon(renderizado2);
                 tf_nombreSugerenciaAdmin.setText(sugerencia.getNombre());
 
-            break;
+                }catch(NullPointerException e){
+        
+        }
+                break;
             default:
         }
+            
+        
 
         if (usuarioActual.getAmigos().isEmpty()) {
         } else {
