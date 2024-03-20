@@ -4897,7 +4897,7 @@ public class NewJFrame extends javax.swing.JFrame {
                     publicacion.getPeopleLikes().add(usuarioActual.getNombre());
                     tf_likePersonAdmin1.setText(String.valueOf(publicacion.getLikes()));
                 }
-                
+                            
                 admin.escribirArchivo();
             } catch (IndexOutOfBoundsException e) {
                 JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
