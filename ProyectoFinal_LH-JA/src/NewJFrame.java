@@ -97,7 +97,6 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel24 = new javax.swing.JPanel();
         lb_fotoAmigo = new javax.swing.JLabel();
         tf_nombreAmigo = new javax.swing.JTextField();
-        jButton5 = new javax.swing.JButton();
         bt_Agenda = new javax.swing.JButton();
         jLabel69 = new javax.swing.JLabel();
         jSeparator19 = new javax.swing.JSeparator();
@@ -753,14 +752,6 @@ public class NewJFrame extends javax.swing.JFrame {
         );
 
         jPanel3.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, 170, 160));
-
-        jButton5.setText(" Crear Admin");
-        jButton5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton5MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, -1, -1));
 
         bt_Agenda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/actividadesFacebook.png"))); // NOI18N
         bt_Agenda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -2028,6 +2019,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 51, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton1.setText("Cerrar Sesion");
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
@@ -2209,6 +2201,7 @@ public class NewJFrame extends javax.swing.JFrame {
         jb_agregarAmigoAdmin.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jb_agregarAmigoAdmin.setForeground(new java.awt.Color(255, 255, 255));
         jb_agregarAmigoAdmin.setText("Agregar Amigo");
+        jb_agregarAmigoAdmin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jb_agregarAmigoAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jb_agregarAmigoAdminMouseClicked(evt);
@@ -4164,6 +4157,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 sp_nuevoDia.setValue(1);
                 sp_nuevoMes.setValue("Enero");
                 sp_nuevoAño.setValue(1970);
+                lb_nuevaFotoPerfil.setIcon(null);
             } else {
                 Usuario usuario = (Usuario) cb_usuariosRegulares.getSelectedItem();
                 pos = cb_usuariosRegulares.getSelectedIndex();
@@ -4455,12 +4449,6 @@ public class NewJFrame extends javax.swing.JFrame {
     private void tf_textPub1AdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tf_textPub1AdminActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tf_textPub1AdminActionPerformed
-
-    private void jButton5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton5MouseClicked
-        jd_createAdmin.pack();
-        jd_createAdmin.setLocationRelativeTo(null);
-        jd_createAdmin.setVisible(true);
-    }//GEN-LAST:event_jButton5MouseClicked
 
     private void jLabel55MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel55MouseClicked
 
@@ -5135,7 +5123,6 @@ if (media != null) {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JLabel jLabel1;
@@ -5710,8 +5697,8 @@ if (media != null) {
             Image icono2 = (Image) icono.getImage();
             Image renderizada = icono2.getScaledInstance(134, 90, Image.SCALE_SMOOTH);
             Icon renderizado2 = new ImageIcon(renderizada);
-            lb_amigoSugerenciaAdmin.setIcon(renderizado2);
-            tf_nombreSugerenciaAdmin.setText(amigo.getNombre());
+            lb_fotoAmigoAdmin.setIcon(renderizado2);
+            tf_nombreAmigoAdmin.setText(amigo.getNombre());
         }   
     }
 
@@ -5882,14 +5869,16 @@ if (media != null) {
     }
 
     private void RefreshMuroSugerencia(Usuario sugerencia) {
-        
+        if(sugerencia.getFotografia() != null){
         lb_proPicReg.setIcon(sugerencia.getFotografia());
         tf_textoPubPers1.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
         tf_textoPubPers2.setText("Tienes que ser amigo de esta \npersona para ver sus publicaciones.");
         lb_imagenPrincipal1.setIcon(null);
         lb_imagenPrincipal2.setIcon(null);
-
-
+        }else{
+            
+        }
+        
     }
 
     private void RefreshMuroAmigo(String nombre) {
