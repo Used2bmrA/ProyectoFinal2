@@ -1,6 +1,8 @@
 
 import java.util.Calendar;
 import java.util.Date;
+import javax.swing.JDialog;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JSpinner;
 
@@ -14,53 +16,60 @@ import javax.swing.JSpinner;
  * @author josed
  */
 public class HiloRecordatorio extends Thread{
-    private Actividad actividades;
-    private int minutosActividad;
+    private Actividad actividadActual;
+    private JLabel label;
+    private JDialog dialog;
 
-    public HiloRecordatorio(Actividad actividades, int minutosActividad) {
-        this.actividades = actividades;
-        this.minutosActividad = minutosActividad;
+    public HiloRecordatorio(Actividad actividadActual, JLabel label, JDialog dialog) {
+        this.actividadActual = actividadActual;
+        this.label = label;
+        this.dialog = dialog;
     }
 
+
+
+    
+
     public Actividad getActividades() {
-        return actividades;
+        return actividadActual;
     }
 
     public void setActividades(Actividad actividades) {
-        this.actividades = actividades;
+        this.actividadActual = actividades;
     }
 
-    public int getMinutosActividad() {
-        return minutosActividad;
-    }
-
-    public void setMinutosActividad(int minutosActividad) {
-        this.minutosActividad = minutosActividad;
-    }
-
-    
-    
-    public void run(){
-       while(true){
-           try {
-                Date ahora = new Date();
-         
-                Date horaInicio = new Date(ahora.getTime() + minutosActividad * 60000);
-
-                long tiempoRestante = actividades.getRecordatorioMinutos().getTime() - horaInicio.getTime();
-
-                if (tiempoRestante <= 0) {
-                    JOptionPane.showMessageDialog(null, "Es hora de tu actividad llamada" + actividades.getTitulo() + "!");
-                    break;
+    public void run() {
+        boolean bandera = true;
+        while (bandera) {
+            Date ahora = new Date();
+            Date recordatorio = actividadActual.getRecordatorioMinutos();
+            
+            if (ahora.getYear() == recordatorio.getYear()) {
+                if (ahora.getMonth() == recordatorio.getMonth()) {
+                    if (ahora.getDate() == recordatorio.getDate()) {
+                        if (ahora.getHours() == recordatorio.getHours()) {
+                            if (ahora.getMinutes() == recordatorio.getMinutes()) {
+                                dialog.pack();
+                                dialog.setLocationRelativeTo(null);
+                                dialog.setVisible(true);
+                                dialog.setModal(true);
+                                label.setText("Este es tu recordatorio de la tarea " + actividadActual.getTitulo() + ".");
+                                bandera = false;
+                            }
+                        }
+                    }
                 }
-                Thread.sleep(tiempoRestante - 60000);
+            }
+            
+            try {
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
-           
-       }
-        
+
     }
+
+}
 
 

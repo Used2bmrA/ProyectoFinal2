@@ -57,6 +57,7 @@ public class NewJFrame extends javax.swing.JFrame {
         lb_subirMedia.add(jfx_panel, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.add(jfx_panelAdmin, BorderLayout.CENTER);
         lb_fotosPublicacionAdmin.setLayout(new BorderLayout());
+        
 
     }
 
@@ -334,6 +335,17 @@ public class NewJFrame extends javax.swing.JFrame {
         jLabel55 = new javax.swing.JLabel();
         lb_fotosPublicacionAdmin = new javax.swing.JLabel();
         jb_publicarAdmin = new javax.swing.JButton();
+        jd_recordatorio = new javax.swing.JDialog();
+        jPanel12 = new javax.swing.JPanel();
+        lb_recordatorio = new javax.swing.JLabel();
+        jd_comentario = new javax.swing.JDialog();
+        jPanel30 = new javax.swing.JPanel();
+        lb_comment1 = new javax.swing.JLabel();
+        lb_nomComent1 = new javax.swing.JLabel();
+        lb_nomComent2 = new javax.swing.JLabel();
+        lb_comment2 = new javax.swing.JLabel();
+        tf_nuevoComentario = new javax.swing.JTextField();
+        bt_publicarComentario = new javax.swing.JButton();
         panelPrincipal = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         tf_username = new javax.swing.JTextField();
@@ -480,6 +492,11 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_comentarPubPers1.setText("Comentar");
         bt_comentarPubPers1.setBorder(null);
         bt_comentarPubPers1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_comentarPubPers1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_comentarPubPers1MouseClicked(evt);
+            }
+        });
 
         tf_textoPubPers1.setEditable(false);
         tf_textoPubPers1.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -797,6 +814,7 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_chatRegular.setBorder(null);
         jPanel5.add(bt_chatRegular, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 110, 30));
 
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Ir a tu muro personal");
         jPanel5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 40, -1, -1));
 
@@ -808,6 +826,11 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_likePubPers4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
         bt_likePubPers4.setBorder(null);
         bt_likePubPers4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_likePubPers4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likePubPers4MouseClicked(evt);
+            }
+        });
 
         bt_comentarPubPers4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/comentarFacebook.png"))); // NOI18N
         bt_comentarPubPers4.setBorder(null);
@@ -874,6 +897,11 @@ public class NewJFrame extends javax.swing.JFrame {
         bt_likePubPers5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/likeFacebook.png"))); // NOI18N
         bt_likePubPers5.setBorder(null);
         bt_likePubPers5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bt_likePubPers5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_likePubPers5MouseClicked(evt);
+            }
+        });
 
         tf_textoPubPrin2.setEditable(false);
         tf_textoPubPrin2.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -2149,11 +2177,12 @@ public class NewJFrame extends javax.swing.JFrame {
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lb_imgSolicitud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_imgSolicitud.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/shadow.png"))); // NOI18N
         lb_imgSolicitud.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel7.add(lb_imgSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 20, 130, 100));
+        jPanel7.add(lb_imgSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 130, 140));
 
         lb_nombreSolicitud.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel7.add(lb_nombreSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 151, 20));
+        jPanel7.add(lb_nombreSolicitud, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 151, 20));
 
         bt_aceptar.setBackground(new java.awt.Color(51, 153, 255));
         bt_aceptar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2164,7 +2193,7 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_aceptarMouseClicked(evt);
             }
         });
-        jPanel7.add(bt_aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel7.add(bt_aceptar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
         bt_rechazar.setBackground(new java.awt.Color(51, 153, 255));
         bt_rechazar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -2175,21 +2204,17 @@ public class NewJFrame extends javax.swing.JFrame {
                 bt_rechazarMouseClicked(evt);
             }
         });
-        jPanel7.add(bt_rechazar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 180, -1, -1));
+        jPanel7.add(bt_rechazar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, -1, -1));
 
         javax.swing.GroupLayout jd_solicitudLayout = new javax.swing.GroupLayout(jd_solicitud.getContentPane());
         jd_solicitud.getContentPane().setLayout(jd_solicitudLayout);
         jd_solicitudLayout.setHorizontalGroup(
             jd_solicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_solicitudLayout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 251, Short.MAX_VALUE)
         );
         jd_solicitudLayout.setVerticalGroup(
             jd_solicitudLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jd_solicitudLayout.createSequentialGroup()
-                .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 6, Short.MAX_VALUE))
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
         );
 
         jPanel11.setBackground(new java.awt.Color(240, 242, 245));
@@ -2657,6 +2682,69 @@ public class NewJFrame extends javax.swing.JFrame {
             .addGroup(jd_crearPublicacionAdminLayout.createSequentialGroup()
                 .addComponent(jPanel29, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 6, Short.MAX_VALUE))
+        );
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lb_recordatorio.setForeground(new java.awt.Color(0, 0, 0));
+        lb_recordatorio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lb_recordatorio.setText("jLabel65");
+        jPanel12.add(lb_recordatorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(86, 60, 240, 170));
+
+        javax.swing.GroupLayout jd_recordatorioLayout = new javax.swing.GroupLayout(jd_recordatorio.getContentPane());
+        jd_recordatorio.getContentPane().setLayout(jd_recordatorioLayout);
+        jd_recordatorioLayout.setHorizontalGroup(
+            jd_recordatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, 400, Short.MAX_VALUE)
+        );
+        jd_recordatorioLayout.setVerticalGroup(
+            jd_recordatorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel12, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+        );
+
+        jPanel30.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lb_comment1.setForeground(new java.awt.Color(0, 0, 0));
+        lb_comment1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb_comment1.setText("comentario 1");
+        lb_comment1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel30.add(lb_comment1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 180, 100));
+
+        lb_nomComent1.setForeground(new java.awt.Color(0, 0, 0));
+        lb_nomComent1.setText("Comentador");
+        jPanel30.add(lb_nomComent1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 80, 90, 20));
+
+        lb_nomComent2.setForeground(new java.awt.Color(0, 0, 0));
+        lb_nomComent2.setText("jLabel67");
+        jPanel30.add(lb_nomComent2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, 90, -1));
+
+        lb_comment2.setForeground(new java.awt.Color(0, 0, 0));
+        lb_comment2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        lb_comment2.setText("jLabel68");
+        lb_comment2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jPanel30.add(lb_comment2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 180, 110));
+        jPanel30.add(tf_nuevoComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 174, 111));
+
+        bt_publicarComentario.setText("Publicar comentario");
+        bt_publicarComentario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bt_publicarComentarioMouseClicked(evt);
+            }
+        });
+        jPanel30.add(bt_publicarComentario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, -1, -1));
+
+        javax.swing.GroupLayout jd_comentarioLayout = new javax.swing.GroupLayout(jd_comentario.getContentPane());
+        jd_comentario.getContentPane().setLayout(jd_comentarioLayout);
+        jd_comentarioLayout.setHorizontalGroup(
+            jd_comentarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel30, javax.swing.GroupLayout.PREFERRED_SIZE, 471, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        jd_comentarioLayout.setVerticalGroup(
+            jd_comentarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, 570, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -3397,9 +3485,16 @@ public class NewJFrame extends javax.swing.JFrame {
                         jd_muroPrincipalAdministrador.setVisible(true);
                         this.setVisible(false);
                     }
+                    indiceActual++;
                 }
-                indiceActual++;
             }
+            
+            
+            for (Actividad actividadActual : admin.getUsuarios().get(indiceActual).getActividades()) {
+                HiloRecordatorio nuevoHilo = new HiloRecordatorio(actividadActual,lb_recordatorio, jd_recordatorio);
+                nuevoHilo.start();
+            }
+            
 
         } else {
             JOptionPane.showMessageDialog(this, "Registrate a Facebook para comenzar.");
@@ -3679,11 +3774,14 @@ public class NewJFrame extends javax.swing.JFrame {
             for (Usuario reg : admin.getUsuarios()) {
                 if (reg.getNombre().equals(usuarioActual.getSolicitudes().get(0))) {
                     lb_nombreSolicitud.setText(reg.getNombre());
-                    ImageIcon icono = (ImageIcon) reg.getFotografia();
-                    Image icono2 = (Image) icono.getImage();
-                    Image renderizada = icono2.getScaledInstance(130, 100, Image.SCALE_SMOOTH);
-                    Icon renderizado2 = new ImageIcon(renderizada);
-                    lb_imgSolicitud.setIcon(renderizado2);
+                    try {
+                        ImageIcon icono = (ImageIcon) reg.getFotografia();
+                        Image icono2 = (Image) icono.getImage();
+                        Image renderizada = icono2.getScaledInstance(130, 100, Image.SCALE_SMOOTH);
+                        Icon renderizado2 = new ImageIcon(renderizada);
+                        lb_imgSolicitud.setIcon(renderizado2);
+                    } catch (NullPointerException e) {
+                    }
                     encontrado = true;
                 }
             }
@@ -4030,12 +4128,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
                     publicacion.setLikes(publicacion.getLikes() -1);
                     publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likesPers1.setText(String.valueOf(publicacion.getLikes()));
                 }else{
                     publicacion.setLikes(publicacion.getLikes() + 1);
                     publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likesPers1.setText(String.valueOf(publicacion.getLikes()));
                 }
                 
-
+                admin.escribirArchivo();
             } catch (IndexOutOfBoundsException e) {
                 JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
             }
@@ -4047,12 +4147,14 @@ public class NewJFrame extends javax.swing.JFrame {
                 if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
                     publicacion.setLikes(publicacion.getLikes() -1);
                     publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likesPers1.setText(String.valueOf(publicacion.getLikes()));
                 }else{
                     publicacion.setLikes(publicacion.getLikes() + 1);
                     publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likesPers1.setText(String.valueOf(publicacion.getLikes()));
                 }
                 
-
+                admin.escribirArchivo();
             } catch (IndexOutOfBoundsException e) {
                 JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
             }
@@ -4363,7 +4465,45 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jt_actividadesMouseClicked
 
     private void bt_likePubPers2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers2MouseClicked
-        // TODO add your handling code here:
+        if (amigo) {
+            administradorUsuario admin = new administradorUsuario(Buscar(amigoActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceAmigo).getPublicaciones().get(amigoActual.getPublicaciones().size() - 2);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() - 1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likesPers2.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likesPers2.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }else {
+            administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+            admin.cargarArchivo();
+            try {
+                Publicacion publicacion = admin.getUsuarios().get(indiceActual).getPublicaciones().get(usuarioActual.getPublicaciones().size() - 2);
+                if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                    publicacion.setLikes(publicacion.getLikes() -1);
+                    publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                    tf_likesPers2.setText(String.valueOf(publicacion.getLikes()));
+                }else{
+                    publicacion.setLikes(publicacion.getLikes() + 1);
+                    publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                    tf_likesPers2.setText(String.valueOf(publicacion.getLikes()));
+                }
+                
+                admin.escribirArchivo();
+            } catch (IndexOutOfBoundsException e) {
+                JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+            }
+        }
     }//GEN-LAST:event_bt_likePubPers2MouseClicked
 
     private void bt_calendarioPersAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_calendarioPersAdminMouseClicked
@@ -4371,6 +4511,108 @@ public class NewJFrame extends javax.swing.JFrame {
       jd_calendario.setLocationRelativeTo(jd_muroPersonalAdministrador);
       jd_calendario.setVisible(true);
     }//GEN-LAST:event_bt_calendarioPersAdminMouseClicked
+
+    private void bt_likePubPers4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers4MouseClicked
+        administradorUsuario admin = new administradorUsuario(Buscar(amigo1));
+        admin.cargarArchivo();
+        try {
+            Publicacion publicacion = admin.getUsuarios().get(indice1).getPublicaciones().get(amigo1.getPublicaciones().size() - 1);
+            if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                publicacion.setLikes(publicacion.getLikes() - 1);
+                publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                tf_likesPrin1.setText(String.valueOf(publicacion.getLikes()));
+            } else {
+                publicacion.setLikes(publicacion.getLikes() + 1);
+                publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                tf_likesPrin1.setText(String.valueOf(publicacion.getLikes()));
+            }
+
+            admin.escribirArchivo();
+        } catch (IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+        }
+    }//GEN-LAST:event_bt_likePubPers4MouseClicked
+
+    private void bt_likePubPers5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_likePubPers5MouseClicked
+        administradorUsuario admin = new administradorUsuario(Buscar(amigo2));
+        admin.cargarArchivo();
+        try {
+            Publicacion publicacion = admin.getUsuarios().get(indice2).getPublicaciones().get(amigo2.getPublicaciones().size() - 1);
+            if (publicacion.getPeopleLikes().contains(usuarioActual.getNombre())) {
+                publicacion.setLikes(publicacion.getLikes() - 1);
+                publicacion.getPeopleLikes().remove(usuarioActual.getNombre());
+                tf_likesPrin2.setText(String.valueOf(publicacion.getLikes()));
+            } else {
+                publicacion.setLikes(publicacion.getLikes() + 1);
+                publicacion.getPeopleLikes().add(usuarioActual.getNombre());
+                tf_likesPrin2.setText(String.valueOf(publicacion.getLikes()));
+            }
+
+            admin.escribirArchivo();
+        } catch (IndexOutOfBoundsException e) {
+            JOptionPane.showMessageDialog(jd_muroPersonal, "No hay nada a que darle like aquí.");
+        }
+    }//GEN-LAST:event_bt_likePubPers5MouseClicked
+
+    private void bt_comentarPubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_comentarPubPers1MouseClicked
+        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+        admin.cargarArchivo();
+        int tamano = admin.getUsuarios().get(indiceActual).getPublicaciones().size();
+        Publicacion publicacionActual;
+        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+
+        if (tamano > 0) {
+            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
+            int cantidadComentarios = publicacionActual.getComentarios().size();
+            if (cantidadComentarios >= 1) {
+                lb_nomComent1.setText(publicacionActual.getPublicador() + ": ");
+                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1).getFechaPublicacion();
+                lb_comment1.setText(publicacionActual.getComentarios().get(cantidadComentarios - 1).getComentario() + "   \n" + sd.format(fechaComentario));
+            } else {
+                lb_nomComent1.setText("");
+                lb_comment1.setText("Sé el primero en comentar!");
+                lb_nomComent2.setText("");
+                lb_comment2.setText("");
+            }
+        }
+
+        if (tamano > 1) {
+            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
+            int cantidadComentarios = publicacionActual.getComentarios().size();
+            if (cantidadComentarios >= 2) {
+                lb_nomComent2.setText(publicacionActual.getPublicador() + ": ");
+                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 2).getFechaPublicacion();
+                lb_comment2.setText(publicacionActual.getComentarios().get(cantidadComentarios - 2).getComentario() + "   \n" +sd.format(fechaComentario));
+            }
+        }else{
+            lb_nomComent2.setText("");
+            lb_comment2.setText("");
+        }
+        
+        jd_comentario.pack();
+        jd_comentario.setLocationRelativeTo(jd_muroPersonal);
+        jd_comentario.setModal(true);
+        jd_comentario.setVisible(true);
+        
+    }//GEN-LAST:event_bt_comentarPubPers1MouseClicked
+
+    private void bt_publicarComentarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_publicarComentarioMouseClicked
+        Publicacion nuevaPublicacion = new Publicacion(usuarioActual.getNombre(), tf_nuevoComentario.getText());
+        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+        admin.cargarArchivo();
+        
+        int tamano = admin.getUsuarios().get(indiceActual).getPublicaciones().size();
+        admin.getUsuarios().get(indiceActual).getPublicaciones().get( tamano - 1).getComentarios().add(nuevaPublicacion);
+        admin.escribirArchivo();
+        
+        lb_nomComent1.setText("");
+        lb_comment1.setText("");
+        lb_nomComent2.setText("");
+        lb_comment2.setText("");
+        tf_nuevoComentario.setText("");
+        JOptionPane.showMessageDialog(jd_comentario, "Comentario publicado exitosamente");
+        jd_comentario.dispose();
+    }//GEN-LAST:event_bt_publicarComentarioMouseClicked
 
     public void ReproductorMusical() {
         jd_reproductorMusical.setVisible(true);
@@ -4458,6 +4700,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton bt_programarEvento;
     private javax.swing.JButton bt_programarTarea;
     private javax.swing.JButton bt_publicar;
+    private javax.swing.JButton bt_publicarComentario;
     private javax.swing.JButton bt_rechazar;
     private javax.swing.JButton bt_registrarAdmin;
     private javax.swing.JButton bt_registrarteU;
@@ -4540,6 +4783,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JPanel jPanel15;
@@ -4559,6 +4803,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
@@ -4595,6 +4840,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jb_publicarAdmin;
     private com.toedter.calendar.JCalendar jc_calendario;
     private javax.swing.JDialog jd_calendario;
+    private javax.swing.JDialog jd_comentario;
     private javax.swing.JDialog jd_crearPublicacion;
     private javax.swing.JDialog jd_crearPublicacionAdmin;
     private javax.swing.JDialog jd_createAdmin;
@@ -4605,6 +4851,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JDialog jd_muroPersonalAdministrador;
     private javax.swing.JDialog jd_muroPrincipal;
     private javax.swing.JDialog jd_muroPrincipalAdministrador;
+    private javax.swing.JDialog jd_recordatorio;
     private javax.swing.JDialog jd_reproductorMusical;
     private javax.swing.JDialog jd_solicitud;
     private javax.swing.JLabel jl_muroPersonalAdmin;
@@ -4612,6 +4859,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lb_agregarFoto;
     private javax.swing.JLabel lb_agregarVideo;
     private javax.swing.JLabel lb_amigoSugerenciaAdmin;
+    private javax.swing.JLabel lb_comment1;
+    private javax.swing.JLabel lb_comment2;
     private javax.swing.JLabel lb_exitBttnAddAdmin;
     private javax.swing.JLabel lb_exitBttnRegister1;
     private javax.swing.JLabel lb_exitTxt;
@@ -4625,6 +4874,8 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lb_imagenPublicacion2;
     private javax.swing.JLabel lb_imgSolicitud;
     private javax.swing.JLabel lb_imgSugerencia;
+    private javax.swing.JLabel lb_nomComent1;
+    private javax.swing.JLabel lb_nomComent2;
     private javax.swing.JLabel lb_nombreSolicitud;
     private javax.swing.JLabel lb_nuevaFechaNacimiento;
     private javax.swing.JLabel lb_nuevaFotoPerfil;
@@ -4637,6 +4888,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel lb_proPicReg;
     private javax.swing.JLabel lb_pubPersonAdmin1;
     private javax.swing.JLabel lb_pubPersonAdmin2;
+    private javax.swing.JLabel lb_recordatorio;
     private javax.swing.JLabel lb_subirMedia;
     private javax.swing.JPanel panelPrincipal;
     private javax.swing.JPasswordField pf_password;
@@ -4698,6 +4950,7 @@ public class NewJFrame extends javax.swing.JFrame {
     private javax.swing.JTextField tf_nombreRegistrarU;
     private javax.swing.JTextField tf_nombreSugerencia;
     private javax.swing.JTextField tf_nombreSugerenciaAdmin;
+    private javax.swing.JTextField tf_nuevoComentario;
     private javax.swing.JTextField tf_nuevoNombre;
     private javax.swing.JTextField tf_paisAdmin;
     private javax.swing.JTextField tf_paisCreateU;
@@ -4722,7 +4975,11 @@ public class NewJFrame extends javax.swing.JFrame {
     static DefaultMutableTreeNode nodo_seleccionado;
     static Actividad actividadSeleccionada;
     static boolean amigo;
-    private Usuario amigoActual;
+    static Usuario amigoActual;
+    static Usuario amigo1;
+    static Usuario amigo2;
+    static int indice1;
+    static int indice2;
 
     public void LlenarEspacios() {
 
@@ -4891,11 +5148,19 @@ public class NewJFrame extends javax.swing.JFrame {
                 admin.cargarArchivo();
                 indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
                 Usuario sugerencia = admin.getUsuarios().get(indiceAmigo);
+
                 while (sugerencia.getNombre().equals(usuarioActual.getNombre())) {
                     indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
                     sugerencia = admin.getUsuarios().get(indiceAmigo);
-                    amigoActual = sugerencia;
                 }
+
+                for (Usuario amigo : usuarioActual.getAmigos()) {
+                    if (usuarioActual.getAmigos().contains(sugerencia)) {
+                        indiceAmigo = sr.nextInt(0, admin.getUsuarios().size());
+                        sugerencia = admin.getUsuarios().get(indiceAmigo);
+                    }
+                }
+                amigoActual = sugerencia;
                 ImageIcon icono = (ImageIcon) sugerencia.getFotografia();
                 Image icono2 = (Image) icono.getImage();
                 Image renderizada = icono2.getScaledInstance(75, 60, Image.SCALE_SMOOTH);
@@ -4915,15 +5180,18 @@ public class NewJFrame extends javax.swing.JFrame {
             administradorUsuario au = new administradorUsuario("./UsuariosRegulares.pfb");
             au.cargarArchivo();
             Usuario amigo = usuarioActual.getAmigos().get(indice);
-            ImageIcon icono = (ImageIcon) amigo.getFotografia();
-            Image icono2 = (Image) icono.getImage();
-            Image renderizada = icono2.getScaledInstance(134, 90, Image.SCALE_SMOOTH);
-            Icon renderizado2 = new ImageIcon(renderizada);
-            lb_fotoAmigo.setIcon(renderizado2);
+            try {
+                ImageIcon icono = (ImageIcon) amigo.getFotografia();
+                Image icono2 = (Image) icono.getImage();
+                Image renderizada = icono2.getScaledInstance(134, 90, Image.SCALE_SMOOTH);
+                Icon renderizado2 = new ImageIcon(renderizada);
+                lb_fotoAmigo.setIcon(renderizado2);
+            } catch (NullPointerException e) {
+            }
+            
             tf_nombreAmigo.setText(amigo.getNombre());
         }
     }
-
 
     private void RefreshMuroPersonalAdmin() {
         SecureRandom sr1 = new SecureRandom();
@@ -5004,8 +5272,7 @@ public class NewJFrame extends javax.swing.JFrame {
         amigo = false;
         SecureRandom sr = new SecureRandom();
         int seleccion = sr.nextInt(1, 3);
-        Usuario amigo1;
-        Usuario amigo2;
+
 
         try {
             if (usuarioActual.getAmigos().isEmpty()) {
@@ -5019,8 +5286,10 @@ public class NewJFrame extends javax.swing.JFrame {
 
                         } else {
                             try {
-                                Publicacion publicacion1 = amigo1.getPublicaciones().get(sr.nextInt(0, amigo1.getPublicaciones().size()));
-                                Publicacion publicacion2 = amigo2.getPublicaciones().get(sr.nextInt(0, amigo2.getPublicaciones().size()));
+                                indice1 = sr.nextInt(0, amigo1.getPublicaciones().size());
+                                indice2 = sr.nextInt(0, amigo2.getPublicaciones().size());
+                                Publicacion publicacion1 = amigo1.getPublicaciones().get(indice1);
+                                Publicacion publicacion2 = amigo2.getPublicaciones().get(indice2);
                                 tf_textoPubPrin1.setText(publicacion1.getPublicador() + ": " + publicacion1.getComentario());
                                 ImageIcon icono = (ImageIcon) publicacion1.getImagen();
                                 Image icono2 = (Image) icono.getImage();
@@ -5038,19 +5307,21 @@ public class NewJFrame extends javax.swing.JFrame {
 
                                 tf_likesPrin2.setText(Integer.toString(publicacion2.getLikes()));
                             } catch (NullPointerException e) {
-
                             }
                         }
 
                         break;
                     case 2: //1 amigo, 1 personal
                         amigo1 = usuarioActual.getAmigos().get(sr.nextInt(0, usuarioActual.getAmigos().size()));
+                        amigo2 = usuarioActual;
                         if (amigo1.getPublicaciones().isEmpty() || usuarioActual.getPublicaciones().isEmpty()) {
 
                         } else {
                             try {
-                                Publicacion publicacion3 = amigo1.getPublicaciones().get(sr.nextInt(0, amigo1.getPublicaciones().size()));
-                                Publicacion publicacion4 = usuarioActual.getPublicaciones().get(sr.nextInt(0, usuarioActual.getPublicaciones().size()));
+                                indice1 = sr.nextInt(0, amigo1.getPublicaciones().size());
+                                indice2 = sr.nextInt(0, usuarioActual.getPublicaciones().size());
+                                Publicacion publicacion3 = amigo1.getPublicaciones().get(indice1);
+                                Publicacion publicacion4 = usuarioActual.getPublicaciones().get(indice2);
                                 tf_textoPubPrin1.setText(publicacion3.getPublicador() + ": " + publicacion3.getComentario());
                                 ImageIcon icono = (ImageIcon) publicacion3.getImagen();
                                 Image icono2 = (Image) icono.getImage();
@@ -5066,7 +5337,6 @@ public class NewJFrame extends javax.swing.JFrame {
                                 lb_imagenPrincipal2.setIcon(renderizado4);
                                 tf_likesPrin2.setText(Integer.toString(publicacion4.getLikes()));
                             } catch (NullPointerException e) {
-
                             }
                         }
 
@@ -5076,7 +5346,6 @@ public class NewJFrame extends javax.swing.JFrame {
             }
 
         } catch (IndexOutOfBoundsException e) {
-
         }
 
         lb_proPicPrincipalReg.setIcon(usuarioActual.getFotografia());

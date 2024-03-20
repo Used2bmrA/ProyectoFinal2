@@ -12,7 +12,27 @@ public class Usuario implements Serializable {
     private ArrayList<String> solicitudes = new ArrayList();
     private ArrayList<Publicacion> publicaciones = new ArrayList();
     private ArrayList<Actividad> actividades = new ArrayList();
+    private boolean administrador;
 
+    
+    public boolean isAdministrador() {
+        return administrador;
+    }
+
+    public void setAdministrador(boolean administrador) {
+        this.administrador = administrador;
+    }
+
+    public Usuario(String nombre, String nickname, String contrasenia, String pais, Date fechaNacimiento, Icon fotografia) {
+        this.nombre = nombre;
+        this.nickname = nickname;
+        this.contrasenia = contrasenia;
+        this.pais = pais;
+        this.fechaNacimiento = fechaNacimiento;
+        this.fotografia = fotografia;
+    }
+
+    
     public ArrayList<Actividad> getActividades() {
         return actividades;
     }
