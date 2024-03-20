@@ -4948,9 +4948,44 @@ public class NewJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jb_likePersonAdmin2MouseClicked
 
     private void bt_comentarPubPers1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bt_comentarPubPers1MouseClicked
-jd_comentario.pack();
-jd_comentario.setLocationRelativeTo(null);
-jd_comentario.setVisible(true);
+        administradorUsuario admin = new administradorUsuario(Buscar(usuarioActual));
+        admin.cargarArchivo();
+        int tamano = admin.getUsuarios().get(indiceActual).getPublicaciones().size();
+        Publicacion publicacionActual;
+        SimpleDateFormat sd = new SimpleDateFormat("dd/MM/yyyy");
+
+        if (tamano > 0) {
+            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
+            int cantidadComentarios = publicacionActual.getComentarios().size();
+            if (cantidadComentarios >= 1) {
+                lb_nomComent1.setText(publicacionActual.getPublicador() + ": ");
+                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1).getFechaPublicacion();
+                lb_comment1.setText(publicacionActual.getComentarios().get(cantidadComentarios - 1).getComentario() + "   \n" + sd.format(fechaComentario));
+            } else {
+                lb_nomComent1.setText("");
+                lb_comment1.setText("Sé el primero en comentar!");
+                lb_nomComent2.setText("");
+                lb_comment2.setText("");
+            }
+        }
+
+        if (tamano > 1) {
+            publicacionActual = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 1);
+            int cantidadComentarios = publicacionActual.getComentarios().size();
+            if (cantidadComentarios >= 2) {
+                lb_nomComent2.setText(publicacionActual.getPublicador() + ": ");
+                Date fechaComentario = admin.getUsuarios().get(indiceActual).getPublicaciones().get(tamano - 2).getFechaPublicacion();
+                lb_comment2.setText(publicacionActual.getComentarios().get(cantidadComentarios - 2).getComentario() + "   \n" +sd.format(fechaComentario));
+            }
+        }else{
+            lb_nomComent2.setText("");
+            lb_comment2.setText("");
+        }
+        
+        jd_comentario.pack();
+        jd_comentario.setLocationRelativeTo(jd_muroPersonal);
+        jd_comentario.setModal(true);
+        jd_comentario.setVisible(true);
     }//GEN-LAST:event_bt_comentarPubPers1MouseClicked
 
     private void jButton6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton6MouseClicked
